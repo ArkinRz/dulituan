@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>换背景</title>
+	<style type="text/css">
+		body{
+			background-image: url(./images/1.jpg);margin: 0 auto;
+		}
+		#center{
+			width: 100%;
+			height: 150px;
+			/*line-height: 200px;*/
+			padding-top: 50px;
+			text-align: center;
+			
+			background: rgba(255,255,255,.5);
+			
+
+		}
+		img{
+			width: 150px;
+			height: 100px;
+
+		}
+	</style>
+
+	<script type="text/javascript">
+		window.onload=function(){
+			var body=document.getElementById('body');
+			var img1=document.getElementById('img1');
+			var img2=document.getElementById('img2');
+			var img3=document.getElementById('img3');
+
+			img1.onclick=function(){
+				body.style.backgroundImage="url(./images/1.jpg)"
+			}
+			img2.onclick=function(){
+				body.style.backgroundImage="url(./images/2.jpg)"
+			}
+			img3.onclick=function(){
+				body.style.backgroundImage="url(./images/3.jpg)"
+			}
+
+		}
+	</script>
+
+
+</head>
+<body id="body">
+<div id="center">
+<img src="./images/1.jpg" alt="" id="img1">
+<img src="./images/2.jpg" alt="" id="img2">
+<img src="./images/3.jpg" alt="" id="img3">
+</div>
+</body>
+</html>
