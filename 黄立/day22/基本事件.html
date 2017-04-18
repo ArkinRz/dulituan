@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>基本事件</title>
+	<style type="text/css">
+		#box{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<script type="text/javascript">
+
+	// onload事件 就是在文档加载的时候执行的事件
+		window.onload=function(){
+			
+			var btn3=document.getElementById('btn3');
+
+			var inp=document.getElementById('inp');
+
+			var select=document.getElementById('select');
+
+			// 双击事件
+			btn3.ondblclick=function(){
+				box.style.display="none";
+				alert("div隐藏了");
+			}
+
+			//keyup 事件 用来做表单验证
+			// inp.onkeyup=function(){
+			// 	alert("建盘弹起！");
+			// }
+
+			inp.onchange=function(){
+				alert("文本框改变了！");
+			}
+
+			
+
+			select.onchange=function(){
+				alert("下拉框选择该变了！");
+			}
+
+
+			// 获得焦点事件
+			inp.onfocus=function(){
+				// alert("获得焦点");
+				console.log("获得焦点");
+			}
+
+			// 失去焦点 慎用 
+
+			inp.onblur=function(){
+				// alert("失去焦点");
+				console.log("失去焦点");
+			}
+
+
+			// 鼠标悬停事件
+			btn3.onmouseover=function(){
+				alert("鼠标悬停");
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<div id="box"></div>
+	
+	<button id="btn3">双击出现</button>
+
+	<input type="text" id="inp">
+
+	<select name="" id="select">
+		<option value="">1</option>
+		<option value="">2</option>
+		<option value="">3</option>
+	</select>
+
+</body>
+</html>
