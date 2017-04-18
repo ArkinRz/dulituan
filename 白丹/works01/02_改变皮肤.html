@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>02_改变皮肤</title>
+	<style>
+		#wrap{
+			width: 100%;
+			height: 800px;
+			background-image:url(./images/1.jpg);
+		}
+		#box{
+			width: 100%;
+			height: 200px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: center;
+			background: rgba(255,255,255,.3);
+		}
+		.item{
+			width: 200px;
+			/*height: 200px;*/
+			padding: 10px;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			var wrap = document.getElementById('wrap');
+			var img1 = document.getElementById('img1');
+			var img2 = document.getElementById('img2');
+			var img3 = document.getElementById('img3');
+			var img4 = document.getElementById('img4');
+		
+
+			img1.onclick = function(){
+				wrap.style.background="url(./images/1.jpg)";
+			}
+			img2.onclick = function(){
+				wrap.style.backgroundImage ="url(./images/2.jpg)";
+			}
+			img3.onclick = function(){
+				wrap.style.background="url(./images/3.jpg)";
+			}
+			img4.onclick = function(){
+				wrap.style.backgroundImage ="url(./images/4.jpg)";
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<div id="box">
+			<img src="./images/1.jpg" alt="" class="item" id="img1" title="点击将它设为背景图">
+			<img src="./images/2.jpg" alt="" class="item" id="img2" title="点击将它设为背景图">
+			<img src="./images/3.jpg" alt="" class="item" id="img3" title="点击将它设为背景图">
+			<img src="./images/4.jpg" alt="" class="item" id="img4" title="点击将它设为背景图">
+		</div>
+	</div>
+</body>
+</html>
