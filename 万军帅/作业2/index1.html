@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>判断成绩</title>
+	<style>
+		#box{
+			width: 500px;
+			height: 25px;
+			/*text-align: center;*/
+			line-height: 25px;
+			margin: 100px auto;
+			/*background-color: red;*/
+		}
+		#spanid{
+			border: 1px solid #888;
+			vertical-align: middle;
+			display: inline-block;
+			width: 200px;
+			height: 25px;
+			text-indent: 20px;
+		}
+		#grade{
+			height: 21px;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="box">
+		<label for="grade">语文:</label>
+		<input type="text" name="grade" id="grade">
+		<span id="spanid">请输入成绩</span>
+	</div>
+
+	<script>
+		window.onload=function(){
+			
+			var grade=document.getElementById("grade");
+			var spanid=document.getElementById("spanid");
+
+			grade.onchange=function(){
+				var mygrade=grade.value;
+				if(!isNaN(mygrade)){
+						if(mygrade>0 && mygrade<150){
+						spanid.style.background="yellowgreen url(./images/right.png) no-repeat 5px center";
+						spanid.innerHTML="输入正确";
+						spanid.style.color="green";
+						spanid.style.borderColor="green";
+					}else{
+						spanid.style.background="orange url(./images/wrong.png) no-repeat 5px center";
+						spanid.innerHTML="请输入合理的范围";
+						spanid.style.color="red";
+						spanid.style.borderColor="red";
+					}
+				}else {
+					spanid.style.background="orange url(./images/wrong.png) no-repeat 5px center";
+					spanid.innerHTML="请输入数字思密达";
+					spanid.style.color="yellow";
+					spanid.style.borderColor="yellow";
+				}
+			}
+
+
+		}
+	</script>
+</body>
+</html>
