@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>练习一</title>
+	<style>
+	    *{
+		   margin: 0;
+		   padding: 0;
+	    }
+		#pic1{
+	        width: 200px;
+	        height: 200px;
+	   }
+	</style>
+
+	<script type="text/javascript">
+		window.onload = function(){
+			var pic1 = document.getElementById("pic1");
+			var pic2 = document.getElementById("pic2");
+
+			pic1.onmouseover = function(){
+				pic1.style.background="url(./images/jd2.png) no-repeat";
+
+			}
+			pic1.onmouseout = function(){
+				pic1.style.background="url(./images/jd1.png) no-repeat";
+
+			}
+
+
+		}
+	</script>
+</head>
+<body>
+	<img src="" alt="" id="pic1">
+	<img src="" alt="" id="pic2">
+
+</body>
+</html>
