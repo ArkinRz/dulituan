@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标展示</title>
+	<style type="text/css">
+	*{
+		margin: 0 auto;
+		padding: 0 auto;
+	}
+	.wrap{
+		
+		width: 360px;
+		margin: 100px auto;
+		border: 1px  solid gray;
+		font-size: 0;
+		
+
+	}
+	.body{
+		border-top: 1px  solid gray;
+		display: flex;
+		justify-content: space-between;
+	}
+	.body img{
+		height: 70px;
+		border-right: 1px solid gray;
+	}
+	.body img:last-child{
+		border-right: none;
+	}
+	.body1{
+		width: 360px;
+	}
+	
+
+	</style>
+	<script type="text/javascript">
+		window.onload = function () {
+			var img1big = document.getElementById('img1big')
+			var img1 = document.getElementById('img1')
+			var img2 = document.getElementById('img2')
+			var img3 = document.getElementById('img3')
+			var img4 = document.getElementById('img4')
+			var img5 = document.getElementById('img5')
+
+		img1big.onmouseover=function(){
+				img1big.src = "./images1/01big.jpg";	
+		}
+		
+		img1.onmouseover=function(){
+				img1big.src = "./images1/01big.jpg";	
+		}
+		img2.onmouseover=function(){
+				img1big.src  = "./images1/02big.jpg";		
+		}
+
+		img3.onmouseover=function(){
+				img1big.src= "./images1/03big.jpg";		
+		}
+		img4.onmouseover=function(){
+				img1big.src = "./images1/04big.jpg";		
+		}
+		img5.onmouseover=function(){
+				img1big.src = "./images1/05big.jpg";		
+		}
+
+			
+		}
+	</script>
+</head>
+<body>
+	
+
+<div class="wrap">
+	<div class="body1">
+		<img src="./images1/01big.jpg" alt="" id="img1big" >
+	</div>
+	<div class="body">
+	<img src="./images1/01.jpg" alt="" id="img1" 
+	>
+	<img src="./images1/02.jpg" alt="" id="img2">
+	<img src="./images1/03.jpg" alt="" id="img3">
+	<img src="./images1/04.jpg" alt="" id="img4">
+	<img src="./images1/05.jpg" alt="" id="img5">
+	
+	</div>
+</div>
+
+</body>
+</html>
