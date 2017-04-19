@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>作业2</title>
+	<style>
+		#div{
+			width: 180px;
+			height: 20px;
+			border: 1px solid gray;
+			display: inline-block;
+			position: absolute;
+			top: 10px;
+			left: 250px;
+
+		}
+		#input{
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	语文:<input type="text" id="input">
+	<div id="div"></div>
+</body>
+  <script>
+  
+  	var i=document.getElementById('input')
+  	var div=document.getElementById('div')
+  	 
+    
+    i.onchange=function(){
+      var grade=i.value
+      if(!isNaN(grade)){
+  	    if(grade>0 && grade<150){
+  		div.innerHTML="输入正确"
+  		div.style.color="green"
+  	    }else{
+  	    	div.innerHTML="请输入合理分数"
+  	    	div.color="yellow"
+  	    }
+  	  }
+  	  else{
+  	  	div.innerHTML="请输入数值"
+  		div.style.color="red"
+  	  }
+  	}
+  
+  </script>
+</html>

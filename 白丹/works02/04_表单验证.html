@@ -1,0 +1,66 @@
+
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>04_表单验证</title>
+	<style type="text/css">
+		#wrap{
+			width: 500px;
+			margin: 100px auto;
+			text-align: center;
+		}
+		#inp{
+			text-indent: 5px;
+			border:1px  solid gray;
+		}
+		#jduge{
+			text-indent: 18px;
+			border:1px  solid gray;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<label for="inp">语文：</label><input type="text" id="inp" placeholder="请输入你的语文成绩">
+		<input type="text" disabled value="请输入你的成绩" id="jduge">
+	</div>
+</body>
+<script type="text/javascript">
+	var inp = document.getElementById('inp');
+	var jduge = document.getElementById('jduge');
+	
+
+
+	inp.onchange = function checkPass(){
+		if(isNaN(parseFloat(inp.value)) == false){
+			if(parseFloat(inp.value)>=0&&parseFloat(inp.value)<=150){
+				jduge.value = "输入正确";
+				jduge.style.background = "url(./images/icon1.png) no-repeat";
+				jduge.style.color = "black";
+			}else{
+				jduge.style.value = "请输入0-150以内数字";
+				jduge.style.background = "url(./images/icon2.png) no-repeat";
+				jduge.style.color = "red";
+			}
+
+		}else if(inp.value == ""){
+			jduge.value = "你还没有输入内容";
+			jduge.style.background = "url(./images/icon2.png) no-repeat";
+		}else if(isNaN(parseFloat(inp.value)) == true){
+			jduge.value = "你输入的不是数字哦";
+			jduge.style.background = "url(./images/icon2.png) no-repeat";
+			jduge.style.color = "red";
+		}else{
+			jduge.value = "你输入是啥啊";
+			jduge.style.background = "url(./images/icon2.png) no-repeat";
+			jduge.style.color = "green";
+		}
+	}
+
+	 
+
+
+
+</script>
+</html>
