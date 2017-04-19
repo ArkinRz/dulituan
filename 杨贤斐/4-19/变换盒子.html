@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>变换盒子</title>
+	<style>
+		#box{
+			width: 600px;
+			height:600px;
+		border: 1px solid gray;
+			margin: 100px 400px;
+			position: relative;
+		}
+		ul{
+			margin: 0;
+			padding: 0;
+		
+		}
+		ul li{
+			list-style-type: none;
+			display: inline-block;
+			width: 70px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			box-sizing: border-box;
+			border: 1px solid gray;
+			
+			background-color: #ecf3f2;
+		}
+		a{
+			text-decoration: none;
+
+		}
+#box .a{
+    position: absolute;
+    top: 30px;
+ 
+    height: 570px;
+    width: 600px;
+    background-color: pink;
+}
+
+	</style>
+</head>
+<body>
+	<div id="box">
+		<ul>
+			<li ><a href="#">第一个</a></li>
+			<li><a href="#">第二个</a></li>
+			<li><a href="#">第三个</a></li>
+			<li><a href="#">第四个</a></li>
+			<li><a href="#">第五个</a></li>
+		</ul>
+    <div class="a">盒子1</div>
+     <div class="a">盒子2</div>
+      <div class="a">盒子3</div>
+       <div  class="a">盒子4</div>
+        <div  class="a">盒子5</div>
+	</div>
+</body>
+<script>
+	var boxs=document.getElementById('box').getElementsByTagName('div')
+var a =document.getElementsByTagName('a')
+var lis =document.getElementsByTagName('li')
+a[0].onclick=function(){
+     lis[0].style.background="red"
+     lis[1].style.background=""
+     lis[2].style.background=""
+     lis[3].style.background=""
+     lis[4].style.background=""
+     boxs[0].style.zIndex="100"
+     boxs[0].style.background="red"
+}
+a[1].onclick=function(){
+     lis[1].style.background="red"
+     lis[0].style.background=""
+     lis[2].style.background=""
+     lis[3].style.background=""
+     lis[4].style.background=""
+     boxs[1].style.zIndex="100"
+     boxs[1].style.background="white"
+}
+a[2].onclick=function(){
+     lis[2].style.background="red"
+     lis[1].style.background=""
+     lis[0].style.background=""
+     lis[3].style.background=""
+     lis[4].style.background=""
+     boxs[2].style.zIndex="100"
+     boxs[2].style.background="black"
+}
+a[3].onclick=function(){
+     lis[3].style.background="red"
+     lis[1].style.background=""
+     lis[2].style.background=""
+     lis[0].style.background=""
+     lis[4].style.background=""
+     boxs[3].style.zIndex="100"
+     boxs[3].style.background="gray"
+}
+a[4].onclick=function(){
+     lis[4].style.background="red"
+     lis[1].style.background=""
+     lis[2].style.background=""
+     lis[3].style.background=""
+     lis[0].style.background=""
+     boxs[4].style.zIndex="100"
+     boxs[4].style.background="yellow"
+}
+</script>
+</html>
