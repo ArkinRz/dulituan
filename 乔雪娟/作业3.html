@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作业3</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.div {
+			margin: 100px auto;
+			width: 360px;
+			border: 1px solid grey;
+
+		}
+		.div1 {
+			height: 360px;
+			margin: 0 auto;
+		}
+		.div1 img {
+			text-align: center;
+		}
+		.div2 {
+			width: 360px;
+			height: auto;
+			text-align: center;
+			border-top: 1px solid grey;
+		}
+		.div2 img {
+			width: auto;
+			height: 65px;
+		}
+	</style>
+</head>
+<body>
+	<div class="div">
+		<div class="div1">
+			<img src="./images/01big.jpg" alt="" id="img">
+		</div>
+		<div class="div2">
+		<img src="./images/01.jpg" alt="" id="img1">
+		<img src="./images/02.jpg" alt="" id="img2">
+		<img src="./images/03.jpg" alt="" id="img3">
+		<img src="./images/04.jpg" alt="" id="img4">
+		<img src="./images/05.jpg" alt="" id="img5">
+		</div>
+	</div>
+</body>
+	<script>
+		var img1 = document.getElementById('img1');
+		var img2 = document.getElementById('img2');
+		var img3 = document.getElementById('img3');
+		var img4 = document.getElementById('img4');
+		var img5 = document.getElementById('img5');
+		img1.onmouseover = function(){
+			img.src = "./images/01big.jpg"
+		}
+		img2.onmouseover = function(){
+			img.src = "./images/02big.jpg"
+		}
+		img3.onmouseover = function(){
+			img.src = "./images/03big.jpg"
+		}
+		img4.onmouseover = function(){
+			img.src = "./images/04big.jpg"
+		}
+		img5.onmouseover = function(){
+			img.src = "./images/05big.jpg"
+		}
+	</script>
+</html>
