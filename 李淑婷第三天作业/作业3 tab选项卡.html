@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>作业3 tab选项卡</title>
+	<style type="text/css">
+		#box{
+			width:600px;
+			margin: 100px auto;
+		}
+		#divs div{
+			width:600px;
+			height: 300px;
+			background-color: pink;
+			display: none;
+
+		}
+		#divs .show{
+			display: block;
+		}
+		.c_pink{
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div id="nav">
+			<button>第1个选项</button>
+			<button>第2个选项</button>
+			<button>第3个选项</button>
+			<button>第4个选项</button>
+			<button>第5个选项</button>
+			<button>第6个选项</button>
+			<button>第7个选项</button>
+		</div>
+		<div class="bottom" id="divs">
+			<div class="show">第1个选项的div</div>
+			<div>第2个选项的div</div>
+			<div>第3个选项的div</div>
+			<div>第4个选项的div</div>
+			<div>第5个选项的div</div>
+			<div>第6个选项的div</div>
+			<div>第7个选项的div</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var btns=document.getElementById('nav').getElementsByTagName('button');
+	var divs=document.getElementById('divs').getElementsByTagName('div');
+
+	for (var i = 0; i < btns.length; i++) {
+		btns[i].index=i;
+		btns[i].onclick=function () {
+			for (var i = 0; i < btns.length; i++) {
+				btns[i].className=" ";
+				divs[i].className=" ";
+			}
+			this.className= "c_pink";
+			divs[this.index].className="show";
+		}
+	}
+</script>
+</html>
