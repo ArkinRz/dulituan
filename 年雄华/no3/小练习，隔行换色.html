@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小练习，隔行换色</title>
+</head>
+<body>
+	<ul>
+		<li>这是第一行</li>
+		<li>这是第二行</li>
+		<li>这是第三行</li>
+		<li>这是第四行</li>
+		<li>这是第五行</li>
+		<li>这是第六行</li>
+		<li>这是第七行</li>
+		<li>这是第八行</li>
+	</ul>
+</body>
+<script type="text/javascript">
+	var lis=document.getElementsByTagName('li')
+	for (var i = 0; i < lis.length; i++) {
+		if(i%2==1){
+			lis[i].style.color="red";
+		}
+		
+	}
+</script>
+</html>
