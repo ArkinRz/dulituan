@@ -8,10 +8,15 @@
 	    	margin: 0;
 	    	padding: 0;
 	    }
-	  
+	  #body{
+	  	width: 100%;
+	  	min-width: 400px;
+	  }
 	    #warp{
+	    	width: 400px;
+	    	margin: 100px auto;
 	    	
-	    	margin:100px 400px;
+	    	
 	    	
 	    }
 		#box1{
@@ -33,7 +38,7 @@
 	</style>
 </head>
 <body>
-
+<div id="body">
  <div id="warp">
     <div id="box1"></div>
 	<div class="box">
@@ -45,7 +50,6 @@
 
 	</div>
 </div>
-
 </body>
 <script>
 	window.onload=function(){
@@ -70,6 +74,24 @@
 		img5.onmouseover=function(){
             box.style.background="url(./images/05big.jpg)no-repeat";
 		}
+		img1.onmouseout=function(){
+           box.style.background="url(./images/01big.jpg)no-repeat";
+		}
+		
+		img2.onmouseout=function(){
+           box.style.background="url(./images/01big.jpg)no-repeat";
+		}
+		img3.onmouseout=function(){
+           box.style.background="url(./images/01big.jpg)no-repeat";
+		}
+		img4.onmouseout=function(){
+           box.style.background="url(./images/01big.jpg)no-repeat";
+		}
+		img5.onmouseout=function(){
+           box.style.background="url(./images/01big.jpg)no-repeat";
+		}
+
+
 
 	}
 </script>
