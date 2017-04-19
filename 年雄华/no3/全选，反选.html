@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>全选，反选</title>
+</head>
+<body>
+	<button>全选</button>
+	<button>反选</button>
+	<button>取消</button>
+
+
+	<div id="box">
+		<ul>
+				<li>选项：<input type="checkbox"></li>
+				<li>选项：<input type="checkbox"></li>
+				<li>选项：<input type="checkbox"></li>
+				<li>选项：<input type="checkbox"></li>
+				<li>选项：<input type="checkbox"></li>
+				<li>选项：<input type="checkbox"></li>
+				<li>选项：<input type="checkbox"></li>
+				<li>选项：<input type="checkbox"></li>
+				<li>选项：<input type="checkbox"></li>
+				<li>选项：<input type="checkbox"></li>
+			</ul>	
+	</div>
+</body>
+<script type="text/javascript">
+	var btns = document.getElementsByTagName('button');
+	var inputs = document.getElementById('box').getElementsByTagName('input');
+
+
+		// 全选
+	btns[0].onclick=function(){
+		// 循环input的每一项，把他们的checked  改为true
+		for (var i=0;i<inputs.length;i++){
+			// inputs[i].checked = "checked"
+			inputs[i].checked = true
+		}
+	}
+
+
+// 取消
+	btns[2].onclick=function(){
+		// 循环input的每一项，把他们的checked  改为false
+		for (var i=0;i<inputs.length;i++){
+			inputs[i].checked = false
+			// inputs[i].checked = "true"
+		}
+	}
+// 反选
+	btns[1].onclick=function(){
+		// 循环input的每一项
+		for (var i=0;i<inputs.length;i++){
+			// 如果有选项被选中了
+			if (inputs[i].checked ==true) {
+				// 将其反选  取消选择
+				inputs[i].checked = false;
+			}else{
+				// 选中
+				inputs[i].checked = true;
+			}
+			// inputs[i].checked = "true"
+		}
+	}
+</script>
+
+</html>

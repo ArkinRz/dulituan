@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>01_鼠标悬浮</title>
+	<style>
+		
+	</style>
+	<script>
+		window.onload = function(){
+			var jd = document.getElementById('jd');
+
+			jd.onmouseover = function(){
+				jd.src="./images/jd2.png";
+			}
+			jd.onmouseout = function(){
+				jd.src="./images/jd1.png";
+			}
+		}
+	</script>
+</head>
+<body>
+	<img src="./images/jd1.png" alt="jd" id="jd">
+</body>
+</html>

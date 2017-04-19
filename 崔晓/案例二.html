@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>案例二</title>
+	<style type="text/css">
+		.box{
+			width: 370px;
+			height: 435px;
+			margin: 150px auto;
+			border:1px solid rgb(161,161,161);
+		}
+		.box #topbox{
+			width: 370px;
+			height: 360px;
+			background: url(./images/01big.jpg) no-repeat center top;
+
+		}
+		.box .img0{
+            margin-left: 5px;
+		}
+		.smallbox{
+			border-top:1px solid rgb(161,161,161);
+		}
+		.smallbox img{
+			width: 70px;
+			height: auto;
+			cursor: pointer;
+
+		}
+	</style>
+
+	<script type="text/javascript">
+		window.onload = function(){
+			var topbox = document.getElementById("topbox");
+			var img1 = document.getElementById("img1");
+			var img2 = document.getElementById("img2");
+			var img3 = document.getElementById("img3");
+			var img4 = document.getElementById("img4");
+			var img5 = document.getElementById("img5");
+
+			// img1.onmouseover = function(){
+			// 	topbox.src="./images/01big.jpg";
+			// }
+			// img2.onmouseover = function(){
+			// 	topbox.src="./images/02big.jpg";
+			// }
+			// img3.onmouseover = function(){
+			// 	topbox.src="./images/03big.jpg";
+			// }
+			// img4.onmouseover = function(){
+			// 	topbox.src="./images/04big.jpg";
+			// }
+			// img5.onmouseover = function(){
+			// 	topbox.src="./images/05big.jpg";
+			// }
+            
+            img1.onmouseover = function(){
+            	topbox.style.background="url(./images/01big.jpg)";
+            }
+            img2.onmouseover = function(){
+            	topbox.style.background="url(./images/02big.jpg)";
+            }
+            img3.onmouseover = function(){
+            	topbox.style.background="url(./images/03big.jpg)";
+            }
+            img4.onmouseover = function(){
+            	topbox.style.background="url(./images/04big.jpg)";
+            }
+            img5.onmouseover = function(){
+            	topbox.style.background="url(./images/05big.jpg)";
+            }
+
+		}
+	</script>
+</head>
+<body>
+	<div class="box">
+	   <div id="topbox">
+	   </div>
+	   
+	   <div class="smallbox">
+	   	     <img src="./images/01.jpg" alt="" id="img1">
+	   	     <img src="./images/02.jpg" alt="" id="img2">
+	   	     <img src="./images/03.jpg" alt="" id="img3">
+	   	     <img src="./images/04.jpg" alt="" id="img4">
+	   	     <img src="./images/05.jpg" alt="" id="img5">
+	   </div>
+		
+	</div>
+</body>
+
+
+</html>

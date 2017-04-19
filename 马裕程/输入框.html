@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<script>
+	function myFunction() {
+    var x, text;
+
+    // 获取 id="numb" 的值
+    x = document.getElementById("numb").value;
+
+    // 如果输入的值 x 不是数字或者小于 0 或者大于 150，则提示错误 Not a Number or less than 0 or greater than 150
+    if (isNaN(x) || x < 0 || x > 150) {
+        text= "输入错误";
+    } else {
+        text = "输入正确";
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+	</script>
+</head>
+<body>
+	 <p>请输入 0 到 150 之间的数字：</p>
+
+      语文:<input id="numb" required>
+
+
+      <button type="button" onclick="myFunction()">提交</button>
+      <!-- <input type="text" id="inp"> -->
+
+	  <p id="demo"></p>
+
+</body>
+</html>

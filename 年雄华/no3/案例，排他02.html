@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#box{
+			
+			width: 308px;
+			margin: 100px auto;
+			
+		}
+
+		.button div{
+			width: 308px;
+			height: 300px;
+			background-color: pink;
+			display: none;
+		}
+
+		.button .show {
+			display: block;
+		}
+	</style>
+
+</head>
+<body>
+	<div id="box">
+	<div class="" id="nav">
+			<button>第一个</button>
+			<button>第二个</button>
+			<button>第三个</button>
+			<button>第四个</button>
+			<button>第五个</button>
+		</div>
+		<div class="button" id="divs">
+			<div class="show">第1个div</div>
+			<div>第2个div</div>
+			<div>第3个div</div>
+			<div>第4个div</div>
+			<div>第5个div</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+// 找节点
+	var btns = document.getElementById('nav').getElementsByTagName('button');
+	var divs = document.getElementById('divs').getElementsByTagName('div');
+	// 给每个按钮添加点击事件
+	for(var i=0;i<btns.length;i++){
+		// 给button的每一项添加索引值   index
+		btns[i].index = i;  // 重点    index  是索引
+
+		btns[i].onclick = function(){
+
+			// alert(this.index)
+			for(var j=0;j<btns.length;j++){
+					btns[j].style.backgroundColor="#fff";
+			}
+			this.style.background="pink";
+
+
+
+
+				// 循环，当触发点击事件时候  循环下面每一个div 都要隐藏
+			for (var k = 0; k < btns.length; k++) {
+				divs[k].style.display="none"
+			}
+
+			// 让隐藏的div出现，就目前的那个，出现，其他的隐藏掉
+			divs[this.index].style.display="block"
+
+		}
+	}
+</script>
+</html>
