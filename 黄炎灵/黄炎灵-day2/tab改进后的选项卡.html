@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+			width: 400px;
+			height: 400px;
+			margin:100px auto;
+		}
+		.bottom div{
+			width: 400px;
+			height: 400px;
+			background-color: pink;
+			display: none;
+		}
+
+		.bottom .show{
+			display: block;
+		}
+
+		.c-pink{
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+
+   <div id="box">
+   	  <div id="nav">
+   	  	<button>第一个</button>
+   	  	<button>第二个</button>
+   	  	<button>第三个</button>
+   	  	<button>第四个</button>
+   	  	<button>第五个</button>
+   	  	<button>第六个</button>
+   	  </div>
+   	  <div class="bottom" id="divs">
+   	  	<div class="show">1</div>
+   	  	<div>2</div>
+   	  	<div>3</div>
+   	  	<div>4</div>
+   	  	<div>5</div>
+   	  	<div>6</div>
+   	  </div>
+   </div>
+	
+</body>
+<script type="text/javascript">
+	var btns=document.getElementById('nav').getElementsByTagName('button');
+	var divs=document.getElementById('divs').getElementsByTagName('div');
+
+	for(var i=0;i<btns.length;i++){
+		btns[i].index = i;
+        
+        // 点击事件
+        btns[i].onclick=function(){
+
+		for(var i=0;i<btns.length;i++){
+			btns[i].className="";
+			divs[i].className="";
+		}
+
+		// 不能使用btns[i]  使用this指向索引值 找到相对应的 button
+		this.className="c-pink";
+		divs[this.index].className = "show";
+	}
+}
+</script>
+</html>
