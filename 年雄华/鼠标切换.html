@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标图片切换</title>
+	<style type="text/css">
+		.box{
+			height: 430px;
+			width: 360px;
+			margin: 100px auto;
+			/*background-color: red;*/
+			/*position: relative;*/
+			border: 1px solid red;
+			box-sizing: border-box;
+		}
+
+		#div-big  {
+			height: 360px;
+			width: 360px;
+			border: 1px solid red;
+			
+		}
+		#div-big  img{
+			height: 358px;
+			/*width: 360px;*/
+			/*border: 1px solid red;*/
+			
+		}
+		.box .box-little {
+			height: 20px;
+			width: 400px;
+			/*border: 1px solid red;*/
+		}
+		.box .box-little img{
+			height: 70px;
+			width: 70px;
+			display: inline-block;
+			border: 1px solid red;
+			float: left;
+		}
+
+	</style>
+
+
+	
+</head>
+<body>
+	<div class="box">
+		<div id="div-big">
+			<img src="./images/03big.jpg" alt="" id="big">
+		</div>
+
+		<div class="box-little">
+			<img src="./images/01.jpg" alt="" id="img1">
+			<img src="./images/02.jpg" alt="" id="img2">
+			<img src="./images/03.jpg" alt="" id="img3">
+			<img src="./images/04.jpg" alt="" id="img4">
+			<img src="./images/05.jpg" alt="" id="img5">
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+		window.onload = function(){
+
+			var big = document.getElementById('big')
+			var img1 = document.getElementById('img1')
+			var img2 = document.getElementById('img2')
+			var img3 = document.getElementById('img3')
+			var img4 = document.getElementById('img4')
+			var img5 = document.getElementById('img5')
+
+			img1.onmouseover=function(){
+				big.src="./images/01big.jpg"
+			}
+			img2.onmouseover=function(){
+				big.src="./images/01big.jpg.jpg"
+			}
+			img3.onmouseover=function(){
+				big.src="./images/03big.jpg"
+				}
+			img4.onmouseover=function(){
+				big.src="./images/04big.jpg"
+			}
+			img5.onmouseover=function(){
+				big.src="./images/05big.jpg"
+			}
+			
+
+
+			// img1.onmouseout=function(){
+			// 	img1.src="./images/01big.jpg"
+			// }
+			// img1.onmouseout=function(){
+			// 	img2.src="./images/02big.jpg"
+			// }
+			// img1.onmouseout=function(){
+			// 	img3.src="./images/03big.jpg"
+			// }
+			// img1.onmouseout=function(){
+			// 	img4.src="./images/04big.jpg"
+			// }
+			// img1.onmouseout=function(){
+			// 	img5.src="./images/05big.jpg"
+			// }
+				
+		}
+	</script>
+</html>

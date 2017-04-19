@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>homework</title>
+	<style type="text/css">
+	    * {
+	    	margin: 0;
+	    	padding: 0;
+	    }
+        #box_wrapper{
+        	height: 450px;
+        	margin: 100px 500px;
+        }
+
+
+		.box1 {
+			width: 360px;
+			height: 360px;
+			border: 1px solid #666;
+			margin-bottom: -1px;
+		}
+		.box2 {
+			width: 360px;
+			height: 70px;
+			border: 1px solid #666;
+		}
+
+		img{
+			float: left;
+		}
+
+	</style>
+</head>
+<body>
+    <div id="box_wrapper">
+		<div class="box1"></div>
+		<div class="box2">
+			<img src="./images/01.jpg" alt="" id="img1">
+			<img src="./images/02.jpg" alt="" id="img2">
+			<img src="./images/03.jpg" alt="" id="img3">
+			<img src="./images/04.jpg" alt="" id="img4">
+			<img src="./images/05.jpg" alt="" id="img5">
+		</div>
+	</div>
+</body>
+	<script>
+		window.onload = function() {
+			var img1 = document.getElementById('img1')
+			var img2 = document.getElementById('img2')
+			var img3 = document.getElementById('img3')
+			var img4 = document.getElementById('img4')
+			var img5 = document.getElementById('img5')
+
+            img1.onmouseover = function() {
+            	box_wrapper.style.background = "url(./images/01big.jpg) no-repeat"
+            }
+
+            img2.onmouseover = function() {
+            	box_wrapper.style.background = "url(./images/02big.jpg) no-repeat"
+            }
+
+            img3.onmouseover = function() {
+            	box_wrapper.style.background = "url(./images/03big.jpg) no-repeat"
+            }
+
+            img4.onmouseover = function() {
+            	box_wrapper.style.background = "url(./images/04big.jpg) no-repeat"
+            }
+
+            img5.onmouseover = function() {
+            	box_wrapper.style.background = "url(./images/05big.jpg) no-repeat"
+            }
+
+
+
+		}
+	</script> 
+</html>
