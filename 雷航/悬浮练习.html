@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>悬浮练习</title>
+	<style type="text/css">
+		#wrapper{
+			width: 360px;
+			height: 430px;
+			margin: 50px auto;
+			border: 1px solid #d1d1d1;
+		}
+
+		#big{
+			width: 360px;
+			height: 360px;
+			background: url(./images/01big.jpg);
+		}
+
+		#small{
+			width: 360px;
+			height: 70px;
+		}
+
+		#small img{
+			margin: 0 -1px;
+		}
+	</style>
+
+	<script type="text/javascript">
+		window.onload = function(){
+			var img1 = document.getElementById('img1')
+			var img2 = document.getElementById('img2')
+			var img3 = document.getElementById('img3')
+			var img4 = document.getElementById('img4')
+			var img5 = document.getElementById('img5')
+
+			img1.onmouseover = function(){
+				big.style.background = "url(./images/01big.jpg)"
+			}
+			img2.onmouseover = function(){
+				big.style.background = "url(./images/02big.jpg)"
+			}
+			img3.onmouseover = function(){
+				big.style.background = "url(./images/03big.jpg)"
+			}
+			img4.onmouseover = function(){
+				big.style.background = "url(./images/04big.jpg)"
+			}
+			img5.onmouseover = function(){
+				big.style.background = "url(./images/05big.jpg)"
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="big">
+			
+		</div>
+		<div id="small">
+			<img src="./images/01.jpg" id="img1">
+			<img src="./images/02.jpg" id="img2">
+			<img src="./images/03.jpg" id="img3">
+			<img src="./images/04.jpg" id="img4">
+			<img src="./images/05.jpg" id="img5">
+		</div>
+	</div>
+</body>
+</html>

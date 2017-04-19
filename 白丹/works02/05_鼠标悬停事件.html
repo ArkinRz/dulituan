@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>05_鼠标悬停事件</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#wrap{
+			width: 360px;
+			height: 430px;
+			box-sizing: border-box;
+			background-color: #fff;
+			margin: 100px auto;
+			border: 1px  solid gray;
+			font-size: 0;
+		}
+		#box{
+			display: flex;
+			justify-content: space-between;
+			border-top: 1px  solid gray;
+		}
+		#box img{
+			height: 69px;
+		}
+		#imgbg{
+			width: 358px;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div><img src="./images/03big.jpg" alt="" id="imgbg"></div>
+		<div id="box">
+			<img src="./images/01.jpg" alt="" id="img1">
+			<img src="./images/02.jpg" alt="" id="img2">
+			<img src="./images/03.jpg" alt="" id="img3">
+			<img src="./images/04.jpg" alt="" id="img4">
+			<img src="./images/05.jpg" alt="" id="img5">
+		</div>
+		
+	</div>
+</body>
+<script type="text/javascript">
+	var imgbg = document.getElementById('imgbg'); 
+	var img2 = document.getElementById('img2');
+	var img2 = document.getElementById('img2');
+	var img3 = document.getElementById('img3');
+	var img4 = document.getElementById('img4');
+	var img5 = document.getElementById('img5');
+
+	img1.onmouseover = function(){
+		imgbg.src = "./images/01big.jpg"
+	}
+	img2.onmouseover = function(){
+		imgbg.src = "./images/02big.jpg"
+	}
+	img3.onmouseover = function(){
+		imgbg.src = "./images/03big.jpg"
+	}
+	img4.onmouseover = function(){
+		imgbg.src = "./images/04big.jpg"
+	}
+	img5.onmouseover = function(){
+		imgbg.src = "./images/05big.jpg"
+	}
+
+
+</script>
+</html>
