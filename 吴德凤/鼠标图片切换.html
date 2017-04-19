@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>作业一</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		#wrapper{
+			width: 370px;
+			height: 434px;
+			margin: 100px auto;
+		}
+
+		#box{
+			width: 370px;
+			height: 362px;
+			border: 1px solid #eee;
+			background-image: url(./images/01big.jpg);
+		}
+
+		#sbox {
+			width: 370px;
+			height: 72px;
+			border: 1px solid #eee;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="box"></div>
+		<div id="sbox">
+			<img src="./images/01.jpg" alt="" id="num1">
+			<img src="./images/02.jpg" alt="" id="num2">
+			<img src="./images/03.jpg" alt="" id="num3">
+			<img src="./images/04.jpg" alt="" id="num4">
+			<img src="./images/05.jpg" alt="" id="num5">
+		</div>
+	</div>
+</body>
+<script>
+window.onload=function(){
+	var Box = document.getElementById('box');
+	var Num1 = document.getElementById('num1');
+	var Num2 = document.getElementById('num2');
+	var Num3 = document.getElementById('num3');
+	var Num4 = document.getElementById('num4');
+	var Num5 = document.getElementById('num5');
+
+	Num1.onmouseover=function(){
+		Box.style.background="url(./images/01big.jpg)"
+	}
+
+	Num2.onmouseover=function(){
+		Box.style.background="url(./images/02big.jpg)"
+	}
+
+	Num3.onmouseover=function(){
+		Box.style.background="url(./images/03big.jpg)"
+	}
+
+	Num4.onmouseover=function(){
+		Box.style.background="url(./images/04big.jpg)"
+	}
+
+	Num5.onmouseover=function(){
+		Box.style.background="url(./images/05big.jpg)"
+	}
+}	
+
+</script>
+</html>

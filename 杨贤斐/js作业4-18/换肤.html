@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>skin</title>
+	<style>
+		#skin{
+		width:100%;
+	    height: 1000px;
+		min-width:1260px;
+		vertical-align: center;
+		background:url(./images/1.jpg) no-repeat ;
+	}
+	.W{
+		width: 100%;
+		min-width: 1260px;
+		height: 100px;
+		text-align: center;
+		padding-top: 20px;
+		background: rgba(255,255,255,.3);
+
+	}
+	  .button{
+		width: 500px;
+		height: 100px;
+	
+		margin: 0 auto;
+	}
+	button{
+		width: 150px;
+		height: 80px;
+		border: none;
+	}
+
+	</style>
+	<script>
+		window.onload=function(){
+               var bt1=document.getElementById('bt1')
+               var bt2=document.getElementById('bt2')
+               var bt3=document.getElementById('bt3')
+               var skin=document.getElementById('skin')
+
+
+               bt1.onclick=function(){
+                   skin.style.background="url(./images/2.jpg)"
+                   skin.style.background-size="100%"
+
+               }
+                bt2.onclick=function(){
+                   skin.style.background="url(./images/3.jpg)"
+                   skin.style.background-size="100%"
+               }
+                bt3.onclick=function(){
+                   skin.style.background="url(./images/5.jpg)"
+                   skin.style.background-size="100%"
+               }
+		}
+	</script>
+</head>
+<body>
+
+	<div id="skin">
+	<div class="W">
+	<div class="button">
+	<button style=" background: url(./images/2.jpg)  ;background-size: 100%;" id="bt1"></button>
+	<button style=" background: url(./images/3.jpg);background-size: 100%;" id="bt2"></button>
+	<button style=" background: url(./images/5.jpg);background-size: 100%;" id="bt3"></button>
+		</div>
+		</div>
+	</div>
+</body>
+</html>

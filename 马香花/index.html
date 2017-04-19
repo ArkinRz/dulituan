@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作业练习</title>
+	<style>
+	    *{
+	    	margin: 0;
+	    	padding: 0;
+	    }
+	  #body{
+	  	width: 100%;
+	  	min-width: 400px;
+	  }
+	    #warp{
+	    	width: 400px;
+	    	margin: 100px auto;
+	    	
+	    	
+	    	
+	    }
+		#box1{
+			width: 360px;
+			height: 360px;
+			background: url(./images/01big.jpg)no-repeat center;
+			border:1px solid #f0f0f0;
+		}
+		.box{
+			width: 360px;
+			height: 70px;
+			border:1px solid #f0f0f0;
+		}
+		img{
+			width: 65px;
+			height: auto;
+		}
+
+	</style>
+</head>
+<body>
+<div id="body">
+ <div id="warp">
+    <div id="box1"></div>
+	<div class="box">
+		<img src="./images/01.jpg" alt="" id="img1">
+		<img src="./images/02.jpg" alt="" id="img2">
+		<img src="./images/03.jpg" alt="" id="img3">
+		<img src="./images/04.jpg" alt="" id="img4">
+		<img src="./images/05.jpg" alt="" id="img5">
+
+	</div>
+</div>
+</body>
+<script>
+	window.onload=function(){
+		var img1=document.getElementById('img1');
+		var img2=document.getElementById('img2');
+		var img3=document.getElementById('img3');
+		var img4=document.getElementById('img4');
+		var img5=document.getElementById('img5');
+		var box=document.getElementById('box1');
+		img1.onmouseover=function(){
+           box.style.background="url(./images/01big.jpg)no-repeat";
+		}
+		img2.onmouseover=function(){
+            box.style.background="url(./images/02big.jpg)no-repeat";
+		}
+		img3.onmouseover=function(){
+            box.style.background="url(./images/03big.jpg)no-repeat";
+		}
+		img4.onmouseover=function(){
+            box.style.background="url(./images/04big.jpg)no-repeat";
+		}
+		img5.onmouseover=function(){
+            box.style.background="url(./images/05big.jpg)no-repeat";
+		}
+		img1.onmouseout=function(){
+           box.style.background="url(./images/01big.jpg)no-repeat";
+		}
+		
+		img2.onmouseout=function(){
+           box.style.background="url(./images/01big.jpg)no-repeat";
+		}
+		img3.onmouseout=function(){
+           box.style.background="url(./images/01big.jpg)no-repeat";
+		}
+		img4.onmouseout=function(){
+           box.style.background="url(./images/01big.jpg)no-repeat";
+		}
+		img5.onmouseout=function(){
+           box.style.background="url(./images/01big.jpg)no-repeat";
+		}
+
+
+
+	}
+</script>
+</html>

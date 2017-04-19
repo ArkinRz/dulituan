@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标</title>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		#box{
+			width: 360px;
+			height: 420px;
+			margin: 0 auto;
+		}
+		#box #up{
+			margin-top: 30px;
+			width: 360px;
+			height: 360px;
+			background: url(./images/01big.jpg) no-repeat center;
+		}
+		#box .down{
+			width: 360px;
+			height: 70px;
+		}
+		#box .down img{
+
+			width: 68px;
+			height: 70px;
+			vertical-align: middle;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div id="up">
+			
+		</div>
+		<div class="down">
+			<img src="./images/01.jpg" alt="" id="img1">
+			<img src="./images/02.jpg" alt="" id="img2">
+			<img src="./images/03.jpg" alt="" id="img3">
+			<img src="./images/04.jpg" alt="" id="img4">
+			<img src="./images/05.jpg" alt="" id="img5">
+
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript">
+	window.onload=function(){
+
+		var bigimg=document.getElementById('up');
+		var img1=document.getElementById('img1');
+		var img2=document.getElementById('img2');
+		var img3=document.getElementById('img3');
+		var img4=document.getElementById('img4');
+		var img5=document.getElementById('img5');
+
+
+		img1.onmouseover=function(){
+			bigimg.style.background="url(./images/01big.jpg)";
+		}
+		img2.onmouseover=function(){
+			bigimg.style.background="url(./images/02big.jpg)";
+		}
+		img3.onmouseover=function(){
+			bigimg.style.background="url(./images/03big.jpg)";
+		}
+		img4.onmouseover=function(){
+			bigimg.style.background="url(./images/04big.jpg)";
+		}
+		img5.onmouseover=function(){
+			bigimg.style.background="url(./images/05big.jpg)";
+		}
+
+	}
+</script>
+</html>
