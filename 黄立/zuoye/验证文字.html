@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>验证文字</title>
+	<style type="text/css">
+		#box{
+			width: 600px;
+			height: 100px;
+			margin: 0 auto;
+			padding-top: 30px;
+
+		}
+
+		#yan{
+			text-indent: 30px;
+			background-image: 
+		}
+
+
+
+
+	</style>
+</head>
+<body>
+	<div id="box">
+		<label >语文成绩：</label>	
+		<input type="text"  placeholder="请输入"  id="inp" value="" oninput="a()">
+		<input type="text" id="yan" value="验证">
+		<img src="" id="img">
+	</div>
+</body>
+
+<script type="text/javascript">
+	function a(){
+		var inp=document.getElementById('inp').value;
+		var yan=document.getElementById('yan');
+		var img=document.getElementById('img');
+		var reg=new RegExp("^[0-9]*$");
+		
+		if (inp=="" || inp==null) {
+			yan.value="亲,请输入成绩！";
+			yan.style.border="1px solid yellow";
+			yan.style.backgroundColor="yellow";
+			img.style.display="none";
+		}
+		else{ 
+				
+				if(!reg.test(inp)){
+					yan.style.backgroundColor="orange";
+					yan.style.border="1px solid orange";
+
+
+					yan.value = "请输入数字！";
+					img.style.display="none";
+
+
+				}
+				else{
+
+						if (inp>0 && inp <150) {
+						yan.style.border="1px solid green";
+						yan.style.backgroundColor="green";
+						img.style.display="inline-block";
+
+						img.src="./images/right.png";
+						
+						yan.value = "成绩有效,么么哒！";
+						
+							}
+							
+
+						else {
+
+						yan.style.border="1px solid red";
+						yan.style.backgroundColor="red";
+						img.style.display="inline-block";
+
+						img.src="./images/wrong.png";
+						
+						yan.value = "成绩不超过150！";
+
+							}
+
+				}
+			}
+	
+    }
+</script>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{	
+			margin:0;
+			padding:0;
+		}
+		
+		.box{
+			width: 360px;
+			height: 432px;
+			border:1px solid gray;
+			/*text-align: center;*/
+			margin: 100px auto;
+		}
+		#top{
+			width: 360px;
+			height: 360px;
+			border-bottom:1px solid gray;
+			background: url(./images/images/01big.jpg) no-repeat; 
+		}
+
+		.bottom{
+			width: 360px;
+			height: 70px;
+		}
+		.bottom img{
+			float: left;
+			width: 70px;
+			height: 70px;
+			border:1px solid red;
+		}
+		
+	</style>
+
+	<script type="text/javascript">
+		window.onload=function(){
+			var top=document.getElementById('top')
+			var img1=document.getElementById('img1')
+			var img2=document.getElementById('img2')
+			var img3=document.getElementById('img3')
+			var img4=document.getElementById('img4')
+			var img5=document.getElementById('img5')
+		
+
+			img1.onmouseover=function(){
+                top.style.background="url(./images/images/01big.jpg) no-repeat"
+			}
+			img2.onmouseover=function(){
+                top.style.background="url(./images/images/02big.jpg) no-repeat"
+			}
+			img3.onmouseover=function(){
+                top.style.background="url(./images/images/03big.jpg) no-repeat"
+			}
+			img4.onmouseover=function(){
+                top.style.background="url(./images/images/04big.jpg) no-repeat"
+			}
+			img5.onmouseover=function(){
+                top.style.background="url(./images/images/05big.jpg) no-repeat"
+			}
+		}
+	</script>
+</head>
+<body>
+
+   <div class="box">
+   	  <div id="top"></div>
+   	  <div class="bottom">
+   	  	<img src="./images/images/01.jpg" id="img1">
+   	  	<img src="./images/images/02.jpg" id="img2">
+   	  	<img src="./images/images/03.jpg" id="img3">
+   	  	<img src="./images/images/04.jpg" id="img4">
+   	  	<img src="./images/images/05.jpg" id="img5">
+   	  	
+   	  </div>
+   </div>
+	
+</body>
+</html>
