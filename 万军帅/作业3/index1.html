@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.style{
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<button>思想原理</button>
+	<button>思想原理</button>
+	<button>思想原理</button>
+	<button>思想原理</button>
+	<button>思想原理</button>
+	<button>思想原理</button>
+
+	<script type="text/javascript">
+		var btns=document.getElementsByTagName('button');
+		function select(a){
+			for(var i=0;i<btns.length;i++){
+				if(i==a){
+					btns[i].className="style"
+				}else{
+					btns[i].className=""
+				}
+			}
+		}
+		btns[0].onclick=function(){
+		select(0);
+		}
+		btns[1].onclick=function(){
+		select(1);
+		}
+		btns[2].onclick=function(){
+		select(2);
+		}
+		btns[3].onclick=function(){
+		select(3);
+		}
+		btns[4].onclick=function(){
+		select(4);
+		}
+		btns[5].onclick=function(){
+		select(5);
+		}
+	</script>
+</body>
+</html>
