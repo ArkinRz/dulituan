@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>练习4</title>
+	<!-- <style>
+	    *{
+	    	padding: 0;
+	    	margin: 0;
+	    }
+		#box{
+			height: 30px;
+			margin: 0 auto;
+			text-align: center;
+		}
+	</style> -->
+</head>
+<body>
+	
+		<span>语文:</span>
+		<input type="number" id="id1" required="" min="0" max="150">
+        <button onclick="myFunction()" id="demo">提交</button>
+        <!-- <span id="demo"></span> -->
+
+</body>
+<script>
+    function myFunction() {
+    var inp = document.getElementById("id1");
+    if (inp.checkValidity() == false) {
+        document.getElementById("demo").innerHTML = inp.validationMessage;
+    } else {
+        document.getElementById("demo").innerHTML = "输入正确";
+    }
+}
+</script>
+</html>
