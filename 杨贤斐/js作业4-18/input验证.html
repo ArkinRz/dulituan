@@ -9,7 +9,14 @@
 	window.onload=function(){
 		var input =document.getElementById('input')
 		var span =document.getElementById('span')
-		var score=value
+		
+
+		input.onchange=function(){
+			var grade=input.value
+			if(grade=='')
+			input.style.background:red
+			span.style="请输入有效值"	
+		}
 	}
 
 
@@ -27,7 +34,7 @@
 </style>
 <form action="">
 <label>语文:</label>
-	<input type="text" id="input" value=""> <span id="span">请填写有效份数</span>
+	<input type="text" id="input" value=""> <span id="span"></span>
 </form>
 	
 </body>
