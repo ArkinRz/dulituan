@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标变换</title>
+	<style>
+		#box{
+			width: 360px;
+			height: 430px;
+			margin: 100px auto;
+			border: 1px solid #666;
+			}
+			.box1{
+				width: 360px;
+				height: 360px;
+			}
+			#img img{
+				width: 70px;
+				height: 70px;
+				float: left;
+				background-color: 
+
+			}
+		
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div class="box1">
+			<img src="./images/01big.jpg" id="rr">
+		
+		</div>
+		<div id="img">
+			<img src="./images/01.jpg" alt="" id="img1" >
+			<img src="./images/02.jpg" alt="" id="img2" >
+			<img src="./images/03.jpg" alt="" id="img3" >
+			<img src="./images/04.jpg" alt="" id="img4" >
+			<img src="./images/05.jpg" id="img5" >
+		</div>
+	</div>
+</body>
+	<script>
+				var img1=document.getElementById('img1')
+				var img2=document.getElementById('img2')
+				var img3=document.getElementById('img3')
+				var img4=document.getElementById('img4')
+				var img5=document.getElementById('img5')
+
+
+				img1.onmouseover=function(){
+				    rr.src="./images/01big.jpg"
+
+				}
+				img2.onmouseover=function(){
+					rr.src="./images/02big.jpg"
+				}
+				img3.onmouseover=function(){
+					rr.src="./images/03big.jpg"
+
+			}
+			img4.onmouseover=function(){
+				rr.src="./images/04big.jpg"
+
+			}
+			img5.onmouseover=function(){
+				rr.src="./images/05big.jpg"
+
+			}
+	</script>
+</html>
