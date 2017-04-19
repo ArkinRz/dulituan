@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>练习3</title>
+</head>
+<body>
+	<ul>
+		<li>为何不</li>
+		<li>地方不得不</li>
+		<li>分vdb</li>
+		<li>更多</li>
+		<li>如风达</li>
+		<li>而地方个人</li>
+		<li>二个人</li>
+		<li>而扥电脑</li>
+	</ul>
+</body>
+<script>
+	var list=document.getElementsByTagName('li')
+	for(var i=0;i<list.length;i++){
+		if(i%2==1){
+			list[i].style.color="green"
+		}
+		list[i].onmouseover=function(){
+			this.style.color="red"
+		}
+		list[i].onmouseout=function(){
+		for(var j=0;j<list.length;j++){
+			if(j%2==1){
+				list[j].style.color="green"
+			}else{
+				list[j].style.color="#000"
+			}
+			
+		}
+		}
+	}
+</script>
+</html>
