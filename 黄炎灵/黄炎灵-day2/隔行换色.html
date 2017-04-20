@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+  <ul id="list">
+  	<li>我是第1个list</li>
+  	<li>我是第2个list</li>
+  	<li>我是第3个list</li>
+  	<li>我是第4个list</li>
+  	<li>我是第5个list</li>
+  	<li>我是第6个list</li>
+  </ul>
+	
+</body>
+<script type="text/javascript">
+	var arr=document.getElementById('list').getElementsByTagName('li')
+
+	for(var i=0;i<arr.length;i++){
+		if(i%2==0){
+			arr[i].style.color="red";
+		}
+
+	}
+</script>
+</html>

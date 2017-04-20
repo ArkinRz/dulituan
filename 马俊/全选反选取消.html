@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		button{
+			background: #adc;
+			border: 1px solid #adc;
+			outline: none;
+		}
+		
+	</style>
+</head>
+<body>
+	<button>全选</button>
+	<button>反选</button>
+	<button>取消</button>
+
+	<div id="box">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+	</div>
+</body>
+	<script>
+		var btn = document.getElementsByTagName('button')
+		var inp = document.getElementById('box').getElementsByTagName('input')
+
+		function point(po){
+			for(var i=0;i<inp.length;i++){
+				inp[i].checked = po
+			}
+		}
+
+		btn[0].onclick = function(){
+			point(true)
+		}
+		btn[2].onclick = function(){
+			point(false)
+		}
+		btn[1].onclick = function(){
+			for(var i=0;i<inp.length;i++){
+				if (inp[i].checked == true) {
+					inp[i].checked = false
+				}else{
+					inp[i].checked = true
+				}
+			}
+		}
+	</script>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>隔行换色</title>
+</head>
+<body>
+	<ul>
+		<li>这是第1只小鸟</li>
+		<li>这是第2只小鸟</li>
+		<li>这是第3只小鸟</li>
+		<li>这是第4只小鸟</li>
+		<li>这是第5只小鸟</li>
+		<li>这是第6只小鸟</li>
+		<li>这是第7只小鸟</li>
+		<li>这是第8只小鸟</li>
+		<li>这是第9只小鸟</li>
+		<li>这是第10只小鸟</li>
+	</ul>
+</body>
+<script>
+	var lis = document.getElementsByTagName('li')
+
+	for(var i=0;i<lis.length;i++){
+		if(i%2==1){
+			lis[i].style.color="red"
+		}
+	}
+</script>
+</html>
