@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tab选项卡02</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#wrap{
+			width: 400px;
+			margin: 100px auto;
+			text-align: center;
+			border: 1px solid  #ccc;
+		}
+
+		#nav .onclicked{
+			background-color: pink;
+		}
+		#nav{
+			height: 40px;
+			line-height: 40px;
+		}
+		#nav button{
+			background-color: #fff;
+		}
+		
+		#box div{
+			background-color: pink;
+			display: none;
+		}
+		#box .show{
+			width: 400px;
+			height: 300px;
+			font-size: 40px;
+			line-height: 300px;
+			background-color: pink;
+			display: block;
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+		<div id="wrap">
+		<div id="nav">
+			<button class="onclicked">按钮1</button>
+			<button>按钮2</button>
+			<button>按钮3</button>
+			<button>按钮4</button>
+			<button>按钮5</button>
+			<button>按钮6</button>
+		</div>
+
+		<div id="box">
+			<div class="show">我是第1个盒子</div>
+			<div>我是第2个盒子</div>
+			<div>我是第3个盒子</div>
+			<div>我是第4个盒子</div>
+			<div>我是第5个盒子</div>
+			<div>我是第6个盒子</div>
+		</div>
+	</div>
+
+</body>
+<script type="text/javascript">
+	var btns = document.getElementsByTagName('button');
+	var box = document.getElementById('box').getElementsByTagName('div');
+
+	for (var i = 0; i < btns.length; i++) {
+		btns[i].index = i;	
+		btns[i].onclick = function(){
+			// console.log(btns[this.index]);
+			for (var j = 0; j < btns.length; j++) {
+				btns[j].className = "";
+				box[j].className = "";
+			}
+			this.className = "onclicked";
+			box[this.index].className = "show";
+		}
+	}
+	
+	/**
+		错误总结：1.script标签的的type = "text/javascript" ,之前单词写错了
+				  2.因为点击事件是btns的，所以 this 在点击事件里是指事件源 btns[i],而不能指向 box，
+				  	所以针对当前btns所对应的的box操作时需要 this.index，也就是取出btns的索引值给相对应的box；
+		代码分析：在tab选项卡script中，先是用最外层的 for循环给所有的button添加点击事件
+				  		然后 在点击事件内部再 添加一个for循环给所有的button以及box 初始化，
+				  		最后 给当前（this）btns修改类名改变样式，再取出 this的索引值 （index）
+				  		给对应的 box，再修改box的类名，从而达到点击不同的button显示不同的box的效果。
+				  	这种线初始化所有样式，再添加特殊样式的方法叫做：排他法
+	*/
+
+</script>
+</html>
