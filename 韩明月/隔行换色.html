@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>隔行换色</title>
+</head>
+<body>
+	<ul>
+		<li>11111111</li>
+		<li>22222222</li>
+		<li>33333333</li>
+		<li>44444444</li>
+		<li>55555555</li>
+		<li>66666666</li>
+	</ul>
+</body>
+<script>
+	var lis=document.getElementsByTagName('li');
+
+	for(var i=0;i<lis.length;i++){
+		if(i%2==0){
+			lis[i].style.color="lime";
+		}
+		lis[i].onmouseover=function(){
+           this.style.color="pink";
+		}
+
+		lis[i].onmouseout=function(){
+		  for(var i=0;i<lis.length;i++){
+			if(i%2==0){
+			this.style.color="lime";
+		  }else{
+		  	lis[i].style.color="black";
+		  }
+		}
+		}
+	}
+
+
+</script>
+</html>
