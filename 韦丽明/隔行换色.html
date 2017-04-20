@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>隔行换色</title>
+	<style type="text/css">
+		ul{
+			list-style: none;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>第1行</li>
+		<li>第2行</li>
+		<li>第3行</li>
+		<li>第4行</li>
+		<li>第5行</li>
+		<li>第6行</li>
+	</ul>			
+</body>
+<script type="text/javascript">
+	var lis = document.getElementsByTagName('li');
+	for(var i=0;i<lis.length;i++){
+		if (i%2==0) {
+			lis[i].style.color="red";
+		}
+	}
+</script>
+</html>
