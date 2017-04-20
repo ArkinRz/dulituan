@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作业5.3</title>
+</head>
+<body>
+	<ul>
+		<li>我是一个list</li>
+		<li>我是一个list</li>
+		<li>我是一个list</li>
+		<li>我是一个list</li>
+		<li>我是一个list</li>
+		<li>我是一个list</li>
+	</ul>
+</body>
+	<script>
+		var lis = document.getElementsByTagName('li');
+		for(var i=0;i<lis.length;i++){
+			if(i%2==1){
+				lis[i].style.color = "red";
+			}
+			lis[i].onmouseover = function(){
+				this.style.color = "blue";
+			}
+			lis[i].onmouseout = function () {
+				for(var j=0;j<lis.length;j++){
+					if(j%2==1){
+						lis[j].style.color = "red";
+					}else{
+						lis[j].style.color = "#000";
+					}
+				}
+			}
+		}
+	</script>
+</html>
