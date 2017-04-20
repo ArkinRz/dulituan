@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选项卡练习</title>
+</head>
+<style type="text/css">
+	#box{
+		width: 500px;
+		margin: 150px auto;
+	}
+	#divs>div{
+		width: 430px;
+		height: 250px;
+		background-color: rgba(0,0,0,.2);
+		display: none;
+	}
+
+	#divs .show{
+		display: block;
+	}
+	.bt{
+
+	}
+</style>
+<body>
+	<div id="box">
+		<button>选项卡之一</button>
+		<button>选项卡之二</button>
+		<button>选项卡之三</button>
+		<button>选项卡之四</button>
+		<button>选项卡之五</button>
+
+		<div id="divs">
+			<div class="show">我是选项卡1的内容部分</div>
+			<div>我是选项卡2的内容部分</div>
+			<div>我是选项卡3的内容部分</div>
+			<div>我是选项卡4的内容部分</div>
+			<div>我是选项卡5的内容部分</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var btns = document.getElementsByTagName('button');
+	var divs = document.getElementById('divs').getElementsByTagName('div');
+
+    for (var i = 0; i < btns.length; i++) {
+    	btns[i].index = i;
+    	btns[i].onclick = function(){
+               for (var i = 0; i < btns.length; i++) {
+               	btns[i].className = "";
+               	divs[i].className = "";
+               }
+               this.className = "bt";
+               divs[this.index].className = "show";
+    	}
+    }
+	
+</script>
+</html>

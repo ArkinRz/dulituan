@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作业5.2</title>
+</head>
+<body>
+	<div id="btn">
+		<button>思想原理</button>
+		<button>思想原理</button>
+		<button>思想原理</button>
+		<button>思想原理</button>
+		<button>思想原理</button>
+		<button>思想原理</button>	
+	</div>
+</body>
+	<script>
+		var btns = document.getElementById('btn').getElementsByTagName('button');
+		for(var i=0;i<btns.length;i++){
+			btns[i].onclick = function(){
+				for(var j=0;j<btns.length;j++){
+					btns[j].style.background = "#fff";
+				}
+				this.style.background = "pink";
+			}	
+		}
+	</script>
+</html>

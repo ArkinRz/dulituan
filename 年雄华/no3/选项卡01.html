@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.box button {
+		width: 100px;
+		height: 20px;
+	/*	background-color: red;*/
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<button>思想原理</button>
+	<button>思想原理</button>
+	<button>思想原理</button>
+	<button>思想原理</button>
+	<button>思想原理</button>
+	<button>思想原理</button>
+</div>
+</body>
+<script type="text/javascript">
+	var btns = document.getElementsByTagName('button')
+	function color(r){
+		for (var i=0;i<btns.length;i++){
+			i==r ? btns[i].style.background = "red" : btns[i].style.background = "#fff";
+		}
+
+	}
+	btns[0].onclick = function(){
+		color(0);
+	}
+
+	btns[1].onclick = function(){
+		color(1);
+	}
+
+	btns[2].onclick = function(){
+		color(2);
+	}
+
+	btns[3].onclick = function(){
+		color(3);
+	}
+
+	btns[4].onclick = function(){
+		color(4);
+	}
+	btns[5].onclick = function(){
+		color(5);
+	}
+</script>
+</html>

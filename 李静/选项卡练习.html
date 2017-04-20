@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选项卡练习</title>
+
+	<style type="text/css">
+		#box{
+			width: 500px;
+			margin: 50px auto;
+		}
+
+        #box2 div{
+        	width: 500px;
+        	height: 400px;
+        	background-color: purple;
+        	display: none;
+        }
+
+        #box2 .show{
+        	display: block;
+        }
+
+        .c-p{
+        	background-color: purple;
+        }
+	</style>
+</head>
+<body>
+
+<div id="box">
+	<div id="box1">
+		<button>第1个</button>
+		<button>第2个</button>
+		<button>第3个</button>
+		<button>第4个</button>
+		<button>第5个</button>
+	</div>
+	<div id="box2">
+		<div class="show">第1个盒子</div>
+		<div>第2个盒子</div>
+		<div>第3个盒子</div>
+		<div>第4个盒子</div>
+		<div>第5个盒子</div>
+	</div>
+</div>
+	
+</body>
+
+<script type="text/javascript"> 
+  
+	var btns = document.getElementById('box1').getElementsByTagName('button')
+	var divs = document.getElementById('box2').getElementsByTagName('div')
+
+	for (var i = 0; i < btns.length; i++) {
+		  btns[i].index = i;
+
+		btns[i].onclick = function(){
+			for (var i = 0; i < btns.length; i++) {
+
+				btns[i].className = ""
+				divs[i].className = ""			
+			}
+
+			this.className = "c-p"
+			divs[this.index].className = "show"
+		}
+		
+	}
+</script>
+</html>

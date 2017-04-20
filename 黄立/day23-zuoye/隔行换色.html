@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>隔行换色</title>
+</head>
+<body>
+
+	<ul>
+		<li>我是一个list</li>
+		<li>我是一个list</li>
+		<li>我是一个list</li>
+		<li>我是一个list</li>
+		<li>我是一个list</li>
+		<li>我是一个list</li>
+	</ul>	
+	
+</body>
+
+<script type="text/javascript">
+// 得到所有li标签
+	var lis = document.getElementsByTagName('li');
+	for (var i =0; i<lis.length ; i++) {
+		if (i%2==1) {
+			lis[i].style.background="red";
+		}
+
+		// 鼠标放上
+
+		lis[i].onmouseover=function(){
+			this.style.background="yellow";
+		}
+
+		// 鼠标离开
+
+		lis[i].onmouseout=function(){
+			for(var j=0;j<lis.length;j++){
+				if (j%2==1) {
+					lis[j].style.background="red";
+					}
+				else{
+					
+					lis[j].style.background="white";
+				}
+			}
+		}
+	}
+</script>
+</html>
