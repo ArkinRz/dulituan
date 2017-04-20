@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>隔行换色</title>
+	<style>
+		ul li {
+			list-style-type: none;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>这是一个list</li>
+		<li>这是一个list</li>
+		<li>这是一个list</li>
+		<li>这是一个list</li>
+		<li>这是一个list</li>
+		<li>这是一个list</li>
+		<li>这是一个list</li>
+		<li>这是一个list</li>
+	</ul>
+</body>
+	<script>
+		var lis = document.getElementsByTagName('li')
+
+		for(var i = 0; i < lis.length; i++){
+			if(i%2==0){
+				lis[i].style.color = "red";
+			}
+
+			lis[i].onmouseover = function(){
+			this.style.color = "blue";
+			}
+			lis[i].onmouseout = function(){
+				for(var j = 0; j < lis.length; j++){
+					if (j%2==0) {
+						lis[j].style.color = "red";
+					}else{
+						lis[j].style.color = "#000";
+					}
+				}
+			}
+		}
+	</script>
+</html>
