@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作业5.1</title>
+</head>
+<body>
+	<button>全选</button>
+	<button>反选</button>
+	<button>取消</button>
+	<div id="box">
+		<ul>
+			<li>选项:<input type="checkbox"></li>
+			<li>选项:<input type="checkbox"></li>
+			<li>选项:<input type="checkbox"></li>
+			<li>选项:<input type="checkbox"></li>
+			<li>选项:<input type="checkbox"></li>
+			<li>选项:<input type="checkbox"></li>
+			<li>选项:<input type="checkbox"></li>
+			<li>选项:<input type="checkbox"></li>
+		</ul>	
+	</div>
+</body>
+	<script>
+		var btns = document.getElementsByTagName('button');
+		var inputs = document.getElementById('box').getElementsByTagName('input');
+		function all (flag) {
+			for(var i=0;i<inputs.length;i++) {
+				inputs[i].checked = flag;
+			}
+		}
+		btns[0].onclick = function(){
+				all(true);
+		}
+		btns[2].onclick = function() {
+				all(false);
+		}
+		btns[1].onclick = function(){
+			for(var i=0;i<inputs.length;i++){
+				inputs[i].checked == true ? inputs[i].checked =false : inputs[i].checked =true;
+			}
+		}
+
+	</script>
+</html>

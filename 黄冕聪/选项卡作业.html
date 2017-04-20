@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选项卡作业</title>
+	<style>
+		.bottom>div{
+			width: 300px;
+			height: 300px;
+			background-color: pink;
+			display: none;
+		}
+		.bottom .show{
+			display: block;
+		}
+		.pink{
+
+		}
+	</style>
+</head>
+<body>
+	 <div id="box">
+       <div id="nav">
+	     <button>第一个</button>
+	     <button>第二个</button>
+	     <button>第三个</button>
+	     <button>第四个</button>
+	     <button>第五个</button>
+	     <button>第六个</button>
+	   </div>
+
+	   <div class="bottom" id="divs">
+	   	<div class="show">第一个div</div>
+	   	<div>第二个div</div>
+	   	<div>第三个div</div>
+	   	<div>第四个div</div>
+	   	<div>第五个div</div>
+	   	<div>第六个div</div>
+	   </div>
+	</div>
+</body>
+<script>
+	var btns = document.getElementsByTagName('button');
+	var divs = document.getElementById('divs').getElementsByTagName('div');
+		for (var i = 0; i < btns.length; i++) {
+			btns[i].index=i;
+			btns[i].onclick = function(){
+				for (var i = 0; i < btns.length; i++) {
+						btns[i].className = "";
+				        divs[i].className = "";
+				}
+			           this.className="pink";
+			           divs[this.index].className="show";
+			}
+			
+		}
+
+</script>
+</html>
