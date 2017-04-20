@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选项卡</title>
+	<style type="text/css">
+		#wrapper{
+			width: 500px;
+			height: 500px;
+			margin: 100px auto;
+		}
+
+		#top{
+			width: 500px;
+			height: 23px;
+			text-align: center;
+		}
+
+		#bottom div{
+			width: 500px;
+			height: 477px;
+			background: pink;
+			display: none;
+		}
+
+		#bottom .show{
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="top">
+			<button>按钮1</button>
+			<button>按钮2</button>
+			<button>按钮3</button>
+			<button>按钮4</button>
+			<button>按钮5</button>
+		</div>
+		<div id="bottom">
+			<div class="show">我是第一个div</div>
+			<div>我是第二个div</div>
+			<div>我是第三个div</div>
+			<div>我是第四个div</div>
+			<div>我是第五个div</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var btns = document.getElementsByTagName('button')
+
+	var bottom = document.getElementById('bottom').getElementsByTagName('div')
+
+	for (var i = 0; i < btns.length; i++) {
+		btns[i].index = i
+		btns[i].onclick = function(){
+            for(var j=0;j<btns.length;j++){
+				btns[j].style.background="#fff"
+			}
+
+			this.style.background = "pink"
+			
+
+			for (var k = 0; k < bottom.length; k++) {
+				bottom[k].style.display = "none"
+			}
+			bottom[this.index].style.display = "block"
+		}
+	}
+</script>
+</html>

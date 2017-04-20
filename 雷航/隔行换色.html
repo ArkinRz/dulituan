@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>隔行换色</title>
+</head>
+<body>
+	<ul>
+		<li>我是第一行</li>
+		<li>我是第二行</li>
+		<li>我是第三行</li>
+		<li>我是第四行</li>
+		<li>我是第五行</li>
+		<li>我是第六行</li>
+		<li>我是第七行</li>
+		<li>我是第八行</li>
+		<li>我是第九行</li>
+		<li>我是第十行</li>
+	</ul>
+</body>
+<script type="text/javascript">
+	var lis = document.getElementsByTagName('li')
+
+		for (var i = 0; i < lis.length; i++) {
+			if(i%2==0){
+				lis[i].style.color = "red"
+			}
+		}
+		
+		lis[i].onmouseover = function(){
+			lis[i].style.color = "green"
+		}
+		lis[i].onmouseout = function(){
+			for (var j = 0; j < lis.length; j++) {
+				if(j%2==0){
+				lis[j].style.color = "yellow"
+			    }else{
+				lis[j].style.color = "#000"
+			     }
+			}
+		}
+</script>
+</html>
