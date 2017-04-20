@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>练习4</title>
+</head>
+<body>
+	<button>全选</button>
+	<button>反选</button>
+	<button>全部取消</button>
+	<ul>
+		<li>选项<input type="checkbox"></li>
+		<li>选项<input type="checkbox"></li>
+		<li>选项<input type="checkbox"></li>
+		<li>选项<input type="checkbox"></li>
+		<li>选项<input type="checkbox"></li>
+		<li>选项<input type="checkbox"></li>
+		<li>选项<input type="checkbox"></li>
+		<li>选项<input type="checkbox"></li>
+	</ul>
+</body>
+<script>
+	var bt=document.getElementsByTagName('button')
+	var inp=document.getElementsByTagName('input')
+	bt[0].onclick=function(){
+		for(var i=0;i<inp.length;i++){
+			inp[i].checked=true
+		}
+	}
+	bt[1].onclick=function(){
+		for(var j=0;j<inp.length;j++){
+			if(inp[j].checked==true){
+				inp[j].checked=false
+			}else{
+				inp[j].checked=true
+			}
+		}
+	}
+	bt[2].onclick=function(){
+		for(var k=0;k<inp.length;k++){
+			inp[k].checked=false
+		}
+	}
+</script>
+</html>

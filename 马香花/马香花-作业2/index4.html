@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div>我是div</div>
+	<div>我是div</div>
+	<div>我是div</div>
+	<div>我是div</div>
+	<div>我是div</div>
+</body>
+<script>
+    var divs=document.getElementsByTagName('div');
+	for(var i=0;i<divs.length;i++){
+		if(i%2==1){
+			divs[i].style.color="red";
+
+		}
+		divs[i].onmouseover=function(){
+			this.style.fontSize="20px";
+		}
+		
+	}
+</script>
+</html>

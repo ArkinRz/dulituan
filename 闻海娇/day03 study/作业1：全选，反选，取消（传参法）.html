@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作业1：全选，反选，取消（传参法）</title>
+</head>
+<body>
+	<button>全选</button>
+	<button>反选</button>
+	<button>取消</button>
+
+	<div id="box">
+		<ul>
+			<li>选项：<input type="checkbox"></li>
+			<li>选项：<input type="checkbox"></li>
+			<li>选项：<input type="checkbox"></li>
+			<li>选项：<input type="checkbox"></li>
+			<li>选项：<input type="checkbox"></li>
+			<li>选项：<input type="checkbox"></li>
+			<li>选项：<input type="checkbox"></li>
+			<li>选项：<input type="checkbox"></li>
+			<li>选项：<input type="checkbox"></li>
+			<li>选项：<input type="checkbox"></li>
+		</ul>										
+	</div>
+</body>
+<script type="text/javascript">
+	var btns =document.getElementsByTagName('button');
+	var inputs =document.getElementsByTagName('input');
+
+	function all(li){
+		for (var  i = 0;  i<inputs.length ;i++ ) {
+			inputs[i].checked=li;
+		}
+	}
+
+// 全选
+	btns[0].onclick=function () {
+		all(true);
+	}
+
+// 取消
+
+	btns[2].onclick=function () {
+		all(false);
+	}
+	
+// 反选
+	btns[1].onclick=function () {
+		for (var  i = 0;  i<inputs.length ;i++ ) {
+			inputs[i].checked ==true? inputs[i].checked=false:inputs[i].checked=true;
+		}
+	}
+	
+</script>
+</html>

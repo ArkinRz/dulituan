@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>全选</title>
+</head>
+<body>
+	<div id="button">
+		<button>全选</button>
+		<button>取消</button>
+		<button>反选</button>
+	</div>
+	<ul>
+		<li><input type="checkbox"></li>
+		<li><input type="checkbox"></li>
+		<li><input type="checkbox"></li>
+		<li><input type="checkbox"></li>
+		<li><input type="checkbox"></li>
+		<li><input type="checkbox"></li>
+	</ul>
+
+
+	
+</body>
+<script type="text/javascript">
+	var buts=document.getElementById('button').getElementsByTagName('button');
+	var inputs=document.getElementsByTagName('input');
+	buts[0].onclick=function(){
+		all(1);//1==ture
+	}
+	buts[1].onclick=function(){
+		all(0);//0==false
+	}
+
+	function all(a){
+			for(var i=0;i<inputs.length;i++){
+				inputs[i].checked=a;	
+				}
+		}
+
+	// 反选
+	buts[2].onclick=function(){
+		for(var i=0;i<inputs.length;i++){
+				inputs[i].checked==1?inputs[i].checked=0:inputs[i].checked=1;
+		}
+	}
+	
+</script>
+
+
+</html>

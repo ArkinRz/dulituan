@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>隔行换色练习</title>
+
+</head>
+<body>
+	<div id="box">
+		<ul>
+			<li>啦啦啦啦啦啦啦啦啦啦啦啦啦</li>
+			<li>啦啦啦啦啦啦啦啦啦啦啦啦啦</li>
+			<li>啦啦啦啦啦啦啦啦啦啦啦啦啦</li>
+			<li>啦啦啦啦啦啦啦啦啦啦啦啦啦</li>
+			<li>啦啦啦啦啦啦啦啦啦啦啦啦啦</li>
+			<li>啦啦啦啦啦啦啦啦啦啦啦啦啦</li>
+			<li>啦啦啦啦啦啦啦啦啦啦啦啦啦</li>
+			<li>啦啦啦啦啦啦啦啦啦啦啦啦啦</li>
+			<li>啦啦啦啦啦啦啦啦啦啦啦啦啦</li>
+			<li>啦啦啦啦啦啦啦啦啦啦啦啦啦</li>
+		</ul>
+	</div>
+</body>
+<script type="text/javascript">
+	var lis = document.getElementById('box').getElementsByTagName('li')
+
+	for (var i = 0; i < lis.length; i++) {
+		if (i%2==1) {
+			lis[i].style.color = "red"
+		}else{
+			lis[i].style.color = "blue"
+		}
+
+		lis[i].onmouseover = function(){
+			this.style.color = "gray"
+			
+		}
+
+		lis[i].onmouseout = function(){
+			for (var i = 0; i < lis.length; i++) {
+				if (i%2==1) {
+					lis[i].style.color = "red"
+				}else{
+					lis[i].style.color = "blue"
+				}
+			}
+		}
+	}
+</script>
+</html>
