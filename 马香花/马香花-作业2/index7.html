@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>练习</title>
+	<style>
+		#box{
+			
+			width:500px;
+			
+			border:1px solid #f0f0f0;
+			margin: 0 auto;
+
+		}
+		
+		#bottom div{
+			height: 300px;
+			width: 500px;
+			background: green;
+			display: none;
+		}
+		#bottom .show{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+	    <div>
+		<button>第一个</button>
+		<button>第二个</button>
+		<button>第三个</button>
+		<button>第四个</button>
+		<button>第五个</button>
+		</div>
+         <div id="bottom">
+		<div class="show">1个盒子</div>
+		<div>2个盒子</div>
+		<div>3个盒子</div>
+		<div>4个盒子</div>
+		<div>5个盒子</div>
+		</div>
+	</div>
+</body>
+<script>
+	var btns=document.getElementsByTagName('button');
+	var divs=document.getElementById('bottom').getElementsByTagName('div');
+	for(var i=0;i<btns.length;i++){
+		
+		btns[i].index=i;
+		btns[i].onclick=function(){
+			for(var j=0;j<btns.length;j++){
+				btns[j].style.backgroundColor="#fff";
+
+			}
+
+			this.style.backgroundColor="red";
+			
+			for(var x=0;x<divs.length;x++){
+				divs[x].style.display="none";
+			}
+			divs[this.index].style.display="block";
+
+		}
+	}
+</script>
+</html>

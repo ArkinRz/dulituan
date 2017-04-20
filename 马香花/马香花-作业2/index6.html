@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选项卡</title>
+</head>
+<body>
+	<div id="box">
+		<button>思想管理</button>
+		<button>思想管理</button>
+		<button>思想管理</button>
+		<button>思想管理</button>
+		<button>思想管理</button>
+	</div>
+</body>
+<script>
+	var btns=document.getElementsByTagName('button');
+	
+	for(var i=0;i<btns.length;i++){
+		btns[i].onclick=function(){
+			for(var j=0;j<btns.length;j++){
+			  btns[j].style.background="#fff";
+		}
+		
+		this.style.background="red";
+	}
+}
+</script>
+</html>
