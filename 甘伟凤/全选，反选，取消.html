@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>全选，反选，取消</title>
+	<style>
+		ul li{
+			list-style: none;
+		}
+	</style>
+</head>
+<body>
+	<button>全选</button>
+	<button>反选</button>
+	<button>取消</button>
+
+	<ul id="ul">
+		<li>选项1：<input type="checkbox"></li>
+		<li>选项2：<input type="checkbox"></li>
+		<li>选项3：<input type="checkbox"></li>
+		<li>选项4：<input type="checkbox"></li>
+		<li>选项5：<input type="checkbox"></li>
+		<li>选项6：<input type="checkbox"></li>
+		<li>选项7：<input type="checkbox"></li>
+		<li>选项8：<input type="checkbox"></li>
+		<li>选项9：<input type="checkbox"></li>
+		<li>选项0：<input type="checkbox"></li>
+	</ul>
+	
+</body>
+	<script>
+		var btns = document.getElementsByTagName('button')
+		var inputs = document.getElementById('ul').getElementsByTagName('input')
+
+		function all(flag){
+			for(var i = 0;i < inputs.length; i++){
+				inputs[i].checked = flag;
+			}
+		}
+
+		btns[0].onclick = function(){
+			all(true);
+		}
+		btns[2].onclick = function(){
+			all(false);
+		}
+		btns[1].onclick = function(){
+			for(var i = 0;i < inputs.length; i++){
+				inputs[i].checked == true ? inputs[i].checked = false : inputs[i].checked = true;
+			}
+			
+		}
+
+
+	</script>
+</html>

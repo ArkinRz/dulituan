@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tab选项卡</title>
+	<style>
+      #box {
+      	width: 800px;
+      	margin: 100px auto;
+
+      }
+      #box .bottom div {
+        width: 800px;
+        height: 300px;
+        background: pink;
+        display: none;
+        text-indent: 2em;
+      }
+      #box .bottom .show {
+      	display: block;
+      }
+      .c-pink {
+      	background: pink;
+      }
+
+
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div id="nav">
+			<button>第一章 我改主意了</button>
+			<button>第二章 为什么</button>
+			<button>第三章 这是个俗气的名字</button>
+			<button>第四章 天道院</button>
+			<button>第五章 青衣少年三十六</button>
+		</div>
+		<div class="bottom" id="divs">
+			<div class="show">
+			<p>“那少年是个什么样的人？”</p>
+			<p>“很沉稳，坐了半个时辰，姿式都没变过。只在最开始的时候喝了一口茶，应该是出于礼貌，其后便没有再喝过……事实上，那第一口茶他也只沾了沾唇，不像是拘谨，更像是谨慎，心思深刻，戒备心很强，甚至隐有敌意。”</p>
+			</div>
+			<div><p>看着消失在偏厅处的少年身影，徐夫人的脸上蒙上了一层寒霜，她想要举起茶杯喝口茶润润有些燥意的嗓子，却发现自己杯里的茶也已经凉了，她想要把茶杯掷到地上以渲泄情绪，自然不会在意汝窑瓷器有多贵，却不想让下人们听到声音，知道自己此时的情绪。</p></div>
+			<div>
+			<p>霜儿过了会儿才醒过神来。</p>
+			<p>她看得出来，这名少年道士，并不是刻意在嘲弄、戏耍自己，而是真的没有把自己说的那些话听进去，看着对方认真平静的神情，她不知为何，越发生气。</p>
+			</div>
+			<div>
+			<p>像过去十四年来每个清晨一样，陈长生五时醒来，即时睁眼，用五息时间静意，翻身起床，套鞋穿衣，铺床叠被，开始洗漱，在客栈前堂吃了一碗鸭肉粥、四个第一笼的热乎乎的肉包子，回到客房，用昨夜的陈茶再次漱嘴，对着铜镜整理衣着，然后走到小院。</p>
+            <p>——现在不在西宁镇的小庙，不用砍柴挑水，他对着初生的晨雾与远处透来的天光，闭着眼睛开始静思，在脑海里默默颂读道卷，直至神清气爽，才算是完成功课，从侧门走到京都渐渐热闹的街道上，极不起眼地汇入人群里，开始了一天的生活。</p>
+			</div>
+			<div><p>参加天道院招生考试的少年们，在那名神情严肃的教习先生命令下，依次上前拿起那块石头，紧握三息时间。大多数时候，那块黑石在人们的手里都会微微发亮，明暗之间有些极细微的区别，只有少数人拿起那块石头时，石头没有任何变化。</p></div>
+		</div>
+	</div>
+</body>
+<script>
+	var btns =document.getElementById('nav').getElementsByTagName('button')
+	var divs =document.getElementById('divs').getElementsByTagName('div')
+  
+     for(i=0;i<btns.length;i++){
+     	btns[i].index=i;
+     	btns[i].onclick=function(){
+     		for(i=0;i<btns.length;i++){
+     			btns[i].className=""
+     			divs[i].className=""
+     		}
+     		this.className="c-pink"
+     		divs[this.index].className="show"
+     	}
+     }
+</script>
+</html>

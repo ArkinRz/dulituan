@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>隔行换色</title>
+</head>
+<body>
+	<ul>
+		<li>我是一个list</li>
+		<li>我是一个list</li>
+		<li>我是一个list</li>
+		<li>我是一个list</li>
+		<li>我是一个list</li>
+		<li>我是一个list</li>
+		<li>我是一个list</li>
+	</ul>
+</body>
+<script type="text/javascript">
+
+// 得到所有的  li   标签
+	var lis = document.getElementsByTagName('li')
+
+	// 外面的for  是循环每一个li  标签
+	for(var i=0;i<lis.length;i++){
+		// 页面加载的时候，给他执行隔行换色
+		// 判断索引除以2的余数   如果是一  是偶数行
+		if (i%2==1) {
+			// 满足条件的  第  i   个    变色
+			lis[i].style.color="red";
+		}
+
+		// 给每个   li  添加  onmouseover  事件
+// 		lis[i].onmouseover=function(){
+// 			this.style.color = "blue";
+// 		}
+// // 给每个   li  添加  onmouseout  事件
+// 		lis[i].onmouseout = function(){
+// 			// console.log(1)
+// 			// 当我的数遍离开时  执行每一个li  给他们隔行换色
+// 			for(var j=0;j<lis.length;j++){
+// 		if (j%2==1) {
+// 			lis[j].style.color="red";
+// 		}else{
+// 			lis[j].style.color="#000";
+// 		}
+// 	}
+}
+// }
+</script>
+</html>

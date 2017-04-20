@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作业5：表单验证</title>
+	<style type="text/css">
+		#box{
+			text-align: center;
+		}
+		span{
+			width: 150px;
+			height: 20px;
+			border: 1px solid #ccc;
+			line-height: 20px;
+			padding-left: 20px;
+			display: none;
+		}
+		.block{
+			display: inline-block;
+		}
+
+		.wrong{
+			background: url(./images1/wrong.png) no-repeat center left 30px;
+		}
+
+		.right{
+			background: url(./images1/right.png) no-repeat center left 30px;
+			color: #00ff00;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+	成绩<input type="text" id="inp">
+	<span class="wrong block">请输入成绩</span>
+	</div>
+</body>
+	<script type="text/javascript">
+		var inp=document.getElementById('inp');
+		var spans=document.getElementsByTagName('span');
+		inp.onblur=function () {
+			if (this.value=="") {
+				spans[0].className="wrong block";
+				spans[0].innerHTML="不能为空"
+				
+			}else if (isNaN(this.value)) {
+				spans[0].className="wrong block";
+				spans[0].innerHTML="请输入数字"
+				
+			}else if(this.value<0 || this.value>150){
+				spans[0].className="wrong block";
+				spans[0].innerHTML="请输入合理范围"
+				
+			}else{
+				spans[0].className="right block";
+				spans[0].innerHTML="输入正确"
+				
+			}
+		} 
+	</script>
+</html>

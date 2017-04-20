@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>homework</title>
+	<style>
+		#box {
+			width: 500px;
+			margin: 100px auto;
+		}
+
+		.bottom div {
+			width: 500px;
+			height: 300px;
+			background-color: pink;
+			display: none;
+		}
+
+        .bottom .show {
+        	display: block;
+        }
+	</style>
+</head>
+<body>
+    <div id="box">
+        <div>
+	    	<button>第1个</button>
+	    	<button>第2个</button>
+	    	<button>第3个</button>
+	    	<button>第4个</button>
+	    	<button>第5个</button>
+	    	<button>第6个</button>
+	    </div>
+	 
+	    <div class="bottom" id="wrapper">
+	    	<div class="show">第1个div</div>
+	    	<div>第2个div</div>
+	    	<div>第3个div</div>
+	    	<div>第4个div</div>
+	    	<div>第5个div</div>
+	    	<div>第6个div</div>
+	    </div>
+
+    </div>
+</body>
+<script>
+	var btns = document.getElementById('box').getElementsByTagName('button')
+	var divs = document.getElementById('wrapper').getElementsByTagName('div')
+
+    for (var i = 0; i < btns.length; i++) {
+    	btns[i].index=i
+    	btns[i].onclick=function(){
+    		for (var k = 0; k < btns.length; k++) {
+    			btns[k].style.background="#fff"
+    		}
+    		this.style.background="pink"
+
+    		for (var j = 0; j < divs.length; j++) {
+    			divs[j].style.display="none"   			
+    		}
+    		divs[this.index].style.display="block"
+    	}
+    }
+</script>
+</html>
