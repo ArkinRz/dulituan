@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作业4</title>
+	<style type="text/css">
+		#div {
+			text-align: center;
+		}
+		.span {
+			width: 150px;
+			height: 30px;
+			line-height: 30px;
+			border: 1px solid grey;
+			padding-left: 30px;
+			display: none;
+			display: inline-block;
+		}
+		#ipt {
+			height: 25px;
+		}
+		.wrong {
+			background: url(./images/wrong.png) no-repeat 20px center;
+			color: red;
+		}
+		.right {
+			background: url(./images/right.png) no-repeat 20px center;
+			color: #00ff00;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="div">
+		成绩:<input type="text" id="ipt">
+		<span class="wrong span">请输入成绩</span>
+	</div>
+</body>
+	<script>
+		var ipts = document.getElementsByTagName('input');
+		var spans = document.getElementsByTagName('span');
+		ipt.onblur = function () {
+			if(this.value==""){
+				spans[0].className = "wrong span";
+				spans[0].innerHTML = "不能为空";
+			}else if(isNaN(this.value)){
+				spans[0].className = "wrong span";
+				spans[0].innerHTML = "请输入数字";
+			}else if(this.value<0||this.value>150){
+				spans[0].className = "wrong span";
+				spans[0].innerHTML = "请输入合理范围";
+			}else {
+				spans[0].className = "right span";
+				spans[0].innerHTML = "输入正确";
+			}                                      
+		}
+	</script>
+</html>
