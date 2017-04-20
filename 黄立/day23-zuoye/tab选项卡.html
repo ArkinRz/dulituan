@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tab选项卡</title>
+	<style type="text/css">
+		#box{
+			width: 400px;
+			height: 600px;
+			margin: 0 auto;
+		}
+
+		
+		#bg>div{
+			width: 400px;
+			height: 400px;
+			background: pink;
+			display: none;
+		}
+
+		
+		#bg .show{
+			display: block;
+		}
+		#nav{
+			width: 400px;
+			
+		}
+		#nav .pink{
+			background: orange;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="box">
+		<!-- 大的 -->
+		<div id="bg">
+			<div class="show">第1个div</div>
+			<div>第2个div</div>
+			<div>第3个div</div>
+			<div>第4个div</div>
+			<div>第5个div</div>
+			<div>第6个div</div>
+		</div>
+
+
+		<!-- 按钮 -->
+
+		<div id="nav">
+			<button class="pink">第一个</button>
+			<button>第二个</button>
+			<button>第三个</button>
+			<button>第四个</button>
+			<button>第五个</button>
+			<button>第六个</button>
+
+		</div>
+		
+	</div>
+</body>
+
+<script type="text/javascript">
+	var btns=document.getElementById('nav').getElementsByTagName('button');
+	var divs=document.getElementById('bg').getElementsByTagName('div');
+
+	for(var i=0;i<btns.length;i++)
+	{	
+		btns[i].index=i;
+		btns[i].onclick=function(){
+			for (var j = 0; j < btns.length; j++) {
+				btns[j].className="";
+				divs[j].className="";
+
+			}
+			this.className="pink";
+			divs[this.index].className="show";
+		}
+	}
+</script>
+</html>

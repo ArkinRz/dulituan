@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#box{
+			
+			width: 308px;
+			margin: 100px auto;
+			
+		}
+
+		.button div{
+			width: 308px;
+			height: 300px;
+			background-color: pink;
+			display: none;
+		}
+
+		.button .show {
+			display: block;
+		}
+
+		.c-pink{
+			background-color: pink;
+		}
+	</style>
+
+</head>
+<body>
+	<div id="box">
+	<div class="" id="nav">
+			<button>第一个</button>
+			<button>第二个</button>
+			<button>第三个</button>
+			<button>第四个</button>
+			<button>第五个</button>
+		</div>
+		<div class="button" id="divs">
+			<div class="show">第1个div</div>
+			<div>第2个div</div>
+			<div>第3个div</div>
+			<div>第4个div</div>
+			<div>第5个div</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+// 找节点
+	var btns = document.getElementById('nav').getElementsByTagName('button');
+	var divs = document.getElementById('divs').getElementsByTagName('div');
+	// 给每个按钮添加点击事件
+	for(var i=0;i<btns.length;i++){
+		// 给button的每一项添加索引值   index
+		btns[i].index = i;  // 重点    index  是索引
+
+		btns[i].onclick = function(){
+
+			// alert(this.index)
+			for(var i=0;i<btns.length;i++){
+				// 让每一个btn背景为初始颜色
+					btns[i].className="";
+					// 让下面所有div隐藏
+					divs[i].className="";
+			}
+			// 给当前要点击的按钮添加class，使它变色
+			this.className="c-pink";
+			// 把对应的div 添加，使它出现
+			divs[this.index].className = "show";
+
+		}
+	}
+</script>
+</html>

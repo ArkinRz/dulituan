@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>隔行换色</title>
+</head>
+<body>
+	<ul>
+		<li>我是一个list</li>
+		<li>我是一个list</li>
+		<li>我是一个list</li>
+		<li>我是一个list</li>
+		<li>我是一个list</li>
+		<li>我是一个list</li>
+	</ul>						
+</body>
+<script type="text/javascript">
+	var lis = document.getElementsByTagName('li');
+
+		for( var i=0;i<lis.length;i++){
+			if(i%2==1){
+			lis[i].style.color="red";
+			}
+
+		}
+		
+</script>
+</html>
