@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tab选项卡二次练习</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#wrap{
+			width: 400px;
+			margin: 100px auto;
+			text-align: center;
+			border: 1px solid  #ccc;
+		}
+
+		.onclicked{
+			background-color: pink;
+		}
+		#nav{
+			height: 40px;
+			line-height: 40px;
+		}
+		#nav button{
+			background-color: #fff;
+		}
+		
+		#box div{
+			width: 400px;
+			height: 300px;
+			font-size: 40px;
+			line-height: 300px;
+			background-color: pink;
+			display: none;
+		}
+		#box .show{
+			display: block;
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="nav">
+			<button class="onclicked">按钮1</button>
+			<button>按钮2</button>
+			<button>按钮3</button>
+			<button>按钮4</button>
+			<button>按钮5</button>
+			<button>按钮6</button>
+		</div>
+
+		<div id="box">
+			<div class="show">我是第1个盒子</div>
+			<div>我是第2个盒子</div>
+			<div>我是第3个盒子</div>
+			<div>我是第4个盒子</div>
+			<div>我是第5个盒子</div>
+			<div>我是第6个盒子</div>
+		</div>
+	</div>
+</body>
+<script>
+	var btns = document.getElementById('nav').getElementsByTagName('button');
+	var box = document.getElementById('box').getElementsByTagName('div');
+
+	for (var i = 0; i < btns.length; i++) {
+		btns[i].index = i;
+		btns[i].onclick = function(){
+			for (var j = 0; j < btns.length; j++) {
+				btns[j].style.background = "#fff";
+			}
+			this.style.background = "pink";
+			for (var k = 0; k < box.length; k++) {
+				box[k].style.display = "none";
+			}
+			box[this.index].style.display = "block";
+		}
+
+	}
+
+
+
+
+</script>
+</html>

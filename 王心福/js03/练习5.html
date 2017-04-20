@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>练习5</title>
+	<style>
+		#box{
+			width: 300px;
+			height: 300px;
+			margin: 0 auto;
+			border: 1px solid gray;
+			
+		}
+		.nav{
+			width: 300px;
+			height: 20px;
+		}
+		.button div{
+			width: 300px;
+			height: 280px;
+			background-color: pink;
+			display: none;
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="box">
+        <div id="nav">
+	        <button>第一个</button>
+	        <button>第二个</button>
+	        <button>第三个</button>
+	        <button>第四个</button>
+	        <button>第五个</button>
+	    </div>
+	    <div class="button" id="id">
+	        <div class="show">1好盒子</div>
+	        <div>2好盒子</div>
+	        <div>3好盒子</div>
+	        <div>4好盒子</div>
+	        <div>5好盒子</div>
+	    </div>
+    </div>
+</body>
+<script>
+	var bt = document.getElementById('nav').getElementsByTagName('button')
+	var dd = document.getElementById('id').getElementsByTagName('div')
+	for(var i=0;i<bt.length;i++){
+		bt[i].index=i;
+		bt[i].onclick=function(){
+			for(var j=0;j<bt.length;j++){
+				bt[j].style.background="#fff"
+			}
+			this.style.background="green"
+			for(var k=0;k<dd.length;k++){
+		      	dd[k].style.display="none"
+		    }
+		    dd[this.index].style.display="block"
+		}
+	}
+</script>
+</html>
