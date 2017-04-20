@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#wrap{
+			width: 500px;
+			height: 500px;
+			/*background: pink;*/
+			margin: 100px auto;
+		}
+
+		/*#box2{
+			width: 500px;
+			height: 400px;
+			background: pink;
+		}*/
+
+
+		#box2 div{
+			width: 500px;
+			height: 400px;
+			background: pink;
+			display: none;
+		}
+
+		#box2 .show{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="box1">
+			<button>选项1</button>
+			<button>选项2</button>
+			<button>选项3</button>
+			<button>选项4</button>
+			<button>选项5</button>
+			<button>选项6</button>
+		</div>
+
+		<div id="box2">
+			<div class="show">我是第1个div</div>
+			<div>我是第2个div</div>
+			<div>我是第3个div</div>
+			<div>我是第4个div</div>
+			<div>我是第5个div</div>
+			<div>我是第6个div</div>			
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript">
+	var btns=document.getElementById('box1').getElementsByTagName('button');
+	var divs=document.getElementById('box2').getElementsByTagName('div');
+	for(var i=0;i<btns.length;i++){
+		btns[i].index=i;
+		btns[i].onclick=function(){
+			alert(this.index)
+			for( var i=0;i<btns.length;i++){
+				btns[i].style.background="#ccc"
+			}
+			this.style.background="pink"
+			for (var i = 0; i < btns.length; i++) {
+				divs[i].style.display="none";
+			}
+			divs[this.index].style.display="block";
+
+		
+	}
+	
+
+}
+</script>
+</html>
+
