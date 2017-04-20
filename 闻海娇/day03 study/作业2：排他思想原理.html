@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作业2：排他思想原理</title>
+</head>
+<body>
+<div class="btn" id="name">
+	<button>思想原n理</button>
+	<button>思想原理</button>
+	<button>思想原理</button>
+	<button>思想原理</button>
+	<button>思想原理</button>
+	</div>
+</body>
+	<script type="text/javascript">
+		
+		
+		var btns = document.getElementById('name').getElementsByTagName('button')
+		// 给每一个按钮添加点击事件
+		for (var i = 0;i<btns.length; i++) {
+			// 给button的每一项添加索引值   index
+			btns[i].index =i ;      
+			btns[i].onclick =function (){
+
+			this.style.background="pink";
+			}
+		}		
+			
+	</script>
+</html>
