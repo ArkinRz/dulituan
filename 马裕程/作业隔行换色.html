@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="box">
+		<ul>
+			<li>这是一个段落</li>
+			<li>这是一个段落</li>
+			<li>这是一个段落</li>
+			<li>这是一个段落</li>
+			<li>这是一个段落</li>
+			<li>这是一个段落</li>
+			<li>这是一个段落</li>
+			<li>这是一个段落</li>
+		</ul>
+	</div>
+</body>
+<script>
+	var lis = document.getElementsByTagName('li');
+	for(i=0;i<lis.length;i++){
+		if(i%2==1){
+            lis[i].style.color="red";
+		}
+		lis[i].onclick= function(){
+			this.style.color="olive";
+		}
+		lis[i].onmouseover= function(){
+			this.style.color="green";
+		}
+		lis[i].onmouseout= function(){
+			for(j=0;j<lis.length;j++){
+				if(j%2==1){
+				lis[j].style.color="navy";
+			}
+			
+			}
+			
+			
+
+	}
+		}
+</script>
+</html>
