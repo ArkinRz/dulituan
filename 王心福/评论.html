@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>评论</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		ul{
+			list-style-type: none;
+		}
+		#box{
+			width: 520px;
+			overflow: hidden;
+			margin: 100px auto;
+			border: 1px solid green;
+			padding: 20px;
+			position: relative;
+		}
+		textarea{
+			width: 450px;
+			resize: none;
+		}
+		button{
+			position: absolute;
+			left: 510px;
+			top: 152px;
+		}
+		ul{
+			width: 450px;
+			margin: 10px auto;
+		}
+		ul li{
+			border-bottom: 1px dashed #000;
+			height: 30px;
+			line-height: 30px;
+		}
+		ul li span{
+			float: right;
+			cursor: pointer;
+		}
+		ul li span:hover{
+			color: red;
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		评论:<textarea name="" id="txt" cols="20" rows="10"></textarea>
+		<button id="bt">发表</button>
+		<ul id="ul">
+		</ul>
+	</div>
+</body>
+<script>
+    var txt = document.getElementById('txt')
+	var bt = document.getElementById('bt')
+	var ul = document.getElementById('ul')
+
+	bt.onclick = function(){
+		if(txt.value==" "){
+			alert("内容不能为空")
+			return false
+		}
+		var newLi = document.createElement("li")
+		newLi.innerHTML = txt.value + "<span>删除</span>"
+
+	    var list = ul.children
+	    if(list.length == 0){
+	    	ul.appendChild(newLi)
+	    }else{
+	    	ul.insertBefore(newLi,list[0])
+	    }
+	
+		txt.value = " " 
+		var spans = ul.getElementsByTagName('span')
+		for(var j=0; j<spans.length; j++){
+			spans[j].onclick = function(){
+				ul.removeChild(this.parentNode)
+			}
+		}
+	}
+</script>
+</html>
