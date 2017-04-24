@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>第1行</li>
+		<li>第2行</li>
+		<li>第3行</li>
+		<li>第4行</li>
+		<li>第5行</li>
+		<li>第6行</li>
+		<li>第7行</li>
+	</ul>
+	<script type="text/javascript">
+		var lis=document.getElementsByTagName('li');
+		for(var i=0;i<lis.length;i++){
+			if(i%2==0){
+				lis[i].style.color="red";
+			}else{
+				lis[i].style.color="green";
+			}
+			lis[i].onmouseover=function(){
+				this.style.color="yellow";
+			}
+			lis[i].onmouseout=function(){
+				for(var j=0;j<lis.length;j++){
+					if(j%2==1){
+						lis[j].style.color="blue";
+					}else{
+						lis[j].style.color="orange";
+					}
+				}
+			}
+		}
+	</script>
+</body>
+</html>
