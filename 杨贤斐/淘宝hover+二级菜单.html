@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>淘宝hover二级菜单</title>
+		<script src="jquery-3.2.1.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#wrap").addClass("wrap")
+//				var arr1=$("#u1 >li")
+				$("#u1  span ").hover(function(){
+//					
+					$(this).addClass("s1");
+					$(this).next().addClass("show")
+				},function(){
+					$(this).removeClass("s1");
+					$(this).next().removeClass("show")
+				})
+				
+
+				
+			})
+			</script>
+	</head>
+	<body>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.wrap{
+				width: 650px;
+				height: 400px;
+				background: #fff2df;
+				margin: 0 auto;
+				
+			}
+			ul{
+				display: inline-block;
+			}
+			li{
+				list-style-type: none;
+				height: 30px;
+				
+				line-height: 30px;
+				text-align: center;
+
+			}
+			#u1>li{
+				/*background: yellowgreen;*/
+				
+				
+				display: inline-block;
+				
+				float: left;
+			}
+			 ol{
+				display: none;
+			}
+			.s1{
+				border-radius:20px;
+				color: #fff;
+				 font-weight: bold;
+				 height: 30px;
+				 width: 90px;
+				 margin-left: 10px ;
+				line-height: 30px;
+				text-align: center;
+				display: inline-block;
+				}
+				
+				span{
+					display: inline-block;
+					margin-left:10px ;
+					
+				 height: 30px;
+				 width:95px;
+				line-height: 30px;
+				text-align: center;
+				background-color: #c0ebd7 ;
+				}
+				.show{
+					display: block;
+				}
+		</style>
+		<div id="wrap">
+			
+		
+		<ul id="u1">
+			<li> <span class="">手机通讯</span> <ol class=" ">
+					<li>第1个</li>
+					<li>第2个</li>
+					<li>第3个</li>
+					<li>第4个</li>
+					<li>第5个</li>
+					<li>第6个</li>
+					<li>第7个</li>
+					<li>第8个</li>
+				</ol>
+			</li>
+			<li><span class="">电脑办公</span><ol class="">
+					<li>第1个</li>
+					<li>第2个</li>
+					<li>第3个</li>
+					<li>第4个</li>
+					<li>第5个</li>
+					<li>第6个</li>
+					<li>第7个</li>
+					<li>第8个</li>
+				</ol>
+			</li>
+			<li><span class="">美妆护理</span>
+				<ol class=" ">
+					<li>第1个</li>
+					<li>第2个</li>
+					<li>第3个</li>
+					<li>第4个</li>
+					<li>第5个</li>
+					<li>第6个</li>
+					<li>第7个</li>
+					<li>第8个</li>
+				</ol>
+			</li>
+			<li><span class="">女鞋</span><ol class=" ">
+					<li>第1个</li>
+					<li>第2个</li>
+					<li>第3个</li>
+					<li>第4个</li>
+					<li>第5个</li>
+					<li>第6个</li>
+					<li>第7个</li>
+					<li>第8个</li>
+				</ol></li>
+			<li><span class="">水果</span><ol class=" ">
+					<li>第1个</li>
+					<li>第2个</li>
+					<li>第3个</li>
+					<li>第4个</li>
+					<li>第5个</li>
+					<li>第6个</li>
+					<li>第7个</li>
+					<li>第8个</li>
+				</ol></li>
+			<li><span class="">医疗保健</span><ol class=" ">
+					<li>第1个</li>
+					<li>第2个</li>
+					<li>第3个</li>
+					<li>第4个</li>
+					<li>第5个</li>
+					<li>第6个</li>
+					<li>第7个</li>
+					<li>第8个</li>
+				</ol></li>
+		</ul>
+		</div>
+	</body>
+</html>
