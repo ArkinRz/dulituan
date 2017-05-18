@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>五星</title>
+	<script type="text/javascript" src="jquery-3.1.0.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".main").click(function(){			
+				$(this).prevAll().addClass("main1");
+				$(this).addClass("main1");
+				$(this).nextAll().removeClass("main1")
+			})
+		})
+	</script>
+	<style>
+		*{margin: 0;padding: 0;}
+		.z{
+			height: 24px;
+			width: 240px;
+			background-color: #eee;
+			display: inline-flex;
+		}
+		.main{
+			background: url('star_icon.png') no-repeat 0 -24px;			
+			width: 24px;
+			height: 24px;					
+		}
+		.main1{
+			background: url('star_icon.png') no-repeat 0 0px;	
+			width: 24px;
+			height: 24px;
+		}
+	</style>
+</head>
+<body>
+	<div class="z">
+		<div class="main"></div>
+		<div class="main"></div>
+		<div class="main"></div>
+		<div class="main"></div>
+		<div class="main"></div>
+		<div class="main"></div>
+		<div class="main"></div>
+		<div class="main"></div>
+		<div class="main"></div>
+		<div class="main"></div>
+	</div>
+	
+</body>
+</html>

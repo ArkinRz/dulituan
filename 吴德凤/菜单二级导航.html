@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>菜单二级导航</title>
+	<script type="text/javascript" src="jquery-3.1.0.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			$(".dh1").hover(function(){				
+				$(this).addClass("dhh");
+				$(".d1").removeClass("div1");			
+			},function(){				
+				$(this).removeClass("dhh");
+				
+				$(".d1").addClass("div1");	
+			})
+
+			$(".dh2").hover(function(){				
+				$(this).addClass("dhh");
+				$(".d2").removeClass("div1");			
+			},function(){				
+				$(this).removeClass("dhh");
+				
+				$(".d2").addClass("div1");	
+			})
+
+			$(".dh3").hover(function(){				
+				$(this).addClass("dhh");
+				$(".d3").removeClass("div1");			
+			},function(){				
+				$(this).removeClass("dhh");
+				
+				$(".d3").addClass("div1");	
+			})
+		})
+	</script>
+	<style>
+		*{margin: 0;padding: 0;}
+		.nav{
+			height: 50px;
+		}
+		.dh{
+			
+			display: inline-block;
+			background-color: orange;
+			margin:5px;
+			padding: 5px 15px;
+			border-radius: 4px;
+		}
+		
+		.dhh{
+			background-color: pink;
+			color: #fff;
+			font-weight: bold;
+		}
+
+		.div1{
+			
+			display: none;
+		}
+		
+
+
+		
+
+		
+	</style>
+</head>
+<body>
+	<div class="nav">	
+		<div class="dh dh1">天猫</div>
+		<div class="dh dh2">聚划算</div>
+		<div class="dh dh3">天猫超市</div>
+	</div>
+	<div>
+		<span class="div1 d1">天猫 天猫 天猫</span>
+		<span class="div1 d2">聚划算 聚划算</span>
+		<span class="div1 d3">天猫超市 天猫超市</span>
+	</div>
+	
+</body>
+</html>
