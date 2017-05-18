@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>二级导航</title>
+	<style>
+		li{
+			list-style: none;
+			text-align: center;
+			line-height: 50px;
+			font-weight: bold;
+			width: 200px;
+			height: 50px;
+			display: inline-block;
+		}
+		.change{
+			color: #fff;
+			background-color: lime;
+		}
+		.nav ul p{
+			display: none;
+			background-color: #f1f1f1;
+			font-size: 20px;
+			color: red;
+		}
+		
+	</style>
+	<script type="text/javascript" src="jquery-3.2.1.js"></script>
+	<script type="text/javascript"> 
+	 $(function(){
+	   	   $("div.nav ul li").hover(function(){
+       	      $(this).addClass("change");
+       	      $(this).next().css("display","inline-block");
+              },
+              function(){
+       	      $(this).removeClass("change");
+       	      $(this).next().css("display","none");
+
+            })
+
+	   
+
+
+	})
+	</script>
+</head>
+<body>
+	 <div class="nav">
+	 	<ul>
+	 		<li>服装</li><p>女装，男装，童装</p><br>
+	 		<li>鞋包</li><p>鞋，包</p><br>
+	 		<li>电器</li><p>电视,冰箱,洗衣机,空调,笔记本</p><br>
+	 		<li>食品</li><p>水果,肉类,零食</p><br>
+	 		<li>生活用品</li><p>护肤品,床上用品</p><br>
+	 	</ul>
+
+	 </div>
+
+	
+</body>
+</html>

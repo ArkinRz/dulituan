@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>导航</title>
+	<style type="text/css">
+		*{
+			margin: 0;padding: 0;
+		}
+		#nav{
+			width: 300px;height: 600px;
+			position: absolute;
+			top: 50px;left: 100px;
+			
+		}
+		#nav .nav_f,#nav .nav_s{
+			list-style-type: none;
+		}
+		#nav .nav_f {
+			color: #fff;
+			width: 100px;height: 500px;
+			position: relative;
+			text-align:  center;
+			background: #0f0;
+		}
+		#nav .nav_f .nav_item{
+			margin: 0 auto;
+			cursor: pointer;
+		}
+		.style{
+			background: orange;
+			font-weight: bold;
+		}
+		#nav .nav_f .nav_s{
+			display: none;
+			position: absolute;
+			width: 100px;height: 200px;
+			background: yellow;
+			color:#000;
+		}
+		.sanjiao{
+			position: absolute;left: -10px;top:0px;
+			height: 0;
+			border-color: transparent yellow transparent transparent;
+			border-width: 10px 10px 10px 0;
+			border-style: dashed solid dashed dashed;
+		}
+	</style>
+	<script type="text/javascript" src="jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".nav_item").hover(function(){
+				var sLeft = $(this).offset().left;
+				var sTop = $(this).position().top;
+				$(this).addClass("style")
+				$(this).next().css({
+					"display":"block",
+					"left":sLeft,
+					"top":sTop
+				})
+			},function(){
+				$(this).next().css({
+					"display":"none"
+				});
+				$(this).removeClass("style");
+			})
+		})
+	</script>
+</head>
+<body>
+	<div id="nav">
+		<ul class="nav_f">
+			<li class="nav_item">首页</li>
+			<ul class="nav_s">
+				<li class="sanjiao"></li>
+				<li>首页菜单</li>
+			</ul>
+			<li class="nav_item">hao123</li>
+			<ul class="nav_s">
+				<li class="sanjiao"></li>
+				<li>hao123菜单</li>
+			</ul>
+			<li class="nav_item">地图</li>
+			<ul class="nav_s">
+				<li class="sanjiao"></li>
+				<li>地图菜单</li>
+			</ul>
+			<li class="nav_item">视频</li>
+			<ul class="nav_s">
+				<li class="sanjiao"></li>
+				<li>视频菜单</li>
+			</ul>
+			<li class="nav_item">贴吧</li>
+			<ul class="nav_s">
+				<li class="sanjiao"></li>
+				<li>贴吧菜单</li>
+			</ul>
+			<li class="nav_item">学术</li>
+			<ul class="nav_s">
+				<li class="sanjiao"></li>
+				<li>学术菜单</li>
+			</ul >
+			<li class="nav_item">设置</li>
+			<ul class="nav_s">
+				<li class="sanjiao"></li>
+				<li>设置菜单</li>
+			</ul>
+		</ul>
+		
+	</div>
+</body>
+</html>
