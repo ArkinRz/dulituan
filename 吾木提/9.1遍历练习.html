@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>遍历练习</title>
+	<script type="text/javascript" src="jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".sp").hover(function(){
+				$(this).css("background","url(./images/star_icon.png) no-repeat 0-1px")
+				$(this).prevAll().css("background","url(./images/star_icon.png) no-repeat 0-1px")
+				var spn=$(this).prevAll().length;
+				$(".spn").html(spn+1+"颗星星");
+
+			},(function(){
+				$(".sp").css("background","url(./images/star_icon.png) no-repeat 0-25px")
+				$(this).prevAll().css("background","url(./images/star_icon.png) no-repeat 0-25px")
+
+			}))
+		})
+		
+	</script>
+	<style>
+		.di1{width: 50%;height:25px;background:#f0f;margin: 0 auto;}
+		.sp{ 
+			width: 25px;
+			height: 25px;
+			background: url(./images/star_icon.png) no-repeat 0-25px;
+			/*background-color: blue;*/
+			display: inline-block;
+		}
+		.spn{display: inline-block;color: blue;float: right;}
+	</style>
+</head>
+<body>
+	<div class="di1">
+		<span class="sp"></span>
+		<span class="sp"></span>
+		<span class="sp"></span>
+		<span class="sp"></span>
+		<span class="sp"></span>
+		<span class="sp"></span>
+		<span class="sp"></span>
+		<span class="sp"></span>
+		<span class="sp"></span>
+		<span class="sp"></span>
+		<span class="spn"></span>
+	</div>
+</body>
+</html>
