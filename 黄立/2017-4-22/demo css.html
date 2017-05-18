@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .xiaomi {
+            width: 512px;
+            height: 400px;
+            border: 1px solid #f00;
+            margin: 100px auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .xiaomi span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            cursor: pointer;
+        }
+        #img{
+            position: absolute;
+            top:0;
+            bottom:0;
+        }
+        .up {
+            top: 0;
+        }
+        .down {
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="xiaomi">
+    <img src="mi.png" alt="mi.png" id="img"/>
+    <span class="up" id="up"></span>
+    <span class="down" id="down"></span>
+</div>
+</body>
+<script type="text/javascript">
+    
+    var up=document.getElementById('up');
+    var down=document.getElementById('down');
+    var img=document.getElementById('img');
+
+    var i=1;
+    var timer;
+    up.onmouseover=function(){
+        clearInterval(timer);
+
+        function up(){
+            
+            i--;
+            i>=-1070? img.style.top=i+"px":clearInterval(timer);
+        }
+
+            
+
+       timer=setInterval(up,30);
+
+    }
+ 
+
+    down.onmouseover=function(){
+        clearInterval(timer);
+
+        function down(){
+              i+=3;
+            i<0? img.style.top=i+"px":clearInterval(timer);
+        
+        }
+         timer=setInterval(down,30);
+    }
+
+    // up.parentNode.onmouseover=function(){
+    //     clearInterval(timer);
+    // }
+
+</script>
+</html>
