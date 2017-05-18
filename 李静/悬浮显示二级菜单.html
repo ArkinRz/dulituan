@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>悬浮显示二级菜单</title>
+	<script type="text/javascript" src="jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			$(".menu span").hover(function(){
+				$(this).css("border-radius","4px")
+				$(this).css("background-color","red")
+				$(this).css("color","#fff")
+			},function(){
+				$(this).css("background-color","pink")
+				$(this).css("color","black")
+			})
+
+			$(".menu .sp1").hover(function(){
+				$(".show1").css("display","block");
+			},function(){
+				$(".show1").css("display","none");
+
+			})
+
+			$(".menu .sp2").hover(function(){
+				$(".show2").css("display","block");
+			},function(){
+				$(".show2").css("display","none");
+
+			})
+
+			$(".menu .sp3").hover(function(){
+				$(".show3").css("display","block");
+			},function(){
+				$(".show3").css("display","none");
+
+			})
+
+
+		})
+	</script>
+	<style type="text/css">
+	.menu{
+		width: 70%;
+		margin: 0 auto;
+		background-color: pink;
+		border-radius: 4px;
+		margin-bottom: 2px;
+	}
+
+	.menu span{
+		margin-left: 50px;
+		padding: 0 50px;
+	}
+		.show{
+			width: 200px;
+			height: 80px;
+			border: 1px solid gray;
+			border-radius: 4px;
+			float: left;
+			position: relative;
+			left: 245px;
+			background-color: gray;
+			display: none;
+
+			
+		}
+		.show ul{
+			margin-left: -30px;
+		}
+		.show2{
+			position: absolute;
+			top: 31px;
+			left: 435px;
+		}
+
+		.show3{
+			position: absolute;
+			top: 31px;
+			left: 625px;
+		}
+		
+
+		.show ul li{
+			list-style: none;
+
+			float: left;
+			text-align: left;
+			/*background-color: yellow*/
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="menu">
+		<span class="sp1">服装</span>
+		<span class="sp2">鞋帽</span>
+		<span class="sp3">电器</span>
+	</div>
+	<div class="show1 show">
+		<ul>
+			<li>女装 |</li>
+			<li>男装 |</li>
+			<li>儿童服饰 |</li>
+			<li>防晒衣 |</li>
+			<li>T恤 |</li>
+			<li>外套 |</li>
+		</ul>
+	</div>
+	<div class="show2 show">
+		<ul>
+			<li>太阳帽 |</li>
+			<li>棒球帽 |</li>
+			<li>大盖帽 |</li>
+			<li>遮阳帽 |</li>
+			<li>帽子 |</li>
+			<li>带绳帽 |</li>
+		</ul>
+	</div>
+	<div class="show3 show">
+		<ul>
+			<li>电脑 |</li>
+			<li>手机 |</li>
+			<li>平板 |</li>
+			<li>液晶电视 |</li>
+			<li>电冰箱 |</li>
+			<li>插线板 |</li>
+		</ul>
+	</div>
+</body>
+</html>
