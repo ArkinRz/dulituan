@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>星星</title>
+	<script type="text/javascript" src="../jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			$("img").click(function(){
+				
+				
+					$(this).each(function(){
+						
+						// alert($(this).attr("src")=="images/off_icon.png");
+						if ($(this).attr("src")=="images/off_icon.png") {
+
+						$(this).attr("src","images/on_icon.png");}
+						else{
+						$(this).attr("src","images/off_icon.png");	
+						}
+					})
+				
+			})
+		})
+	</script>
+</head>
+<body>
+	<img src="images/off_icon.png">
+	<img src="images/off_icon.png">
+	<img src="images/off_icon.png">
+	<img src="images/off_icon.png">
+	<img src="images/off_icon.png">
+	<img src="images/off_icon.png">
+	<span>星级</span>
+</body>
+</html>
