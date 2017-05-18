@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <script type="text/javascript" src="jquery-3.1.0.js"></script>
+<style type="text/css">
+*{
+ margin:0;
+ padding:0;
+}
+ul,ol,li,dl{
+ list-style-type:none;
+}
+a{
+ color:#555;
+ font-size:14px;
+ text-decoration:none;
+}
+.nav{
+ margin:0 auto;
+ width:800px;
+ height:30px;
+}
+.nav ul li{
+ float:left;
+ display:block;
+ width:200px;
+ height:30px;
+ position:relative;
+}
+.nav ul li a{
+ display:block;
+ width:200px;
+ height:30px;
+ background:#666;
+ color:#fff;
+ line-height:30px;
+ font-weight:bold;
+ text-align:center;
+}
+.nav ul li a:hover{
+ background:#F60;
+}
+.drop_dwon{
+ width:330px;
+ position:absolute;
+ left:0;
+ top:30px;
+ display:none;
+}
+#drop a{
+ width:200px;
+}
+#color{
+ background:#18E44E;
+}
+</style>
+<script type="text/javascript" src="jquery-3.2.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+ $(".nav ul li").hover(function(){
+   // $(this).children(".drop_dwon").slideDown(180);
+      $(this).children(".drop_dwon").css("display","block")
+      $(this).children(".nav ul li a").attr("id","color")
+  },function(){
+   // $(this).children(".drop_dwon").slideUp(100);
+   $(this).children(".drop_dwon").css("display","none")
+   $(this).children(".nav ul li a").attr("id","")
+  }
+ )
+})
+</script>
+</head>
+<body>
+<div class="nav">
+  <ul>
+    <li><a href="#">首页</a>
+      <div class="drop_dwon" id="drop"> </div>
+    </li>
+    <li><a href="#">综艺花边</a>
+      <div class="drop_dwon" id="drop">
+        <div class="onemenulayout"><a href="#">王尼玛是鬼</a></div>
+        <div class="onemenulayout"><a href="#">王尼玛是鬼</a></div>
+        <div class="onemenulayout"><a href="#">王尼玛是鬼</a></div>
+      </div>
+    </li>
+    <li><a href="#">周杰伦小崽子</a>
+      <div class="drop_dwon" id="drop">
+        <div class="onemenulayout"><a href="#">彩虹</a></div>
+        <div class="onemenulayout"><a href="#">听麻麻的话</a></div>
+        <div class="onemenulayout"><a href="#">迭迭香</a></div>
+      </div>
+    </li>
+    <li><a href="#">偶像666</a>
+      <div class="drop_dwon" id="drop">
+        <div class="onemenulayout"><a href="#">勒布朗 king</a></div>
+        <div class="onemenulayout"><a href="#">勒布朗 king</a></div>
+        <div class="onemenulayout"><a href="#">勒布朗 king</a></div>
+        <div class="onemenulayout"><a href="#">勒布朗 king</a></div>
+      </div>
+    </li>
+  </ul>
+</body>
+</html>
