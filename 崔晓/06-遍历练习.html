@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>遍历练习</title>
+	<script src="F:\cuixiao\WebClass\第三阶段\jquery-3.2.1.js"></script>
+	<script>
+		$(function(){
+            
+            $("span").click(function(){
+            	if ($(this).hasClass("add")) {
+            		// $(this).removeClass("add")
+            		$(this).nextAll().removeClass("add")
+            	}else{
+            		$(this).addClass("add")
+            		$(this).prevAll().addClass("add")
+            	}
+               var index = $(this).index()+1
+               $("strong").text("您的评价为："+ index + "颗星")
+            	
+            })
+
+      
+
+		})
+	</script>
+	<style>
+		#box{
+			width: 500px;
+			height: 80px;
+			line-height: 80px;
+			border: 1px solid #ccc;
+			margin: 0 auto;
+			text-indent: 20px;
+			
+		}
+		span{
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			background: url(./images/star_icon.png) 0px -24px ;
+		}
+		.add{
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			background: url(./images/star_icon.png) 0px 0px ;
+		}
+		strong{
+             font-size: 15px;
+             font-weight: normal;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="box">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		&nbsp;&nbsp;&nbsp;
+		<strong></strong>
+	</div>
+</body>
+</html>

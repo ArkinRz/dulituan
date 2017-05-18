@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定时换图片</title>
+</head>
+<body>
+	<img src="./1.jpg">
+</body>
+<script type="text/javascript">
+	var imgArr = ["1.jpg","2.jpg","3.jpg","4.png","5.jpg","6.jpg"]
+	var num = 0;
+
+	// document.getElementsByTagName('img')[0].style.display = "src = './1.jpg'"
+	setInterval(function(){
+		for (var i = 0; i < imgArr.length; i++) {
+			document.getElementsByTagName('img')[i].src=imgArr[num];
+			imgArr[num++];
+		}
+	},1000)
+
+	if(num>=imgArr.length){
+			document.getElementsByTagName('img')[0].src=imgArr[imgArr.length-1];
+			alert("已经是最后一张了！");
+			console.log("已经是最后一张了！");
+			num=imgArr.length-1;
+	}a1.innerText=num+1;
+</script>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作业</title>
+	<script type="text/javascript" src="jquery-3.2.1.js"></script>
+	<script>
+		$(function(){
+			$(".p1").hover(function(){
+				$(".pp1").css("display","block")
+			},function(){
+				$(".pp1").css("display","none")
+			})
+			$(".p2").hover(function(){
+				$(".pp2").css("display","block")
+			},function(){
+				$(".pp2").css("display","none")
+			})
+			$(".p3").hover(function(){
+				$(".pp3").css("display","block")
+			},function(){
+				$(".pp3").css("display","none")
+			})
+			$(".p4").hover(function(){
+				$(".pp4").css("display","block")
+			},function(){
+				$(".pp4").css("display","none")
+			})
+		})
+	</script>
+	<style>
+		*{margin: 0;padding: 0;}
+		.di1 span{width: 150px;text-align: center;height: 150px;display: inline-block;font-weight: bold;color: #000;vertical-align: top; background: pink;}
+		a{text-decoration:none; color: blue;}
+		.p1 .p2 .p3 .p4{margin-top: 0;line-height: 50px;}
+		.pp1{display: none;}
+		.pp2{display: none;}
+		.pp3{display: none;}
+		.pp4{display: none;}
+	</style>
+</head>
+<body>
+
+		
+				<div class="di1"  style="width:80%; margin-left:auto; margin-right:auto;"">
+					<span >
+						<p class="p1">首页</p>
+						<p class="pp1"><a href="">产品介绍</a></p>
+						<p class="pp1"><a href="">购买零件</a></p>
+
+					</span>
+					<span>
+						<p class="p2">产品介绍</p>
+						<p class="pp2"><a href="">vivo</a></p>
+						<p class="pp2"><a href="">OPPO</a></p>
+						<p class="pp2"><a href="">苹果8</a></p>
+						<p class="pp2"><a href="">三星</a></p>
+					</span>
+					<span>
+						<p class="p3">购买零件</p>
+						<p class="pp3"><a href="">插头</a></p>
+						<p class="pp3"><a href="">数据线</a></p>
+						<p class="pp3"><a href="">充电宝</a></p>
+						<p class="pp3"><a href="">手机壳</a></p>
+					</span>
+					<span>
+						<p class="p4">给我留言</p>
+						<p class="pp4"><a href="">查看留言</a></p>
+						<p class="pp4"><a href="">回复留言</a></p>
+					</span>
+				</div>
+</body>
+</html>

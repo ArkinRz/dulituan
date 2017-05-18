@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>微博评论</title>
+	<style>
+	#wrap{
+		width: 820px;
+		margin: 100px 200px;
+		background: url(./1.jpg);
+	}
+		
+		#box{
+			width: 800px;
+			margin: 0 20px;
+			
+			
+			
+		}
+		textarea{
+			resize: none;
+		}
+ #ul{
+
+width:580px;
+margin: 0 50px;
+
+ }
+  #ul li{
+  	border-bottom: 1px dashed gray;
+ 
+  	list-style-type: none;
+
+  }
+  #ul li a{
+  	float: right;
+
+  }
+   #ul li a:hover{
+   	color: yellow;
+   }
+	</style>
+
+</head>
+<body>
+<div id="wrap">
+
+		<div id="box">
+ <textarea name="" id="txt" cols="100" rows="5"></textarea><button id="btn">发表评论</button>
+			<ul id="ul">
+
+			</ul>
+
+
+		</div>
+</div>
+
+<script>
+	var txt=document.getElementById('txt');
+	var btn=document.getElementById('btn');
+	var ul=document.getElementById('ul');
+	btn.onclick=function(){
+		if (txt.value=="") {
+			alert('内容不能为空');
+			return false;
+		}
+		var newLi=document.createElement("li");
+	var lis=ul.children;
+	newLi.innerHTML=txt.value +"<a>删除</a>";
+
+	ul.insertBefore(newLi,lis[0]);
+	txt.value="";
+
+	var all =ul.getElementsByTagName('a');
+ for (var i = 0; i < all.length; i++) {
+ 	all[i].onclick=function(){
+ 		ul.removeChild(this.parentNode);
+ 	}
+ }
+	
+}
+
+</script>
+	
+</body>
+</html>
