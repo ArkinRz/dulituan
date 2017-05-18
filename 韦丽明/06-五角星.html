@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>五角星</title>
+	<script type="text/javascript" src="../Day36/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("span").click(function(){	
+				
+				$("span").slice(0,$(this).index()+1).addClass("on");
+				$("span").slice($(this).index()+1,10).removeClass("on");
+				$(this).each(function(){
+					$("strong").html($(this).index()+1+"颗星")
+				})
+			})
+
+
+			
+		})
+	</script>
+	<style type="text/css">
+		#wrap{
+			margin: 100px auto;
+			text-align: center;
+		}
+		span{
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			background: url(./images/star_icon.png) 0 -24px;
+		}
+		.on{
+			background: url(./images/star_icon.png) 0 0;
+		}
+		strong{
+			padding-left: 50px;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+
+		<strong></strong>
+	</div>
+</body>
+</html>
