@@ -8,19 +8,20 @@
 		$(document).ready(function(){
 			
 			$("img").click(function(){
-				
-				
+				var i=$("img").index(this)+1;
+				if ($(this).attr("src")=="images/off_icon.png") {
 					$(this).each(function(){
-						
-						// alert($(this).attr("src")=="images/off_icon.png");
-						if ($(this).attr("src")=="images/off_icon.png") {
 
-						$(this).attr("src","images/on_icon.png");}
-						else{
-						$(this).attr("src","images/off_icon.png");	
-						}
+						$(this).prevAll("img").attr("src","images/on_icon.png");
+						$(this).attr("src","images/on_icon.png");
+						$("span").html("您评了"+i+"颗星");
+						
 					})
-				
+				}else{
+					
+						$(this).nextAll("img").attr("src","images/off_icon.png");
+						$("span").html("您评了"+i+"颗星");	
+						}
 			})
 		})
 	</script>
