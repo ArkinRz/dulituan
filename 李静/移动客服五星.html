@@ -18,6 +18,16 @@
 
 		})
 
+		$(".sp").click(function(){
+				$(this).css("background","url('star_icon.png') no-repeat 0 0");
+				$(this).prevAll().css("background","url('star_icon.png') no-repeat 0 0");
+				$(this).nextAll(".sp").css("background","url('star_icon.png') no-repeat 0 -25px");
+				var len = $(this).prevAll().length
+				$(".sn").html(len+1+"个五角星")
+
+
+		})
+
 
 		})
 	</script>
@@ -27,6 +37,7 @@
 			width: 60%;
 			height: 25px;
 			margin: 0 auto;
+			padding: 3px;
 		}
 		.div1 .sp{
 			width: 25px;
@@ -35,6 +46,12 @@
 			/*background-color: blue;*/
 			display: inline-block;
 			/*float: left;*/
+		}
+		.sn{
+			/*width: 25px;*/
+			/*height: 25px;*/
+			display: inline-block;
+			margin-bottom: 20px;
 		}
 	</style>
 </head>
