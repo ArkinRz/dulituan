@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动客服五星</title>
+	<script type="text/javascript" src="jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".sp").hover(function(){
+				$(this).prevAll().css("background","url('star_icon.png') no-repeat 0 -1px");
+				$(this).css("background","url('star_icon.png') no-repeat 0 -1px");
+				var len = $(this).prevAll().length
+				$(".sn").html(len+1+"个五角星")
+			// alert($(this).width())
+		},function(){
+			$(this).css("background","url('star_icon.png') no-repeat 0 -25px");
+			$(this).prevAll().css("background","url('star_icon.png') no-repeat 0 -25px");
+
+		})
+
+
+		})
+	</script>
+	<style type="text/css">
+		.div1{
+			background-color: pink;
+			width: 60%;
+			height: 25px;
+			margin: 0 auto;
+		}
+		.div1 .sp{
+			width: 25px;
+			height: 25px;
+			background: url("star_icon.png") no-repeat 0 -25px;
+			/*background-color: blue;*/
+			display: inline-block;
+			/*float: left;*/
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="div1">
+		<span class="sp"></span>
+		<span class="sp"></span>
+		<span class="sp"></span>
+		<span class="sp"></span>
+		<span class="sp"></span>
+		<span class="sp"></span>
+		<span class="sp"></span>
+		<span class="sp"></span>
+		<span class="sp"></span>
+		<span class="sp"></span>
+		<span class="sn"></span>
+	</div>
+</body>
+</html>
