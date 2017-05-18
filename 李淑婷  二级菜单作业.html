@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>练习</title>
+	<script type="text/javascript" src="jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(".span").mouseover(function () {
+				$(this).css({"color":"white","background-color":"yellowgreen"});
+				var box="<div class='div1'><p>芒果</p><p>荔枝</p><p>龙眼</p><p>火龙果</p></div>"
+				$(this).append(box)
+			})
+			$(".span").mouseout(function () {
+				$(this).css({"color":"","background-color":""})
+				$(".div1").remove();
+			})
+		})
+	</script>
+	<style type="text/css">
+		.*{padding: 0;margin: 0;}
+		.nav{background-color: pink;width: 500px;height: 50px;line-height: 50px;margin: 100px auto;padding:0 10px;text-align: center;
+		}
+		span{width: 70px;height: 30px;line-height: 30px;background-color: yellow;display: inline-block;border-radius: 10px;text-align: center;color: gray;position: relative;}
+		.div1{width: 200px;height: 50px;background-color: red;position: absolute;
+		top: 35px;left: -50px;}
+		p{display: inline-block;width: 50px;height: 20px;line-height: 20px;}
+	</style>
+</head>
+<body>
+
+
+	<div class="nav">
+		<span class="span">水果</span>
+		<span class="span">甜点</span>
+		<span class="span">蔬菜</span>
+		<span class="span">饮料</span>
+	</div>
+</body>
+</html>

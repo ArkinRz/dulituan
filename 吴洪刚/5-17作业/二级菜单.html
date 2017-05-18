@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style type="text/css">
+*{
+ margin:0;
+ padding:0;
+}
+ul,ol,li,dl{
+ list-style-type:none;
+}
+a{
+ color:#555;
+ font-size:14px;
+ text-decoration:none;
+}
+.nav{
+ margin:0 auto;
+ width:800px;
+ height:30px;
+}
+.nav ul li{
+ float:left;
+ display:block;
+ width:200px;
+ height:30px;
+ position:relative;
+}
+.nav ul li a{
+ display:block;
+ width:200px;
+ height:30px;
+ background:#666;
+ color:#fff;
+ line-height:30px;
+ font-weight:bold;
+ text-align:center;
+}
+.nav ul li a:hover{
+ background:#F60;
+}
+.drop_dwon{
+ width:330px;
+ position:absolute;
+ left:0;
+ top:30px;
+ display:none;
+}
+#drop a{
+ width:200px;
+}
+#color{
+ background:#18E44E;
+}
+</style>
+<script type="text/javascript" src="jquery-3.2.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+ $(".nav ul li").hover(function(){
+   $(this).children(".drop_dwon").slideDown(200);
+   $(this).children(".nav ul li a").attr("id","color")
+  },function(){
+   $(this).children(".drop_dwon").slideUp(100);
+   $(this).children(".nav ul li a").attr("id","")
+  }
+ )
+})
+</script>
+</head>
+<body>
+<div class="nav">
+  <ul>
+    <li><a href="#">首页</a>
+      <div class="drop_dwon" id="drop"> </div>
+    </li>
+    <li><a href="#">热门电影</a>
+      <div class="drop_dwon" id="drop">
+        <div class="onemenulayout"><a href="#">速度与激情8</a></div>
+        <div class="onemenulayout"><a href="#">记忆大师</a></div>
+        <div class="onemenulayout"><a href="#">绑架者</a></div>
+      </div>
+    </li>
+    <li><a href="#">最新电视剧</a>
+      <div class="drop_dwon" id="drop">
+        <div class="onemenulayout"><a href="#">择天记</a></div>
+        <div class="onemenulayout"><a href="#">欢乐颂2</a></div>
+        <div class="onemenulayout"><a href="#">特工皇妃楚乔传</a></div>
+      </div>
+    </li>
+    <li><a href="#">综艺连连看</a>
+      <div class="drop_dwon" id="drop">
+        <div class="onemenulayout"><a href="#">奔跑吧</a></div>
+        <div class="onemenulayout"><a href="#">约吧大明星2</a></div>
+        <div class="onemenulayout"><a href="#">极限挑战第三季</a></div>
+        <div class="onemenulayout"><a href="#">火星情报局</a></div>
+      </div>
+    </li>
+  </ul>
+</body>
+</html>
