@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>二级菜单</title>
+	<script type="text/javascript" src="../Day36/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("li").hover(function(){
+				$(this).addClass("green");
+				var box = "<div><a>学校概况</a><a>学校概况</a><a>学校概况</a></div>";
+				$(this).append(box);
+			},function(){
+				$(this).removeClass("green");
+				$("div").remove();
+			})
+		})
+	</script>
+	<style type="text/css">
+		ul{
+			display: table;
+			margin: 100px auto;
+			width: 900px;
+			height: 40px;
+			line-height: 40px;
+		}
+		ul li{
+			list-style: none;
+			width: 10%;
+			background-color: yellowgreen;
+			text-align: center;
+			display: inline-block;
+			position: relative;
+		}
+		.green{
+			background-color: green;
+			color:#fff;
+			font-weight: bold; 
+		}
+		div{
+			position: absolute;
+			top: 40px;
+			left: 0;
+			background-color: green;
+			font-weight: normal;
+		}
+		 a{
+			display: block;
+			width: 90px;
+		}
+
+	</style>
+</head>
+<body>
+	<ul>
+		<li>学校概况
+			<!-- <div class="list-1">
+				<a>学校概况</a>
+				<a>学校概况</a>
+				<a>学校概况</a>
+			</div> -->
+		</li>
+		<li>组织机构</li>
+		<li>院部设置</li>
+		<li>人才培养</li>
+		<li>队伍建设</li>
+		<li>科学研究</li>
+	</ul>
+</body>
+</html>

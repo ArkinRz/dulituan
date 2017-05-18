@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>微博评论练习</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+			width: 450px;
+			margin: 150px auto;
+			padding: 20px;
+			border: 1px solid pink;
+
+			overflow: hidden;
+		}
+		ul{
+			list-style: none;
+			width: 450px;
+
+		}
+		ul li{
+			width: 450px;
+			height: 30px;
+			line-height: 30px;
+			border-bottom: 1px dashed pink;
+		}
+		ul li span{
+			float: right;
+			color: red;
+			text-decoration: underline;
+			cursor: pointer;
+		}
+		button{
+			width: 50px;
+			height: 30px;
+			border: none;
+			background: yellowgreen;
+			color: #fff;
+			margin: 20px 0;
+
+		}
+		textarea{
+			width: 450px;
+			text-indent: 10px;
+			padding: 10px;
+			box-sizing: border-box;
+			resize: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<p>微博评论：</p>
+		<textarea name="" id="text" cols="30" rows="10" placeholder="请再此输入评论"></textarea>
+		<button id="btn">提交</button>
+		<ul id="ul">
+			<!-- <li>skfd<span>删除</span></li> -->
+		</ul>
+	</div>
+</body>
+<script type="text/javascript">
+	var btn = document.getElementById('btn')
+	var text = document.getElementById('text')
+	var ul = document.getElementById('ul')
+
+    btn.onclick = function(){
+    	if (text.value == "") {
+    		alert("内容不能为空！")
+    		return false;
+    	}
+    	var newLi = document.createElement("li")
+    	newLi.innerHTML = text.value + "<span>删除</span>"
+    	// ul.appendChild(newLi)
+        
+        //判断，将提交的内容添加到列表的第一行
+    	var lis = ul.children
+        if (lis.length == 0) {
+        	ul.appendChild(newLi)
+        }else{
+        	ul.insertBefore(newLi,lis[0])
+        }
+
+        text.value = " "
+        
+
+        //删除操作
+        var spans = document.getElementsByTagName('span')
+        for (var i = 0; i < spans.length; i++) {
+        	spans[i].onclick = function(){
+                 ul.removeChild(this.parentNode)
+        	}
+        }
+
+    }
+
+</script>
+</html>

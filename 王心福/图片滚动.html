@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片滚动</title>
+	<style type="text/css">
+		body{
+			-moz-user-select:none;/*火狐*/
+			-webkit-user-select:none;/*webkit浏览器*/
+			-ms-user-select:none;/*IE10*/
+			-khtml-user-select:none;/*早期浏览器*/
+			user-select:none;
+		}
+		
+	</style>
+</head>
+<body>
+	<img src="images/1.jpg"><b id="a1">1</b>
+
+</body>
+<script type="text/javascript">
+	var imgArr =["1.jpg","2.jpg","3.jpg","4.png","5.jpg","6.jpg"]
+	var a1 = document.getElementById('a1');
+	var num = 0;
+
+	setInterval(function(){
+		for(var i=0;i<imgArr.length;i++){
+			document.getElementsByTagName('img')[i].src="images/" + imgArr[++num]
+		
+		if(num>=imgArr.length){
+			document.getElementsByTagName('img')[i].src="images/" + imgArr[imgArr.length-1]
+			alert("已经是最后一张了！")
+			num=imgArr.length-1;
+		}
+		a1.innerText=num+1
+        }
+	},2000)
+
+	
+
+</script>
+</html>

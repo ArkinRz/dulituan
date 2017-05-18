@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>04-练习-二级菜单</title>
+	<script type="text/javascript" src="./jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("li").hover(function(){
+				$(this).css("background","red");
+				$(this).css("color","#fff");
+				$(this).css("border-radius","20px");
+			},function(){
+				$(this).css("background","");
+				$(this).css("color","");
+				$(this).css("border-radius","0px");
+			})
+			
+			$(".first").mouseover(function(){
+				$(".one").css("display","block")
+			})
+			$(".first").mouseout(function(){
+				$(".one").css("display","none")
+			})
+
+			$(".second").mouseover(function(){
+				$(".two").css("display","block")
+			})
+			$(".second").mouseout(function(){
+				$(".two").css("display","none")
+			})
+
+			$(".third").mouseover(function(){
+				$(".three").css("display","block")
+			})
+			$(".third").mouseout(function(){
+				$(".three").css("display","none")
+			})
+
+			$(".forth").mouseover(function(){
+				$(".four").css("display","block")
+			})
+			$(".forth").mouseout(function(){
+				$(".four").css("display","none")
+			})
+		})
+	</script>
+	<style type="text/css">
+		.all{
+			width: 500px;
+			margin: 0 auto;
+		}
+		ul li{
+			list-style: none;
+			display: inline-block;
+			text-align: center;
+			width: 100px;
+			height: 50px;
+			line-height: 50px;
+			border: 1px solid red;
+			text-align: center;
+			font-size: 22px;
+		}
+		table{
+			width: 400px;
+			height: 50px;
+			background: pink;
+			position: relative;
+			left: 450px;
+			display: none;
+		}
+		td{
+			width: 100px;
+		}
+		
+	</style>
+</head>
+<body>
+	<ul class="all">
+		<li class="first">水果</li>
+		<li class="second">蔬菜</li>
+		<li class="third">肉类</li>
+		<li class="forth">其他</li>
+	</ul>
+	<table class="one">
+		<tr>
+			<td>苹果</td>
+			<td>橘子</td>
+			<td>香蕉</td>
+			<td>西瓜</td>
+		</tr>
+	</table>
+	<table class="two">
+		<tr>
+			<td>白菜</td>
+			<td>土豆</td>
+			<td>茄子</td>
+			<td>蘑菇</td>
+		</tr>
+	</table>
+	<table class="three">
+		<tr>
+			<td>猪肉</td>
+			<td>牛肉</td>
+			<td>羊肉</td>
+			<td>鸡肉</td>
+		</tr>
+	</table>
+	<table class="four">
+		<tr>
+			<td>植物油</td>
+			<td>酱油</td>
+			<td>香油</td>
+			<td>芝麻酱</td>
+		</tr>
+	</table>
+</body>
+</html>
