@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>评论</title>
+	<style>
+	    *{
+	    	margin: 0;
+	    	padding: 0;
+	    }
+		ul{
+			list-style: none;
+			width: 470px;
+			margin: 10px auto;
+			text-align: left;
+		}
+		#wrap{
+			width: 600px;
+			border:1px solid gray;
+			margin: 100px auto;
+			padding: 20px;
+			text-align: center;
+		}
+		textarea{
+			width: 470px;
+			resize: none;
+		}
+		ul li {
+			border-bottom: 1px dashed gray;
+			height: 30px;
+			line-height: 30px;
+		}
+        ul li span{
+        	float: right;
+        	cursor: pointer;
+        	color: blue;
+
+        }
+        ul li span:hover{
+        	color: pink;
+        	text-decoration: underline;
+        }
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		评论:<textarea name="" id="text" cols="30" rows="10"></textarea>
+		<button id="btn">发表</button>
+		<ul id="ul"></ul>
+	</div>
+</body>
+<script>
+	var text=document.getElementById('text');
+	var btn=document.getElementById('btn');
+	var ul=document.getElementById('ul');
+
+	btn.onclick=function(){
+		if(text.value==""){
+			alert("不能为空！");
+			return flase;
+		}
+		var newli=document.createElement('li');
+		newli.innerHTML=text.value+"<span>删除</span>";
+
+		var lis=ul.children;
+		ul.insertBefore(newli,lis[0]);
+		text.value="";
+		var spans=document.getElementsByTagName('span');
+	    for (var i = 0; i < spans.length; i++) {
+		spans[i].onclick=function(){
+			this.parentNode.style.display="none";
+		}
+	}
+	}
+
+	
+</script>
+</html>

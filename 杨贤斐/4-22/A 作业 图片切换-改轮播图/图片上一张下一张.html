@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		body{
+			-moz-user-select:none;/*火狐*/
+			-webkit-user-select:none;/*webkit浏览器*/
+			-ms-user-select:none;/*IE10*/
+			-khtml-user-select:none;/*早期浏览器*/
+			user-select:none;
+
+
+		}
+		span{
+			cursor: pointer;
+		}
+		span:active{
+			background-color: red;
+		}
+		#w{
+			margin: 100px 200px;
+		}
+	</style>
+</head>
+<body>
+<div id="w">
+<img src="images/1.jpg" ><b id="a1">1</b>
+<br>
+<span id="prev">◀</span>
+<span id="next">▶</span>
+</div>
+</body>
+<script type="text/javascript">
+	var imgArr =["1.jpg","2.jpg","3.jpg","4.png","5.jpg","6.jpg"]
+	var prev = document.getElementById('prev');
+	var next = document.getElementById('next');
+	var a1 = document.getElementById('a1');
+	var num = 0;
+
+	next.onclick=function(){
+		document.getElementsByTagName('img')[0].src="images/" + imgArr[++num];
+		if(num>=imgArr.length){
+			document.getElementsByTagName('img')[0].src="images/" + imgArr[imgArr.length-1];
+			alert("已经是最后一张了！");
+			console.log("已经是最后一张了！");
+			num=imgArr.length-1;
+		}
+		a1.innerText=num+1;
+		console.log(num)
+	}
+	prev.onclick=function(){
+		document.getElementsByTagName('img')[0].src="images/" + imgArr[--num];
+		if(num<0){
+			document.getElementsByTagName('img')[0].src="images/" + imgArr[0];
+			alert("已经是第一张了！");
+			console.log("已经是第一张了！");
+			num=0;
+		}
+		a1.innerText=num+1;
+		console.log(num)
+	}
+	var y =0;
+	setInterval(function(){
+       y++;
+     a1.innerHTML=y%6+1
+
+   
+  
+console.log(y)
+document.getElementsByTagName('img')[0].src="images/" + imgArr[y%6];
+	},4000)
+
+</script>
+</html>
