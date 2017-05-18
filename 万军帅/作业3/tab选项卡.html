@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#wrap{
+			width: 500px;
+			margin: 100px auto;
+			border: 1px solid #888;
+		}
+		.style{
+			background: purple;
+		}
+		.box{
+			width: 500px;
+			height: 500px;
+			background: pink;
+			display: none;
+		}
+		.show{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<button>第1个</button>
+		<button>第2个</button>
+		<button>第3个</button>
+		<button>第4个</button>
+		<button>第5个</button>
+		<button>第6个</button>
+		<div id="button">
+			<div class="box show">第1号盒子</div>
+			<div class="box">第2号盒子</div>
+			<div class="box">第3号盒子</div>
+			<div class="box">第4号盒子</div>
+			<div class="box">第5号盒子</div>
+			<div class="box">第6号盒子</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var btns=document.getElementsByTagName('button');
+		var boxs=document.getElementById('button').getElementsByTagName('div');
+		for(var i=0;i<btns.length;i++){
+			btns[i].index=i;
+			btns[i].onclick=function(){
+				for(var j=0;j<btns.length;j++){
+					btns[j].className="";
+					boxs[j].className="box";
+				}
+				this.className="style";
+				boxs[this.index].className="box show";
+			}
+		}
+	</script>
+</body>
+</html>
