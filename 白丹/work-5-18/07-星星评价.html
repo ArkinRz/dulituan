@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动客服星级评价</title>
+	<script type="text/javascript" src="../jquery-3.2.1.js"></script>
+	<script>
+		$(function(){
+
+			$(".star li").on("click",function(){
+				$(this).nextAll().children().attr("src","images/star1.png");
+				$(this).prevAll().children().attr("src","images/star2.png");
+				$(this).children().attr("src","images/star2.png");
+				$(".num").html($(this).index()+1+"颗星");
+			})
+			// 
+
+
+		})
+
+
+	</script>
+	<style>
+		*{margin: 0;padding: 0;}
+		body{font: 16px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;background-color: rgba(100,100,100,.4);}
+		.wrap{width: 500px;background-color: #ffffff;margin:50px auto;border-top: 2px solid green;padding: 10px 25px;}
+		h2{font-size: 18px;margin-bottom: 20px;}
+		.main{text-align: center;}
+		.starAll{width: 90%;height: 30px;line-height: 30px;background-color: #ffeeff;margin-bottom: 20px;box-sizing: border-box;}
+		.starAll .num{float: right;color:#ff3300;padding: 0 10px;}
+		.star{width: 80%;display:flex;justify-content: space-around;float: left;}
+		.star img{display: inline-block;height: 30px;/*background-color: red;*/}
+		.star li{display: inline-block;list-style: none;}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<h2>感谢您的使用，您有多大的可能性向您的亲友推荐10086网厅？请用1-10颗星表达您的观点，一颗星代表完全不可能，十颗星代表完全有可能！</h2>
+		<div class="main">
+			<div class="starAll">
+				<ul class="star">
+					<li><img src="./images/star1.png" alt=""></li>
+					<li><img src="./images/star1.png" alt=""></li>
+					<li><img src="./images/star1.png" alt=""></li>
+					<li><img src="./images/star1.png" alt=""></li>
+					<li><img src="./images/star1.png" alt=""></li>
+					<li><img src="./images/star1.png" alt=""></li>
+					<li><img src="./images/star1.png" alt=""></li>
+					<li><img src="./images/star1.png" alt=""></li>
+					<li><img src="./images/star1.png" alt=""></li>
+					<li><img src="./images/star1.png" alt=""></li>
+				</ul>
+				<span class="num">7颗星</span></div>
+			</div>
+			<p>您觉得我们在哪些方面需要改进？以便更好的为您服务\(0.0)/</p>
+			<textarea name="" id="txt" cols="50" rows="10"></textarea>
+			<button class="btn">提交</button>
+			<p>感谢您的宝贵意见，我们会努力改进的</p>
+			<br>
+		</div>
+		
+	</div>
+
+
+
+</body>
+</html>
