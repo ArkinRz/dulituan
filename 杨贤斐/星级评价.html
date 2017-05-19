@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>星级评价</title>
+		<script src="jquery-3.2.1.js"></script>
+		<script>
+			$(document).ready(function(){
+//				$("div span").bind("mouseover",function(){
+//					
+//					$(this).addClass("l");
+//					$(this).prevAll().addClass("l");
+//				})
+//				$("div span").bind("mouseout",function(){
+//					$(this).removeClass("l");
+//					$(this).prevAll().removeClass("l");
+//					$(this).nextAll().removeClass("l")
+//			})
+			var i=0;
+				$("div span").click(function(){
+					 //$("div span").unbind("mouseout")
+					$(this).addClass("l");
+					$(this).prevAll().addClass("l");
+					$(this).nextAll().removeClass("l");
+			
+			 var i=$(this).index();
+			 var j=i+1
+			 $("b").html("您给的评价是"+j+"星级评价")
+				})
+				
+			})
+			</script>
+	</head>
+	<style>
+		span{
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			background: orange;
+			background: url(./star_icon.png);
+			background-position:0 -24px;
+		}
+		.l,span:hover{
+			background-position:0 0;
+		}
+		
+	</style>
+	<body>
+		<div>
+			<span class=""></span>
+			<span class=""></span>
+			<span class=""></span>
+			<span class=""></span>
+			<span class=""></span>
+			<b></b>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>五角星</title>
+	<script type="text/javascript" src="jquery-3.1.0.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// $("img").click(function(){
+
+			// 	var ss=$("img").index(this);
+			
+			// 	if(ss){
+					// $("img").slice(0,ss+1).css("background","olive");
+			// 	}
+
+			// })
+			$("span").click(function(){
+			var ss=$("span").index(this);
+			$("span").slice(0,ss+1).addClass("imgstar")
+			$(this).nextAll().removeClass("imgstar")
+			})
+
+		})
+	</script>
+	<style type="text/css"> 
+		span{
+			width: 24px;
+			height: 24px;
+			display: inline-block;
+			background: url(star_icon.png) 0 24px;
+		}
+
+		.imgstar{background: url(star_icon.png) ;}
+	</style>
+</head>
+<body>
+	
+		
+
+	
+	<div class="off">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+</body>
+</html>

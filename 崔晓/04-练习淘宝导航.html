@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>淘宝导航</title>
+	<script src="F:\cuixiao\WebClass\第三阶段\jquery-3.2.1.js"></script>
+	<script>
+		$(function(){
+			
+           $(".li1").hover(function(){
+              $(this).addClass("sty")
+              $(this).children(".ul1").addClass("hid").show()
+
+           },function(){
+              $(this).removeClass("sty")
+              $(this).children(".ul1").removeClass("hid")
+             
+           })
+
+
+		})
+	</script>
+	<style>
+
+	    a{  
+	    	/*display: inline-block;*/
+	    	/*width: 68px;*/
+	    	/*height: 40px;*/
+	    	/*border-radius: 8px;*/
+	    	color: #000;
+	    	text-decoration: none;
+	    	/*border: 1px solid red;*/
+	    } 
+		ul .li1{
+			list-style: none;
+			float: left;
+			display: inline-block;
+			/*background: red;*/
+			width: 70px;
+			height: 40px;
+			line-height: 40px;
+			margin: 10px;
+			border-radius: 8px;
+			font-weight: bold;
+			font-size: 17px;
+			text-align: center;
+			transition: 0.2s;
+		}
+		.ul1{
+			position: relative;
+			display: none;
+		}
+        .ul1>li{
+        	list-style: none;
+        	position: absolute;
+        	left: 0px;
+        	margin:5px 0;
+        	/*display: none;*/
+        }
+		.sty{
+			color: #fff;
+			background: orange;
+
+		}
+		.hid{
+			display: block;
+			height: 150px;
+			text-align: center;
+			background: rgba(0,0,0,.3);
+			border-radius: 8px;
+
+		}
+	
+	</style>
+</head>
+<body>
+	<div id="box">
+		<ul>
+			<li class="li1">首页<a href="#"></a>
+                <ul class="ul1">
+                	<li>bababa</li>
+                	<li>bababa</li>
+                	<li>bababa</li>
+                </ul>
+			</li>
+			<li class="li1">超市<a href="#"></a>
+                <ul class="ul1">
+                	<li>bababa</li>
+                	<li>bababa</li>
+                	<li>bababa</li>
+                </ul>
+			</li>
+			<li class="li1">服装<a href="#"></a>
+                <ul class="ul1">
+                	<li>bababa</li>
+                	<li>bababa</li>
+                	<li>bababa</li>
+                </ul>
+			</li>
+			<li class="li1">零食<a href="#"></a>
+                <ul class="ul1">
+                	<li>bababa</li>
+                	<li>bababa</li>
+                	<li>bababa</li>
+                </ul>
+			</li>
+			<li class="li1">电器<a href="#"></a>
+                <ul class="ul1">
+                	<li>bababa</li>
+                	<li>bababa</li>
+                	<li>bababa</li>
+                </ul>
+			</li>
+			<li class="li1">生活<a href="#"></a>
+                <ul class="ul1">
+                	<li>bababa</li>
+                	<li>bababa</li>
+                	<li>bababa</li>
+                </ul>
+			</li>
+			<li class="li1">旅行<a href="#"></a>
+                <ul class="ul1">
+                	<li>bababa</li>
+                	<li>bababa</li>
+                	<li>bababa</li>
+                </ul>
+			</li>
+			<li class="li1">特色<a href="#"></a>
+                <ul class="ul1">
+                	<li>bababa</li>
+                	<li>bababa</li>
+                	<li>bababa</li>
+                </ul>
+			</li>
+		</ul>
+	</div>
+
+</body>
+</html>
