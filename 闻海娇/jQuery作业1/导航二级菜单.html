@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript" src="jquery-3.2.1.js"></script>
+	<style>
+	*{margin: 0;padding: 0;}
+		.wrap ul{
+			margin-left: 20px;
+			display: inline-block;
+		}
+		
+		li{
+			list-style: none;
+		}
+		.wrap{
+			width: 100%;
+			margin: 100px auto;
+			background-color: pink;
+		}
+		.static{
+			background-color: pink;
+		}
+		.lime{
+			background-color: lime;
+			font-weight: bold;
+			border-radius: 6px;
+			color: #fff;
+		}
+		.li{
+			background-color: red;
+			width: 65px;
+			display: none;
+			position: relative;
+			top: -100px;
+		}
+		
+		.li1{
+			position: relative;
+			left: 20px;
+		}
+		.li2{
+			position: relative;
+			left: 108px;
+		}
+		.li3{
+			position: relative;
+			left: 196px;
+		}
+		.li4{
+			position: relative;
+			left:286px;
+		}
+		.li5{
+			position: relative;
+			left: 375px;
+		}
+		.li6{
+			position: relative;
+			left: 465px;
+		}
+		.li7{
+			position: relative;
+			left: 554px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<ul class="span1">精选水果</ul>
+		<ul class="span2">优质蔬菜</ul>
+		<ul class="span3">鲜肉禽蛋</ul>
+		<ul class="span4">海鲜水产</ul>
+		<ul class="span5">速冻食品</ul>
+		<ul class="span6">饮料甜品</ul>
+		<ul class="span7">粮油五谷</ul>
+	</div>
+		<ul class='li1 li'><li>车厘子</li><li>草莓</li><li>西瓜</li><li>苹果</li></ul>
+		<ul class='li2 li'><li>西蓝花</li><li>白菜</li><li>油麦菜</li><li>韭菜</li></ul>
+		<ul class='li3 li'><li>牛肉</li><li>鸡肉</li><li>羊肉</li><li>狗肉</li></ul> 
+		<ul class='li4 li'><li>基围虾</li><li>螃蟹</li><li>蛤蜊</li><li>螺蛳</li></ul>
+		<ul class='li5 li'><li>饺子</li><li>汤圆</li><li>饺子</li><li>馄饨</li></ul>
+		<ul class='li6 li'><li>可乐</li><li>红酒</li><li>鸡尾酒</li><li>冰淇淋</li></ul>
+		<ul class='li7 li'><li>大豆</li><li>玉米</li><li>黄豆</li><li>麦子</li></ul> 
+</body>
+	<script>
+		$(document).ready(function() {
+			
+			$("ul").hover(function() {
+				
+				$(this).removeClass("static")
+				$(this).addClass("lime")
+			},function() {
+				
+				$(this).removeClass("lime")
+				$(this).addClass("static")
+			})
+
+
+			$(".span1").hover(function(){
+				$(".li1").css("display","block");
+			},function(){
+				$(".li1").css("display","none");
+
+			})
+
+			$(".span2").hover(function(){
+				$(".li2").css("display","block");
+			},function(){
+				$(".li2").css("display","none");
+
+			})
+
+			$(".span3").hover(function(){
+				$(".li3").css("display","block");
+			},function(){
+				$(".li3").css("display","none");
+
+			})
+
+			$(".span4").hover(function(){
+				$(".li4").css("display","block");
+			},function(){
+				$(".li4").css("display","none");
+
+			})
+
+			$(".span5").hover(function(){
+				$(".li5").css("display","block");
+			},function(){
+				$(".li5").css("display","none");
+
+			})
+
+			$(".span6").hover(function(){
+				$(".li6").css("display","block");
+			},function(){
+				$(".li6").css("display","none");
+
+			})
+
+			$(".span7").hover(function(){
+				$(".li7").css("display","block");
+			},function(){
+				$(".li7").css("display","none");
+
+			})
+
+			$(".span8").hover(function(){
+				$(".li8").css("display","block");
+			},function(){
+				$(".li8").css("display","none");
+
+			})
+
+		})
+	</script>
+</html>
