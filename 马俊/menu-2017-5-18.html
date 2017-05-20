@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="../jquery-3.2.1.js"></script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			font-weight: bold;
+		}
+		#box{
+			width: 1000px;
+			height: 40px;
+			margin:0 auto;
+			background: #eee;
+			text-align: center;
+		}
+		div{
+			box-shadow: 2px 2px 2px 0 #999	
+		}
+		.menu{
+			display: table;
+			height: 40px;
+		}
+		.menu li{
+			display: inline-block;
+			width: 200px;
+			height: 40px;
+			line-height: 40px;
+		}
+		.menu li a{
+			padding: 10px;
+			border-radius: 10px;
+			text-decoration: none;
+			color: #000;
+		}
+		.hide {
+			width: 200px;
+			float: left;
+			background: #eee;
+			display: inline-block;
+			display: none;
+		}
+		.sty{
+			color: #fff;
+			background: orange;
+		}
+	</style>
+	<title>menu</title>
+	<script>
+		$(function(){
+			
+			$("li").hover(function(){
+				$(this).addClass("sty")
+				$(this).find("span").css("color","#fff")
+				$(this).find(".hide").css("display","block")
+			},function(){
+				$(this).removeClass("sty")
+				$(this).find("span").css("color","#000")
+				$(this).find(".hide").css("display","none")
+			})
+		})
+	</script>
+</head>
+<body>
+	<div id="box">
+		<ul class="menu">
+			<li><a href="#"><span>首页</span></a></li>
+			<li><a href="#"><span>学校概况</span></a>
+				<div class="hide">
+					<div><a href="#">现任领导</a></div>
+					<div><a href="#">学科专业</a></div>
+					<div><a href="#">校园风光</a></div>
+				</div>	
+			</li>
+			<li><a href="#"><span>组织机构</span></a>
+				<div class="hide">
+					<div><a href="#">学校办公室</a></div>
+					<div><a href="#">党委宣传部</a></div>
+					<div><a href="#">学生工作部</a></div>
+				</div>
+				
+			</li>
+			<li><a href="#"><span>科学研究</span></a>
+				<div class="hide">
+					<div><a href="#">阿拉伯研究中心</a></div>
+					<div><a href="#">北方语言研究所</a></div>
+					<div><a href="#">西夏研究所</a></div>
+				</div>
+					
+			</li>
+			<li><a href="#"><span>招生就业</span></a>
+				<div class="hide">
+					<div><a href="#">本科信息</a></div>
+					<div><a href="#">研究生信息</a></div>
+					<div><a href="#">招生信息</a></div>
+				</div>
+				
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

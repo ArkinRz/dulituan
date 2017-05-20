@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>移动客服导航案例</title>
+	<style>
+		div{
+			display: inline-block;
+			width: 25px;
+			height: 25px;
+			background: url(./images/star_icon.png) no-repeat;
+			background-position:0px -25px;
+		}
+		.change{
+			background-position:0px 0px;
+		}
+		span{
+			color: orange;
+			font-size: 20px;
+			margin-left: 10px;
+		}
+	</style>
+	<script type="text/javascript" src="jquery-3.2.1.js"></script>
+	<script type="text/javascript"> 
+	 $(function(){
+       $("div").click(function(){
+       	  $(this).prevUntil().addClass("change");
+       	  $(this).addClass("change");
+       	  $(this).nextAll().removeClass("change");
+       	  var num=$(this).index();
+       	  $("span").html(num+1+ "颗星");
+
+       })
+      
+	})
+	</script>
+</head>
+<body>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+	  <span></span>
+</body>
+</html>

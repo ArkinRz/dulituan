@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>02_复合事件</title>
+	<script src="jquery-3.2.1.js"></script>
+	<script>
+		$(function(){
+			// 复合事件
+
+			// hover(fn1,fn2)      结合了mouseenter()和mouseleave()事件
+
+			$(".div1").hover(function(){
+				$(this).css("background","yellow");
+			},function(){
+				$(this).css("background","red");
+			})
+
+			$(".div2").hover(function(){
+				$(this).removeClass("yellow");
+				$(this).addClass("red");
+				$(".d1").hide(100);
+			},function(){
+				$(this).removeClass("red");
+				$(this).addClass("yellow");
+				$(".d1").show(100);
+			})
+
+			// 鼠标滑过 class为p1的标签的时候弹出层
+			$(".p1").hover(function(){
+				alert("1")
+			})
+		})
+	</script>
+	<style>
+		.red{background: red;}
+		.yellow{background: yellow;}
+	</style>
+</head>
+<body>
+	<!-- <div class="div1">鼠标滑过，背景颜色改变
+		<div>测试看能不能再次触发</div>
+	</div> -->
+	<div class="div2">鼠标滑过，背景颜色改变
+		<div class="d1">测试看能不能再次触发</div>
+	</div>
+
+	<p class="p1">鼠标滑过 弹出一个弹出层</p>
+	
+</body>
+</html>

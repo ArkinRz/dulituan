@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>08_仿淘宝好评</title>
+	<script src="jquery-3.2.1.js"></script>
+	<script>
+		$(function(){
+				$("img").click(function(){
+					if($(this).attr("src")=="./images/off_icon.png"){
+						$(this).prevAll().attr("src","./images/on_icon.png");
+						$(this).attr("src","./images/on_icon.png");
+						$("i").html($(this).index()+1);
+					}else{
+						$(this).nextAll().attr("src","./images/off_icon.png");
+						$(this).attr("src","./images/on_icon.png");
+					}
+				})
+		})
+	</script>
+	<style>
+		.wrap{width: 300px;margin: 100px auto;}
+		p{display: inline-block;position: relative;top: -4px;}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<img src="./images/off_icon.png" alt="">
+		<img src="./images/off_icon.png" alt="">
+		<img src="./images/off_icon.png" alt="">
+		<img src="./images/off_icon.png" alt="">
+		<img src="./images/off_icon.png" alt="">
+		<p>你选择了<i> </i> 颗星星</p>
+	</div>
+	
+</body>
+</html>
