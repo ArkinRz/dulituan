@@ -1,0 +1,117 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript" src="jquery-3.2.1.js"></script>
+	<style>
+	*{margin: 0;padding: 0;}
+		.wrap{
+			margin: 100px auto;
+			width: 800px;
+			position: relative;
+		}
+		
+		li{
+			list-style: none;
+			background-color: pink;
+			margin: 5px;
+			border-radius: 3px;
+			/*display: none;*/
+		}
+		
+		
+		
+		ul{
+			display: inline-block;
+			background-color: yellowgreen;
+			width: 100px;
+			height: 20px;
+			margin: 5px;
+			border-radius: 4px;
+			text-align: center;
+			float: left;
+		}
+		
+		.static{
+			background-color: yellowgreen;
+		}
+		.lime{
+			background-color: lime;
+			font-weight: bold;
+			border-radius: 6px;
+			
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="wrap">
+	
+		<ul>精选水果
+			<li>车厘子</li>
+			<li>草莓</li>
+			<li>西瓜</li>
+			<li>苹果</li>
+		</ul>
+		<ul>优质蔬菜
+			<li>西蓝花</li>
+			<li>白菜</li>
+			<li>油麦菜</li>
+			<li>韭菜</li>
+		</ul>
+		<ul>鲜肉禽蛋
+			<li>牛肉</li>
+			<li>鸡肉</li>
+			<li>羊肉</li>
+			<li>狗肉</li>
+		</ul> 
+		<ul>海鲜水产
+			<li>基围虾</li>
+			<li>螃蟹</li>
+			<li>蛤蜊</li>
+			<li>螺蛳</li>
+		</ul>
+		<ul>速冻食品
+			<li>饺子</li>
+			<li>汤圆</li>
+			<li>饺子</li>
+			<li>馄饨</li>
+		</ul>
+		<ul>饮料甜品
+			<li>红酒</li>
+			<li>鸡尾酒</li>
+			<li>冰淇淋</li>
+		</ul>
+		<ul>五谷杂粮
+			<li>大豆</li>
+			<li>玉米</li>
+			<li>黄豆</li>
+			<li>麦子</li>
+		</ul> 
+	</div>
+</body>
+	<script>
+		$(document).ready(function() {
+			$("ul").hover(function() {
+				
+				$(this).removeClass("static")
+				$(this).addClass("lime")
+			},function() {
+				
+				$(this).removeClass("lime")
+				$(this).addClass("static")
+			})
+
+
+			$("li").hide();
+			$("ul").hover(function(){
+				$(this).children().show();
+				$(this).siblings().children().hide();
+			},function(){
+				$(this).children().hide();
+			})
+
+		})
+	</script>
+</html>

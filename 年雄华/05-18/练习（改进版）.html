@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>练习</title>
+	<script type="text/javascript" src = "jquery-3.2.1.js"></script>
+		<script type="text/javascript">
+
+			$(function(){
+
+
+					//第一种方法：css
+				// $(".a1").mouseover(function(){
+				// 	$(".a1").css("background","red");
+				// 	$(".a1").css("color","#fff");
+				// 	$(".tr1").css("display","block");
+				// })
+
+				// $(".a1").mouseout(function(){
+				// 	$(".a1").css("background","#fff");
+				// 	$(".a1").css("color","#000");
+				// 	$(".tr1").css("display","none");
+				// })
+
+				// $(".a2").mouseover(function(){
+				// 	$(".a2").css("background","red");
+				// 	$(".a2").css("color","#fff");
+				// 	$(".tr2").css("display","block");
+				// })
+
+				// $(".a2").mouseout(function(){
+				// 	$(".a2").css("background","#fff");
+				// 	$(".a2").css("color","#000");
+				// 	$(".tr2").css("display","none");
+				// })
+
+				// $(".a3").mouseover(function(){
+				// 	$(".a3").css("background","red");
+				// 	$(".a3").css("color","#fff");
+				// 	$(".tr3").css("display","block");
+				// })
+
+				// $(".a3").mouseout(function(){
+				// 	$(".a3").css("background","#fff");
+				// 	$(".a3").css("color","#000");
+				// 	$(".tr3").css("display","none");
+				// })
+
+				// $(".a4").mouseover(function(){
+				// 	$(".a4").css("background","red");
+				// 	$(".a4").css("color","#fff");
+				// 	$(".tr4").css("display","block");
+				// })
+
+				// $(".a4").mouseout(function(){
+				// 	$(".a4").css("background","#fff");
+				// 	$(".a4").css("color","#000");
+				// 	$(".tr4").css("display","none");
+				// })
+
+				// $(".a5").mouseover(function(){
+				// 	$(".a5").css("background","red");
+				// 	$(".a5").css("color","#fff");
+				// 	$(".tr5").css("display","block");
+				// })
+
+				// $(".a5").mouseout(function(){
+				// 	$(".a5").css("background","#fff");
+				// 	$(".a5").css("color","#000");
+				// 	$(".tr5").css("display","none");
+				// })
+
+
+
+
+
+				//第二种方法：遍历
+
+					$("li").hide()
+				$("ul").hover(function(){
+					$(this).children().show(50)
+					$(this).slibling().children().hide()
+				},function(){
+					$(this).children().hide(50)
+					// $(this).slibling().children().hide()
+				})
+
+				
+
+			})
+
+
+		</script>
+		<style type="text/css">
+			/*ul{display: none;}
+			button{
+				border-radius: 4px;
+				width: 80px;
+				height: 30px;
+				font-size: 20px;
+				text-align: center;
+			}*/
+
+
+/*
+			ul{
+				border-radius: 4px;
+				width: 80px;
+				height: 30px;
+				font-size: 20px;
+				text-align: center;
+				display: inline;
+			}*/
+			
+			/*//第二种方法：遍历*/
+				ul{
+				border-radius: 4px;
+				width: 80px;
+				height: 30px;
+				font-size: 20px;
+				text-align: center;
+				display: inline;
+				float: left;
+			}
+			li{
+				list-style: none;
+				width: 80px;
+				margin: 5px;
+				height: 20px;
+				font-size: 20px;
+				background-color: yellow;
+				border: 1px solid #fff;
+				border-radius: 5px;
+				display: inline-block;
+			}
+		</style>
+</head>
+<body>
+	
+	<!-- //第一种方法：css -->
+<!-- <button class="a1">水果</button>
+<button class="a2">蔬菜</button>
+<button class="a3">海鲜</button>
+<button class="a4">饮料</button>
+<button class="a5">啤酒</button>
+	<ul class="tr1">
+		<li>榴莲</li>
+		<li>车厘子</li>
+		<li>草莓</li>
+		<li>香蕉</li>
+		<li>西瓜</li>
+	</ul>
+	<ul class="tr2">
+		<li>卷心菜</li>
+		<li>辣椒</li>
+		<li>西红柿</li>
+		<li>萝卜</li>
+		<li>豆角</li>
+	</ul>
+	<ul class="tr3">
+		<li>大龙虾</li>
+		<li>带鱼</li>
+		<li>红鲤鱼</li>
+		<li>虾米</li>
+		<li>霸王蟹</li>
+	</ul>
+	<ul class="tr4">
+		<li>百世</li>
+		<li>红牛</li>
+		<li>乐虎</li>
+		<li>东鹏特饮</li>
+		<li>康师傅</li>
+	</ul>
+	<ul class="tr5">
+		<li>雪花</li>
+		<li>燕京</li>
+		<li>X5</li>
+		<li>青岛</li>
+	</ul> -->
+
+
+	<!-- //第二种方法：遍历
+ -->	<ul class="tr1">水果
+		<li>榴莲</li>
+		<li>车厘子</li>
+		<li>草莓</li>
+		<li>香蕉</li>
+		<li>西瓜</li>
+	</ul>
+	<ul class="tr2">蔬菜
+		<li>卷心菜</li>
+		<li>辣椒</li>
+		<li>西红柿</li>
+		<li>萝卜</li>
+		<li>豆角</li>
+	</ul>
+	<ul class="tr3">海鲜
+		<li>大龙虾</li>
+		<li>带鱼</li>
+		<li>红鲤鱼</li>
+		<li>虾米</li>
+		<li>霸王蟹</li>
+	</ul>
+	<ul class="tr4">饮料
+		<li>百世</li>
+		<li>红牛</li>
+		<li>乐虎</li>
+		<li>东鹏特饮</li>
+		<li>康师傅</li>
+	</ul>
+	<ul class="tr5">啤酒
+		<li>雪花</li>
+		<li>燕京</li>
+		<li>X5</li>
+		<li>青岛</li>
+	</ul>
+</body>
+</html>
