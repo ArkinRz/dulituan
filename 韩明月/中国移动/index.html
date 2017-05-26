@@ -15,7 +15,11 @@
 	<div class="header_nav">
 		<div class="header_nav_content">
 			<div class="header_nav_left">
-				<span class="h_n_l_l"><i></i>关注山西移动</span> 
+				<span class="h_n_l_l"><i></i>关注山西移动</span>
+				<div class="gz">
+					<img src="./images/ewm_bg.png" alt="">
+					<img src="./images/yyewm.jpg" alt="" class="ewm">
+				</div>
 				<span class="h_n_l_r"><i></i>收藏山西移动</span> 	 	
 	  		</div>
 	  		<div class="header_nav_right">
@@ -108,24 +112,55 @@
 					<li>
 						<span class="aside_sp1">合约机</span>
 						<p>购机送费</p>
+						<div class="li_ej">
+							<a href="javascript:;">合约机</a>
+							<a href="javascript:;">合约机</a>
+							<a href="javascript:;">合约机</a>
+							<a href="javascript:;">合约机</a>
+							<a href="javascript:;">合约机</a>
+						</div>
 					</li>
 					<li>
 						<span class="aside_sp2">品牌(机型)</span>
 						<p>苹果6&nbsp;小米2&nbsp;三星&nbsp;华为P8</p>
 						<p>酷派&nbsp;&nbsp;中兴&nbsp;&nbsp;TCL&nbsp;&nbsp;更多</p>
+						<div class="li_ej">
+							<a href="javascript:;">苹果6</a>
+							<a href="javascript:;">小米2</a>
+							<a href="javascript:;">三星</a>
+							<a href="javascript:;">华为P8</a>
+							<a href="javascript:;">酷派</a>
+						</div>
 					</li>
+					
 					<li>
 						<span class="aside_sp3">周边(外设)</span>
 						<p>智能监控&nbsp;&nbsp;智能手表</p>
+						<div class="li_ej">
+							<a href="javascript:;">智能监控</a>
+							<a href="javascript:;">智能手表</a>
+						</div>
 					</li>
+					
 					<li>
 						<span class="aside_sp4">靓号</span>
 						<p>靓号选购</p>
+						<div class="li_ej">
+							<a href="javascript:;">靓号选购</a>
+							<a href="javascript:;">靓号选购</a>
+						</div>
 					</li>
+					
 					<li style="border: none;">
 						<span class="aside_sp5">新机首发/预约</span>
 						<p>三星&nbsp;&nbsp;Galaxy&nbsp;&nbsp;S4</p>
+						<div class="li_ej">
+							<a href="javascript:;">三星</a>
+							<a href="javascript:;">Galaxy</a>
+							<a href="javascript:;">S4</a>
+						</div>
 					</li>
+					
 				</ul>
 			</div>
 		</div>
@@ -163,16 +198,16 @@
 					<li>什么是合约机？</li>
 					<p>合约机=手机+话费+流量</p>
 					<li>合约类型有哪些？</li>
-					<p style="margin-bottom: 10px;">0元购机</p>
-					<p>预存明年话费,即可得0元</p>
-					<p>获取最新最靓手机</p>
-					<p style="margin-bottom: 10px;">购机送费</p>
-					<p>选择心仪的手机,获得话费</p>
-					<p>赠送</p>
+					<p style="margin-bottom: 10px;" class="p">0元购机</p>
+					<p class="p">预存明年话费,即可得0元</p>
+					<p class="p">获取最新最靓手机</p>
+					<p style="margin-bottom: 10px;" class="p">购机送费</p>
+					<p class="p">选择心仪的手机,获得话费</p>
+					<p class="p">赠送</p>
 					<li>合约号卡是什么？</li>
-					<p style="margin-bottom: 10px;">合约卡号=号码+话费</p>
-					<p>精美号码等您选,话费流量</p>
-					<p>送不停</p>
+					<p class="p" style="margin-bottom: 10px;">合约卡号=号码+话费</p>
+					<p class="p">精美号码等您选,话费流量</p>
+					<p class="p">送不停</p>
 				</ul>
 
 				<div class="an"></div>
@@ -501,13 +536,15 @@
 
   	  })
 
+ 
   	  $(".sfq").hover(function(){
-          $(this).width("407px");
-          $(this).siblings().width(" 195px");
+          $(this).stop().animate({width:'407px'});
+          $(this).siblings().stop().animate({width:'195px'});
   	  },function(){
-          $(".last").width("407px");
-          $(".last").siblings().width(" 195px");
+          $(".last").stop().animate({width:'407px'});
+          $(".last").siblings().stop().animate({width:'195px'});
   	  })
+
 
   	  $(".main_one_c_r .pic").hover(function(){
          $(this).children().last().animate({top:'390px'},200);
@@ -521,12 +558,14 @@
 		   $(this).animate({top:"150px"});
            $(this).css("backgroundPosition","0% -18%");
            $(".ud").animate({top:"190px"});
+           $(".d_ul .p").hide(500);
            // $(".main_one_content .main_one_c_l .d_ul").animate({top:"-230px"});
   	  	}else{
   	  	   $(this).animate({top:"380px"},1000);
            $(this).css("backgroundPosition","0% 120%");
            $(".ud").animate({top:"420px"},1000);
            $(".ud").animate({display:"none"},500);
+            $(".d_ul .p").show(500);    
            // $(".main_one_content .main_one_c_l .d_ul").animate({top:"0px"},1000);
   	  	}
   	  })
@@ -545,11 +584,45 @@
   	  $(".page_aside_nav_content .fhdb").click(function(){
        	 $("body").animate({scrollTop:0},500)
   	  })
+      
+
+      $(".header_nav .header_nav_content .header_nav_left .h_n_l_l").hover(function(){
+      	 		$(this).css("color","#0085d0");
+      			$(".header_nav_left .gz").show();
+      			$(".header_nav_left .h_n_l_l i").css("backgroundPosition","0% 102%");
+      		},function(){
+      			$(".header_nav_left .gz").hide();
+      			$(".header_nav_left .h_n_l_l i").css("backgroundPosition","0% 0%");	
+      			$(this).css("color","#5e5e5e");	
+      	})
+  	 $(".header_nav .header_nav_content .header_nav_left .h_n_l_r").hover(function(){
+  	 		$(this).css("color","#0085d0");
+  	 		$(".header_nav_left .h_n_l_r i").css("backgroundPosition","0% 100%");	
+		},function(){
+  	 		$(this).css("color","#5e5e5e");
+  	 		
+  	 		$(".header_nav_left .h_n_l_r i").css("backgroundPosition","0 0");
+
+  	 })
+
+  	 $(".main_one_c_l .ul2 li:not(.li1)").hover(function(){
+  	 	 $(this).css("backgroundColor","#f4f8f8");
+  	 	 $(this).css("color","#949797");
+  	 },function(){
+  	 	 $(this).css("backgroundColor","#ebebeb");
+  	 	 $(this).css("color","#000");
+  	 })
 
   	
+  	 $(".ad_center_aside ul li").hover(function(){
+  	 	$(this).children().last().slideDown(0); 
+  	 	$(this).siblings().children().last().slideUp(0);
+  	 },function(){
+  	 	$(this).children().last().slideUp(0); 
+  	 })
+  	
 
-
-   	})
+  })
 
 </script>
 </html>

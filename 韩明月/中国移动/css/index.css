@@ -47,10 +47,28 @@ a {
 	height: 30px;
 	line-height: 30px;
 	float: left;
+	position: relative;
 }
 .header_nav .header_nav_content .header_nav_left .h_n_l_l{
+	display: inline-block;
+	height: 30px;
 	margin-right:5px;
+	cursor: pointer;
 }
+.header_nav .header_nav_content .header_nav_left .gz{
+	position: absolute;
+	top:22px;
+	text-align: center;
+	z-index: 100000;
+	color: #000;
+	display: none;
+}
+.header_nav_left .gz .ewm{
+	position:absolute;
+	left: 25px;
+	top: 25px;
+}
+
 
 .header_nav .header_nav_content .header_nav_left .h_n_l_l i{
 	display: inline-block;
@@ -58,14 +76,20 @@ a {
 	height: 13px;
 	margin-bottom: -2px;
 	margin-right: 2px;
-    background:url(../images/erweima.jpg) no-repeat; 
+    background:url(../images/ewm_icon.png) no-repeat;
+    background-position: 0% 0%;
+    /*background-position: 0% 102%; */
+
 }
 .header_nav .header_nav_content .header_nav_left .h_n_l_r i{
 	display: inline-block;
 	width: 13px;
 	height: 13px;
 	margin-right: 2px;
-    background:url(../images/star.jpg) no-repeat; 
+    background:url(../images/sc_icon.png) no-repeat;
+    background-position: 0% 0%; 
+    /*background-position: 0% 100%; */
+
 }
 
 .header_nav .header_nav_content .header_nav_right{
@@ -316,12 +340,36 @@ a {
 	width: 1000px;
 	height: 370px;
 	margin:0 auto;
+
 }
 .ad_center_aside ul li{
 	width: 200px;
-	height: 73px;
+	height: 73.2px;
 	border-bottom: 1px dashed #e1e1e1;
 	background-color:#fff;
+	cursor: pointer;
+}
+.ad_center_aside ul{
+	position: relative;
+}
+
+.ad_center_aside ul li div{
+	position: absolute;
+	border: none;
+	width: 200px;
+	height:370px;
+	left: 200px;
+	top: 0px;
+	background-color: rgba(125,125,125,0.3);
+	display: none;
+}
+.ad_center_aside ul .li_ej a{
+	display: inline-block;
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 25px;
+	color: #000;
 }
 .ad_center_aside ul li span{
 	margin-top: 10px;
@@ -387,6 +435,7 @@ a {
 	width: 1000px;
 	height: 420px;
 	border: 1px solid #e1e1e1;
+	overflow: hidden;
 }
 .main_one_wz h2{
 	height: 40px;
@@ -418,7 +467,9 @@ a {
 .main_one_content .main_one_c_l p{
 	line-height: 20px;
 }
-
+.main_one_content .main_one_c_r{
+	overflow: hidden;
+}
 .main_one_content .main_one_c_r .sfq{
 	width: 195px;
 	height: 420px;
@@ -427,6 +478,7 @@ a {
 	text-align: center;
 	float: left;
 	border-right: 1px solid #ebebeb;
+	cursor: pointer;
 	
 }
 .main_one_content .main_one_c_r .last{
@@ -444,6 +496,7 @@ a {
     line-height: 40px;
     padding: 0;
     margin: 0;
+    cursor: pointer;
 
 }
 .main_one_c_l .ul2 .li1{
@@ -469,6 +522,7 @@ a {
 	border-right: 1px solid #ebebeb;
 	overflow: hidden;
 	position: relative;
+	cursor: pointer;
 
 }
 .main_one_c_r .pic .pic_wz{
@@ -520,8 +574,10 @@ a {
 }
 .main_one_c_l .an{
 	width: 30px;
+	width: 200px;
 	height: 30px;
 	position: absolute;
+	cursor: pointer;
 	top: 380px;
 	/*top: 150px;*/
 	left: 85px;
