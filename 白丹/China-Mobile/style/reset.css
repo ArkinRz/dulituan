@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+/*样式初始化*/
+*{margin:0;padding:0}
+
+body{
+	-webkit-font-smoothing:antialiased;
+	background-color:#fff;
+	font:12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;
+	color:#5e5e5e
+}
+
+em,i{font-style:normal}
+li{list-style:none}
+img{border:0;vertical-align:middle}
+button,.cur-p{cursor:pointer}
+a{color:#5e5e5e;text-decoration:none}
+a:hover{color:#c81623}
+button,input{font-family:Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif}
+.hide,.none{display:none}
+.clearfix:after{visibility:hidden;clear:both;display:block;content:".";height:0}
+.clearfix{*zoom:1}
+
+
+
+
+
+/*以下为特殊的多用样式*/
+.wrap{width: 1000px;margin:0 auto;box-sizing: border-box;}
+.color-red{color: #e40077;}
+.inline-blo{display: inline-block;}
+.color-normal{color:#5e5e5e;}
+.max-width{width: 100%;min-width: 1000px;margin:0 auto;}

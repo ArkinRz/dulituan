@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<script type="text/javascript" src="jquery-3.2.1.js"></script>
+<script>
+	$(function(){
+		var i=0;
+       $("span").click(function(){
+       	$(this).prevAll().addClass("ad")
+         var a=$(this).index()+1;
+         $("i").html(a+"颗星")
+       	
+       	$(this).addClass("ad")
+	    $(this).nextAll().removeClass("ad")
+       })
+      
+	})
+</script>
+<style>
+	
+</style>
+</head>
+<style>
+	span{
+		display: inline-block;
+		width: 25px;
+		height: 25px;
+		background: url(./images/star_icon.png)no-repeat;
+		background-position:0 -25px;
+
+		
+
+
+	}
+	.ad{
+		background-position: 0 0;
+	}
+
+</style>
+<body>
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	<i>颗星</i>
+
+
+
+</body>
+</html>

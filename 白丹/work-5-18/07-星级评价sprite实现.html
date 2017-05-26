@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>07-星级评价sprite实现</title>
+	<script type="text/javascript" src="../jquery-3.2.1.js"></script>
+	<script>
+		$(function(){
+			$("ul li").click(function(){
+				$(this).nextAll().removeClass("list")
+				$(this).prevAll().addClass("list")
+				$(this).addClass("list");
+				$(".star span em").html($(this).index()+1);
+				// console.log($(this).prevAll())
+
+			});
+
+
+
+		})
+
+	</script>
+	<style>
+		.wrap{width: 500px;margin: 100px auto;background-color: #ddeecf;height: 500px;}
+		.star{width: 90%;padding: 20px;display: flex;justify-content: space-between;float: left;}
+		li{background:url(./images/star_icon.png) 0px -24px no-repeat;float: left;list-style: none;width: 32px;height: 24px;}
+		span{float: right;color:#f30;}
+		em{color:#f30;}
+		.list{background:url(./images/star_icon.png) 0px 0px no-repeat;}
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<ul class="star">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<span>您选择了 <em> 7 </em>&nbsp;颗星</span>
+
+		</ul>
+	</div>
+
+
+
+</body>
+</html>
