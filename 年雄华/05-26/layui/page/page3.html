@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>page3</title>
+	<link rel="stylesheet" type="text/css" href="../layui/css/layui.css">
+	<script src="../layui/layui.js"></script>
+	<style type="text/css">
+	*{margin: 0;
+		padding: 0;}
+
+	.layui-input-inline{
+		width: 100%;
+	}
+	#th,td{
+		text-align: center;
+	}
+	.layui-table, .layui-elem-quote{width: 95%; margin-left: 2%;}
+	.elem-top{
+	display: inline-block;
+	width: 15%;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 4px;
+	text-align: center;
+	font-size: 15px;
+	color: #fff;
+}
+.l{background-color: pink;}
+.r{background-color: yellowgreen;}
+	</style>
+
+
+</head>
+<body>
+	<div class="layui-elem-quote" style="margin-top: 10px;">
+		<div class="elem-top l"><a href="" class="layui-icon" style="background: #fff;">&#xe60a;</a> <span>我的操作日志</span></div>
+		<div class="elem-top r"><a href="" class="layui-icon" style="background: #fff;">&#xe632;</a><span>我的登录日志</span></div>
+	</div>
+ 
+<table class="layui-table" lay-even="" lay-skin="nob">
+  <thead>
+    <tr>
+     <th id="th"><input type="checkbox" name="" lay-skin="primary" lay-filter="allChoose"></th>
+      <th id="th">ID</th>
+      <th id="th">操作人</th>
+      <th id="th">操作时间</th>
+      <th id="th">操作类型</th>
+      <th id="th">操作模块</th>
+      <th id="th">操作ip</th>
+    </tr> 
+  </thead>
+  <tbody>
+    <tr>
+    <td><input type="checkbox" name="" lay-skin="primary"></td>
+      <td>1</td>
+      <td>who</td>
+      <td> 
+      <div class="layui-input-inline">
+        <input type="tel" name="phone" lay-verify="phone" autocomplete="off" class="layui-input">
+      </div>
+      </td>
+      <td>编辑</td>
+       <td>test</td>
+       <td>127.0.0.1</td>
+    </tr>
+    <tr>
+    <td><input type="checkbox" name="" lay-skin="primary"></td>
+      <td>2</td>
+      <td>who</td>
+      <td>
+      	 <div class="layui-input-inline">
+        <input type="tel" name="phone" lay-verify="phone" autocomplete="off" class="layui-input">
+      </div>
+      </td>
+      <td>编辑</td>
+       <td>test</td>
+       <td>127.0.0.1</td>
+    </tr>
+    <tr>
+    <td><input type="checkbox" name="" lay-skin="primary"></td>
+      <td>3</td>
+      <td>who</td>
+      <td>
+      	 <div class="layui-input-inline">
+        <input type="tel" name="phone" lay-verify="phone" autocomplete="off" class="layui-input">
+      </div>
+      </td>
+      <td>编辑</td>
+       <td>test</td>
+       <td>127.0.0.1</td>
+    </tr>
+    <tr>
+    <td><input type="checkbox" name="" lay-skin="primary"></td>
+      <td>4</td>
+      <td>who</td>
+      <td>
+      	 <div class="layui-input-inline">
+        <input type="tel" name="phone" lay-verify="phone" autocomplete="off" class="layui-input">
+      </div>
+      </td>
+      <td>编辑</td>
+       <td>test</td>
+       <td>127.0.0.1</td>
+    </tr>
+    <tr>
+    <td><input type="checkbox" name="" lay-skin="primary"></td>
+      <td>5</td>
+      <td>who</td>
+      <td>
+      	 <div class="layui-input-inline">
+        <input type="tel" name="phone" lay-verify="phone" autocomplete="off" class="layui-input">
+      </div>
+      </td>
+      <td>编辑</td>
+       <td>test</td>
+       <td>127.0.0.1</td>
+    </tr>
+     <tr>
+    <td><input type="checkbox" name="" lay-skin="primary"></td>
+      <td>6</td>
+      <td>who</td>
+      <td>
+      	 <div class="layui-input-inline">
+        <input type="tel" name="phone" lay-verify="phone" autocomplete="off" class="layui-input">
+      </div>
+      </td>
+      <td>编辑</td>
+       <td>test</td>
+       <td>127.0.0.1</td>
+    </tr>
+  </tbody>
+</table> 
+
+<div id="demo5">
+	<div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-4">
+		<span class="layui-laypage-curr">
+			<em class="layui-laypage-em"></em>
+			<em>1</em>
+		</span>
+		<a href="javascript:;" data-page="2">2</a>
+		<a href="javascript:;" data-page="3">3</a>
+		<a href="javascript:;" data-page="4">4</a>
+		<a href="javascript:;" data-page="5">5</a>
+		<span>…</span>
+		<a href="javascript:;" class="layui-laypage-last" title="尾页" data-page="100">末页</a>
+		<a href="javascript:;" class="layui-laypage-next" data-page="2">下一页</a>
+	</div>
+</div>
+
+<script type="text/javascript">
+layui.use(['laypage', 'layer'], function(){
+  var laypage = layui.laypage
+  ,layer = layui.layer;
+
+
+  laypage({
+    cont: 'demo5'
+    ,pages: 100
+    ,curr: location.hash.replace('#!fenye=', '') //获取hash值为fenye的当前页
+    ,hash: 'fenye' //自定义hash值
+  });
+	
+	  })
+</script>
+</html>

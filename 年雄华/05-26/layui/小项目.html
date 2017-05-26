@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小项目</title>
+	<link rel="stylesheet" type="text/css" href="./layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<script src="./layui/layui.js"></script>
+	<!-- <style type="text/css">
+		.layui{
+
+			font-size: 50px;
+			color: #000;
+		}
+		.img{
+			width: 50px;
+			height: 50px;
+			margin: 0 20px 0  40px;
+			color: #fff;
+			display: inline-block;
+			font-size: 55px;
+			line-height: 50px;
+			text-align: center;
+			background-color:yellowgreen;
+		}
+		.layui-nav-tree{
+			height: 600px;
+		}
+		.kuozhan{width: 869px;}
+	</style> -->
+</head>
+<body>
+	<!-- <ul class="layui-nav" lay-filter="">
+				<li class="layui-nav-item layui-this"><a href="" class="layui">layui<div class="img">&#x1002;</div></a></li>
+				<li class="layui-nav-item"><a href="">我的主页</a></li>
+				<li class="layui-nav-item">
+					<a href="javascript:;" class="layui-this">切换系统</a>
+					<dl class="layui-nav-child"> 
+						<dd><a href="">移动模块</a></dd>
+						<dd><a href="">后台模版</a></dd>
+						<dd><a href="">电商平台</a></dd>
+					</dl>
+				</li>
+				<li class="layui-nav-item layui-this kuozhan"><a href="">扩展模块</a></li>
+		</ul>
+			 -->
+			
+		<!-- <ul class="layui-nav layui-nav-tree" lay-filter="test">
+			<li class="layui-nav-item layui-nav-itemed"><a href="javascript:;">后台首页</a></li>
+			<li class="layui-nav-item"><a href="javascript:;">我的面板</a>
+				<dl class="layui-nav-child">
+					<dd><a href="javascript:;">个人信息</a></dd>
+					<dd><a href="javascript:;">日志信息</a></dd>
+					<dd><a href="">面板</a></dd>
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;">用户管理</a>
+				<dl class="layui-nav-child">
+					<dd><a href="">移动模块</a></dd>
+					<dd><a href="">后台模版</a></dd>
+					<dd><a href="">电商平台</a></dd>
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;">网站维护</a>
+				<dl class="layui-nav-child">
+					<dd><a href="">移动模块</a></dd>
+					<dd><a href="">后台模版</a></dd>
+					<dd><a href="">电商平台</a></dd>
+				</dl>
+			</li>
+			<li class="layui-nav-item"><a href="">系统设置</a></li>
+			<li class="layui-nav-item"><a href="">数据统计</a></li>
+			<li class="layui-nav-item"><a href="">友情链接</a></li>
+		</ul> -->
+
+
+
+				<div class="bigbox">
+					<!-- 顶部区域开始 -->
+					<div class="layui-nav-box">
+						<div class="layui-logo">
+							<a href="http://www.layui.com">Layui</a>
+						</div>
+						<div class="layui-icon-box">
+							<li class="layui-icon">&#xe628;</li>
+						</div>
+						<ul class="layui-nav  layui-nav-ul">
+							<li class="layui-nav-item layui-this"><a href="javascript:void(0)">我的主页</a></li>
+							<li class="layui-nav-item index">
+								<a href="javascript:void(0)">切换系统</a>
+								<dl class="layui-nav-child">
+									<dd><a href="javascript:;">系统一</a><a href=""></a></dd>
+									<dd><a href="javascript:;">系统二</a><a href=""></a></dd>
+									<dd><a href="javascript:;">系统三</a><a href=""></a></dd>
+								</dl>
+							</li>
+							<li class="layui-nav-item"><a href="javascript:void(0)">扩展模块</a></li>
+
+						</ul>
+					</div>
+
+					<!-- 顶部区域结束 -->
+
+
+					<!-- 侧导航开始 -->
+
+					<div class="layui-side layui-side-top">
+						<ul class="layui-nav layui-nav-tree layui-nav-side" lay-filter="navDemo">
+							<li class="layui-nav-item" index="1" iframe="./page/page1.html"><a href="javascript:void(0)" >后台首页</a></li>
+							<li class="layui-nav-item">
+								<a href="javascript:void(0)">我的面板</a>
+								<dl class="layui-nav-child">
+									<dd iframe="./page/page2.html" index="2"><a href="javascript:void(0)">个人信息</a></dd>
+									<dd iframe="./page/page3.html" index="3"><a href="javascript:void(0)">日志信息</a></dd>
+									<dd iframe="./page/page4.html" index="4"><a href="javascript:void(0)">面板</a></dd>
+								</dl>
+
+							</li>
+							<li class="layui-nav-item">
+								<a href="javascript:void(0)">用户管理</a>
+								<dl class="layui-nav-child">
+									<dd iframe="./page/page5.html" index="5"><a href="javascript:void(0)">用户相册</a></dd>
+									<dd iframe="./page/page6.html" index="6"><a href="javascript:void(0)">富文本编辑器</a></dd>
+									<dd iframe="./page/page7.html" index="7"><a href="javascript:void(0)">菜单管理</a></dd>
+								</dl>
+
+							</li>
+							<li class="layui-nav-item">
+								<a href="javascript:void(0)">网站维护</a>
+								<dl class="layui-nav-child">
+									<dd iframe="./page/page8.html" index="8"><a href="javascript:void(0)">内容1</a></dd>
+									<dd iframe="./page/page9.html" index="9"><a href="javascript:void(0)">内容2</a></dd>
+									<dd iframe="./page/page10.html" index="10"><a href="javascript:void(0)">内容3</a></dd>
+								</dl>
+
+							</li>
+							<li iframe="./page/page11.html" class="layui-nav-item" index="11"><a href="javascript:void(0)">友情链接</a></li>
+							<li iframe="./page/page12.html" class="layui-nav-item" index="12"><a href="javascript:void(0)">数据统计</a></li>
+						</ul>
+					</div>
+
+					<!-- 右侧内容开始 -->
+
+					<div class="layui-body layui-side-top layui-side-pa">
+						<div class="layui-tab layui-tab-card" lay-filter="tebDemo" lay-allowClose="true" style="height:100%;">
+							<ul class="layui-tab-title">
+
+							</ul> 
+							<div class="layui-tab-content">
+
+							</div>
+						</div>	
+					</div>
+
+
+				</div>
+</body>
+
+
+<script type="text/javascript">
+	// layui.use(["form","element","layer","laydate","layedit"],function(){
+
+	// 	//注意：导航 依赖 element 模块，否则无法进行功能性操作
+	// 			layui.use('element', function(){
+ //  				var element = layui.element();
+
+ //  					//…
+	// 				});
+
+
+	// })
+
+	layui.use("element",function(){
+		var element = layui.element(),
+		$ = layui.jquery;
+		var tableHeight=$(".layui-tab-card").height()-70;
+		element.on("nav(navDemo)",function(){  //事件监听  nav就是一个事件  function()回调函数
+
+			var title = $(this).text();    //点击菜单的时候获取相应的值
+			var index = $(this).attr("index");       //点击菜单的时候获取相应的值
+			var iframe = $(this).attr("iframe");     //点击菜单的时候获取相应的值
+			//获取到tab选项卡里面的title
+			var tabs = $(".layui-tab-title li");
+			for (var i = 0; i < tabs.length; i++) {
+					//获取到tab选项卡里面的title的内容
+				var tabText = tabs[i].innerHTML;
+
+				//截取title的内容
+
+				var substrText = tabText.substr(0,tabText.indexOf("i")-1);
+
+				//判断点击导航时获取到的内容（title是否等于substrText）
+
+				if (substrText==title) {
+
+					//如果相等就切换到对应的选项卡
+					element.tabChange("tebDemo",index);   //如果有就切换
+					return false;   //阻止后面继续添加的行为
+				}
+			}
+			element.tabAdd("tebDemo",{
+				title:title,
+				content:'<iframe name="iframe" style="border:none;width:100%; height:'+tableHeight+'px'+'"'+'src="'+iframe+'"></iframe>',    //字符串拼接     内容就是选项可卡里面的内容
+				id:index
+			})
+		})
+
+
+
+
+		$(".layui-icon-box").click(function () {
+			var sideWidth = $(".layui-nav-side").width();
+			if (sideWidth==200) {
+				$(".layui-nav-side").animate({width:'0'});
+				$(".layui-body").animate({left:'0'});
+			}else{
+				$(".layui-nav-side").animate({width:'200px'});
+				$(".layui-body").animate({left:'200px'});
+			}
+
+	})
+
+	})
+</script>
+<!-- <iframe name=" " style="" src=""></iframe> -->
+</html>

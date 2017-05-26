@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>流加载</title>
+	<link rel="stylesheet" type="text/css" href="./layui/css/layui.css">
+	<script src="./layui/layui.js"></script>
+	<style type="text/css">
+		*{margin: 0;
+			padding: 0;
+		}
+
+		.claer-fix:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.layui-flow-ul li{
+			width: 46%;
+			height: 80%;
+			text-align: center;
+			line-height: 80px;
+			font-size: 40px;
+			background-color: #eee;
+			border-radius: 5px;
+			margin: 10px 1%;
+		/*	float: left;*/
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<ul class="layui-flow-ul clear-fix" id="flow">
+		<li>0</li>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	
+	</ul>
+
+	<script type="text/javascript">
+		layui.use("flow",function(){
+			var flow = layui.flow;
+			flow.load({
+				elem:"#flow",
+				done:function(page,next){
+					setTimeout(function(){
+						var lis = [];
+						for (var i = 0; i <2; i++) {
+							var str = '<li>'+1+'</li>';
+							lis.push(str);
+						}
+						next(lis.join(""),page<5);
+					},500)
+				}
+			})
+		})
+	</script>
+</body>
+</html>
