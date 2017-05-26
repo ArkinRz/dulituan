@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.2.1.js"></script>
+	<script>
+		$(document).ready(function(){
+		  // $("span").hover(function() {
+		  // 	    $("span").addClass('lk')
+		  // 	  	// $(this).addClass('lk')
+		  // 	  	$(this).nextAll().removeClass('lk')
+		  // }, function() {
+		  //    // $(this).removeClass('lk')
+		  //    $("span").removeClass('lk')
+		  // })
+
+		  $("span").click(function(){
+		  	$("span").addClass('lk')
+		  	$(this).nextAll().removeClass('lk')
+		  	$("strong").html(($(this).index()+1)+"颗星")
+		  })
+
+		})
+
+		
+	</script>
+	<style>
+       span{
+       	width: 24px;
+       	height: 24px;
+       	display:inline-block;
+       	background: url(images/022.png) 0 -24px;
+       }
+       strong{
+       	 color:orange;
+         font-size: 30px;
+         padding-left: 50px;
+       }
+
+       .lk{
+       	background: url(images/022.png) ;
+       }
+	</style>
+</head>
+<body>
+	<div class="box">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<strong>0颗星</strong>
+	</div>
+</body>
+</html>
