@@ -1,0 +1,75 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript" src="jquery-3.2.1.js"></script>
+	<style>
+	*{margin: 0;
+		padding: 0;}
+		li{
+			border-radius: 4px;
+			background-color: lime;
+			margin: 5px;
+			list-style: none;
+			text-align: center;
+			color: #fff;
+			font-size: 25px;
+		}
+		ul{
+			background-color: pink;
+			margin: 15px;
+			width: 250px;
+			padding: 5px;
+			text-align: center;
+			font-size: 30px;
+			border-radius: 5px;
+
+		}
+
+	</style>
+</head>
+<body>
+		
+	<ul>
+		河南鑫苑	
+		<li>河南鑫苑工程进度1</li>
+		<li>河南鑫苑工程进度2</li>
+		<li>河南鑫苑工程进度3</li>
+	</ul>
+
+	
+	<ul>
+	山东鑫苑		
+		<li>山东鑫苑工程进度1</li>
+		<li>山东鑫苑工程进度2</li>
+		<li>山东鑫苑工程进度3</li>
+	</ul>
+
+	
+	<ul>
+	安徽鑫苑		
+		<li>安徽鑫苑工程进度1</li>
+		<li>安徽鑫苑工程进度2</li>
+		<li>安徽鑫苑工程进度3</li>
+	</ul>
+
+	
+	<ul>
+	成都鑫苑		
+		<li>成都鑫苑工程进度1</li>
+		<li>成都鑫苑工程进度2</li>
+		<li>成都鑫苑工程进度3</li>
+	</ul>
+
+</body>
+	<script>
+		$(document).ready(function() {
+			$("li").hide()
+			$("ul").click(function() {
+				$(this).children().toggle(500)
+				$(this).siblings().children().hide()
+			})
+		})
+	</script>
+</html>

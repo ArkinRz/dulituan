@@ -1,0 +1,61 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/*顶部导航*/
+.layui-nav-box{
+	height: 55px;
+	border-bottom: 5px solid #1AA094;
+	background: #393D49;
+	position: relative;
+}
+.layui-logo{
+	width: 200px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	font-size: 40px;
+	position: relative;
+}
+.layui-logo a{
+	color: #fff;
+}
+.laui-icon-box{
+	position: relative;
+	width: 30px;
+	height: 30px;
+	background: #1AA094;
+	text-align: center;
+	line-height: 30px;
+	color: #fff;
+	cursor: pointer;
+	font-weight: bold;
+	left: 200px;
+	top: -45px;
+} 
+.layui-nav-ul{
+	position: absolute;
+	top: 0;
+	left: 260px;
+	background: none;
+}
+.layui-nav-ul .layui-nav-bar,.layui-nav-u .layui-this:after{
+	background: #000!important;
+}
+.layui-nav{
+	padding: 0 20px;
+	background: #393D49;
+	color: #c2c2c2;
+	font-size: 0px;
+	box-sizing: border-box !important;
+}
+
+/*垂直导航*/
+.layui-side-top{
+	position: absolute;
+	top: 100px;
+}
+.layui-side-pa{
+	padding: 0 10px;
+}
