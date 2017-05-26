@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>page5</title>
+	<link rel="stylesheet" type="text/css" href="../layui/css/layui.css">
+	<script type="text/javascript" src = "../js/jquery-3.2.1.js"></script>
+	<script src="../layui/layui.js"></script>
+	<link rel="stylesheet" href="../css/swiper.min.css">
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/swiper.animate1.0.2.min.js"></script>
+	
+	<style type="text/css">
+	.img{
+	/*	display: flex;*/
+		margin-left: 20%;
+		margin-top: 5%;
+		text-emphasis: circle;
+
+	}
+	.layui-elem-field{
+		margin-left: 10%;
+		width: 80%;
+	}
+	.img img{
+		width: 15%;
+		height: 150px;
+		margin:1%;
+	}
+
+	.swiper-container{
+			width: 50%;
+			height: 170px;
+			top: 10%;
+			margin-bottom: 5%;
+		}
+		p{
+			font-size: 60px;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+  <legend>浮木风格</legend>
+</fieldset>
+	<div class="img">
+		<img src="../images/5.jpg">
+		<img src="../images/6.jpg">
+		<img src="../images/7.jpg">
+		<img src="../images/8.jpg"><br>
+		<img src="../images/9.jpg">
+		<img src="../images/10.jpg">
+		<img src="../images/11.jpg">
+		<img src="../images/12.jpg">
+	</div>
+
+	<fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+  <legend>来！！！！换一种方式</legend>
+</fieldset>
+
+<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide" style="background:url(../images/13.jpg)">
+				<p class="ani" swiper-animate-effect="flash" swiper-animate-duration="0.2s" swiper-animate-delay="0.2s">Animate</p>
+			</div>
+			<div class="swiper-slide" style="background:url(../images/14.jpg)"></div>
+			<div class="swiper-slide" style="background:url(../images/15.jpg)"></div>
+			<div class="swiper-slide" style="background:url(../images/16.jpg)"></div>
+			<div class="swiper-slide" style="background:url(../images/17.jpg)"></div>
+			<div class="swiper-slide" style="background:url(../images/18.jpg)"></div>
+		</div>
+		<!--  点击按钮 -->
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+
+		<div class="swiper-pagination"></div>
+
+		<div class="swiper-scrollbar"></div>
+
+	</div>
+</body>
+<script type="text/javascript">
+$(function(){
+	$("img").hover(function(){
+		$(this).animate({"width":"10%","height":"10%"},1000);
+			},function(){
+				$(this).animate({"width":"15%","height":"150px"},1500);
+	})
+})
+
+
+
+	new Swiper('.swiper-container',{
+			prevButton:'.swiper-button-prev',   //  点击滚到上一页
+			nextButton:'.swiper-button-next',   // 点击滚到下一页
+			// direction : 'vertical',       //上下滚动（滚轮控制）
+			loop:true,     //控制是否可倒滚（到第一或者最后一页是是否可以循环滚动）
+			pagination:'.swiper-pagination',     //翻页效果（下面的小点）
+			mousewheelControl:true,    //鼠标滚轮控制
+			// grabCursor : true,     //点击时显示手型
+			 autoplay : 500,   //自己滚动的速度
+			 autoplayDisableOnInteraction : false,      //   true   和fals进行设置     当鼠标操作时就停止自己滚动
+			scrollbar:'.swiper-scrollbar',
+
+			onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+			    swiperAnimateCache(swiper); //隐藏动画元素 
+			    swiperAnimate(swiper); //初始化完成开始动画
+			}, 
+			onSlideChangeEnd: function(swiper){ 
+			    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+			} 
+
+
+
+		})
+
+		
+</script>
+</html>
