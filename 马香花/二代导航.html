@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作业</title>
+
+<script type="text/javascript" src="jquery-3.2.1.js"></script>
+<script>
+	$(function(){
+        $("li").hover(function(){
+        	$(this).addClass("red")
+            $(this).children().css("display","block")
+             
+            
+
+        	
+        },function(){
+        	$(this).removeClass("red")
+            $(this).children().css("display","none")
+
+        })
+      
+
+
+	})
+</script>
+<style>
+   .nav{
+   	width: 800px;
+   	height: 500px;
+   	background: pink;
+   }
+   .div1{
+   	       
+   	       height: 43px;
+   	       width: 800px;
+   	       background: green;
+
+
+   }
+	 .div1 li{
+          float: left;
+          list-style-type: none;
+          padding: 10px;
+          font-size: 18px;
+         text-align: center;
+         
+          width: 100px;
+          height: 20px;
+          
+         
+
+	}
+	
+	.red{
+		background: red;
+		font-weight: bold;
+	}
+	ol{
+		display: none;
+	}
+
+</style>
+</head>
+
+<body>
+<div class="nav">
+<div class="div1">
+	
+		<ul>
+			<li>首页
+			<ol class="ol1">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ol>
+			</li>
+			
+			<li>我们
+			 <ol class="ol2">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ol>
+			</li>
+			<li>客户
+			<ol class="ol3">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ol>
+			</li>
+			<li>登录
+                <ol class="ol4">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ol>
+			</li>
+			<li>联系
+               <ol class="ol5">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ol>
+			</li>
+			<li>注册
+                <ol class="ol6">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ol>
+			</li>
+		
+		</ul>
+</div>
+</div>
+	
+</body>
+</html>

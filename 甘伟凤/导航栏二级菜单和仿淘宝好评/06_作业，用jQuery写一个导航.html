@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>06_作业，用jQuery写一个导航</title>
+	<script src="jquery-3.2.1.js"></script>
+	<script>
+		$(function(){
+			$(".li").hover(function(){
+				$(this).css("background","#0a0");
+				$(this).css("border-radius","4px");
+				$(this).children("a").css("color","#fff");
+				$(this).children("a").css("font-weight","blod");
+				$(this).children("#child").show();
+			},function(){
+				$(this).css("background","#0e0");
+				$(this).children("a").css("color","#000");
+				$(this).children("a").css("font-weight","normal");
+				$(this).children("#child").hide();
+
+			})
+			$("span").hover(function(){
+				$(this).css("background","#0ee")
+				$(this).css("color","#fff")
+			},function(){
+				$(this).css("background","#0af")
+				$(this).css("color","#000")
+			})
+		})
+	</script>
+	<style>
+		#box{position: relative;}
+		#wrap{
+			
+			width: 1060px;
+			height: 80px;
+			margin: 100px auto;
+			background: #0f4;
+			text-align:center;
+			padding: 20px;
+			position: relative;
+		}
+		ul li{
+			list-style: none;
+			display: inline-block;
+			font-size: 18px;
+			width:100px;
+			height: 20px;
+			background-color: #0e0;
+			padding: 10px;
+			z-index: 1;
+				
+		}
+		a{text-decoration: none;color: #000;}
+		#child{
+			position: absolute;
+			left: 250px;
+			top: 77px;
+			display: none;
+			height: 100px;
+			z-index: 0;
+		}
+		span{
+			display: inline-block;
+			width: 180px;
+			height: 30px;
+			background: #0af;
+			text-align: center;
+			padding-top: 6px;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div id="wrap">
+		<ul>
+			<li class="li">
+				<a href="">菜单1</a>
+				<div id="child">
+					<span><a href="">我是菜单1的子导航1</a></span>
+					<span><a href="">我是菜单1的子导航2</a></span>
+					<span><a href="">我是菜单1的子导航3</a></span>
+					<span><a href="">我是菜单1的子导航4</a></span>
+				</div>
+				
+			</li>
+			<li class="li">
+				<a href="">菜单2</a>
+				<div id="child">
+					<span><a href="">我是菜单2的子导航1</a></span>
+					<span><a href="">我是菜单2的子导航2</a></span>
+					<span><a href="">我是菜单2的子导航3</a></span>
+					<span><a href="">我是菜单2的子导航4</a></span>
+				</div>
+			</li>
+			<li class="li">
+				<a href="">菜单3</a>
+				<div id="child">
+					<span><a href="">我是菜单3的子导航1</a></span>
+					<span><a href="">我是菜单3的子导航2</a></span>
+					<span><a href="">我是菜单3的子导航3</a></span>
+					<span><a href="">我是菜单3的子导航4</a></span>
+				</div>
+			</li>
+			<li class="li">
+				<a href="">菜单4</a>
+				<div id="child">
+					<span><a href="">我是菜单4的子导航1</a></span>
+					<span><a href="">我是菜单4的子导航2</a></span>
+					<span><a href="">我是菜单4的子导航3</a></span>
+					<span><a href="">我是菜单4的子导航4</a></span>
+				</div>
+			</li>
+			<li class="li">
+				<a href="">菜单5</a>
+				<div id="child">
+					<span><a href="">我是菜单5的子导航1</a></span>
+					<span><a href="">我是菜单5的子导航2</a></span>
+					<span><a href="">我是菜单5的子导航3</a></span>
+					<span><a href="">我是菜单5的子导航4</a></span>
+				</div>
+			</li>
+		</ul>
+		</div>
+		
+	</div>
+	
+	
+</body>
+</html>
