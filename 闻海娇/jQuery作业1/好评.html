@@ -1,0 +1,37 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>好评星级</title>
+	<script type="text/javascript" src="jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			$("img").click(function(){
+				var i=$("img").index(this)+1;
+				if ($(this).attr("src")=="off_icon.png") {
+						$(this).prevAll("img").attr("src","on_icon.png");
+						$(this).attr("src","on_icon.png");
+						$("span").html(i+"星");
+				}else{
+						$(this).nextAll("img").attr("src","off_icon.png");
+						$(this).attr("src","off_icon.png");
+						$("span").html(--i+"星");	
+						}
+			})
+
+		})
+	</script>
+</head>
+<body>
+	<div>
+		<b>评价：</b>
+		<img src="off_icon.png">
+		<img src="off_icon.png">
+		<img src="off_icon.png">
+		<img src="off_icon.png">
+		<img src="off_icon.png">
+		<span></span>
+	</div>
+</body>
+</html>

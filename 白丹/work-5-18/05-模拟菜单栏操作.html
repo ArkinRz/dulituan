@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>05-模拟菜单操作</title>
+	<script type="text/javascript" src="../jquery-3.2.1.js"></script>
+	<script>
+		$(function(){
+
+			 $("#wrap ul li").hover(function(){
+			 	$(this).find(".subnav").show();
+			 	$(this).find(".di1").css("background-color","#ff6600")
+			 },function(){
+			 	$(this).find(".di1").css("background-color","")
+			 	$(this).find(".subnav").hide();
+			 });
+
+			$(".subnav ul li").hover(function(){
+			 	$(this).css("background-color","#ff9933")
+
+			 },function(){
+			 	$(this).css("background-color","")
+			 });
+
+
+
+
+		})
+
+	</script>
+	<style>
+		*{margin: 0;padding: 0;}
+		a{text-decoration: none;color: #000}
+		#wrap{width: 1060px;margin: 20px auto;text-align: center;}
+		ul{font-size: 0;width: 100%;}
+		ul li{list-style: none;cursor: pointer;}
+		.nav{display: flex;justify-content: space-between;}/*确保不会溢出*/
+		.item{display: inline-block;width: 20%;}
+		.di1{background-color: #ffcc66;height: 40px;line-height: 40px;font-size: 20px;cursor: pointer;}
+		.d_f{border-radius: 8px 0 0 0}
+		.d_l{border-radius: 0 8px 0 0}
+		.subnav{background-color: #ffcc99;margin:0 auto;display: none;}
+		.subnav ul li{font-size: 18px;}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<ul class="nav">
+			<li class="item">
+				<div class="di1 d_f"><a href="javascript:">导航1</a></div>
+				<div class="subnav">
+					<ul>
+						<li><a href="javascript:">我是子导航1</a></li>
+						<li><a href="javascript:">我是子导航2</a></li>
+						<li><a href="javascript:">我是子导航3</a></li>
+					</ul>
+				</div>
+			</li>
+			
+			<li class="item">
+				<div class="di1"><a href="javascript:">导航2</a></div>
+				<div class="subnav">
+					<ul>
+						<li><a href="javascript:">我是子导航1</a></li>
+						<li><a href="javascript:">我是子导航2</a></li>
+						<li><a href="javascript:">我是子导航3</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="item">
+				<div class="di1"><a href="javascript:">导航3</a></div>
+				<div class="subnav">
+					<ul>
+						<li><a href="javascript:">我是子导航1</a></li>
+						<li><a href="javascript:">我是子导航2</a></li>
+						<li><a href="javascript:">我是子导航3</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="item">
+				<div class="di1"><a href="javascript:">导航4</a></div>
+				<div class="subnav">
+					<ul>
+						<li><a href="javascript:">我是子导航1</a></li>
+						<li><a href="javascript:">我是子导航2</a></li>
+						<li><a href="javascript:">我是子导航3</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="item">
+				<div class="di1 d_l"><a href="javascript:">导航5</a></div>
+				<div class="subnav">
+					<ul>
+						<li><a href="javascript:">我是子导航1</a></li>
+						<li><a href="javascript:">我是子导航2</a></li>
+						<li><a href="javascript:">我是子导航3</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+
+</body>
+</html>

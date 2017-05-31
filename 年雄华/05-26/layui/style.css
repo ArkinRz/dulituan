@@ -1,0 +1,55 @@
+*{margin: 0;
+padding: 0;}
+
+/*//顶部导航*/
+
+.layui-nav-box{
+	height: 55px;
+	border-bottom: 5px solid #1AA094;
+	background: #393D49;
+	position: relative;
+}
+
+.layui-logo{
+	width: 200px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	font-size: 40px;
+	position: relative;
+}
+.layui-logo a{
+	color: #fff;
+}
+.layui-icon-box{
+position: relative;
+width: 30px;
+height: 30px;
+background-color: #1AA094;
+text-align: center;
+line-height: 30px;
+color: #fff;
+cursor: pointer;
+font-weight: bold;
+left: 200px;
+top: -45px;
+
+}
+.layui-nav-ul{
+	position: absolute;
+	top: 0;
+	left: 260px;
+	z-index: 999;
+	background: none;
+
+}
+.layui-nav-ul .layui-nav-bar,.layui-nav-ul .layui-this:after{
+background-color: #000!important;
+
+}
+/*垂直导航*/
+
+.layui-side-top,.layui-side-top .layui-nav{
+	top: 60px;
+}
+.layui-side-pa{padding: 0 10px;}

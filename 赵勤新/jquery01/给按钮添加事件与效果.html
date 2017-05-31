@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.1.0.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+      $(".inp").blur(function(){
+	if($(this).val()==""){
+		$(this).val("搜索你想要的商品");
+	}
+}).focus(function(){
+	if($(this).val()=="搜索你想要的商品"){
+		$(this).val("");
+	}
+
+})
+
+
+          $("a").hover(function(){
+                  $(this).addClass("a2");
+                  $(this).removeClass("a1");
+                  // $(".div1").css("background","red")
+
+           },function(){
+           	 $(this).addClass("a1");
+                  $(this).removeClass("a2");
+                  // $(".div1").css("background","green")
+
+
+           })
+		})
+	</script>
+	<style type="text/css">
+
+
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	div{
+		width: 100%;
+		/*margin: 0 auto;*/
+		text-align: center;
+		margin-top: 50px;
+
+
+	}
+	input{
+		width: 300px;
+		height: 50px;
+		border-radius: 16px;
+	}
+
+	.div1{
+		width: 100%;
+		/*margin: 0 auto;*/
+		text-align: center;
+		/*top: 200px;*/
+		margin-top: 100px;
+		border: 2px solid red;
+		background-color: green;
+	}
+	a{
+		display: inline-block;
+		width: 150px;
+		height: 30px;
+		line-height: 30px;
+		text-decoration: none;
+		border: 1px solid red;
+		margin-left: -8px;
+		border-radius: 16px;
+		color: white;
+
+
+
+	}
+
+	.a1{
+		background-color: green;
+	}
+
+	.a2{
+		color: yellow;
+		background: red;
+		font-weight: bold;
+
+	}
+
+
+	</style>
+</head>
+<body>
+<div>
+	<input type="text" name="" value="搜索你想要的商品" class="inp">
+</div>
+<div class="div1">
+<a href="" class="a1">首页</a>
+<a href="" class="a1">我的浏览记录</a>
+<a href="" class="a1">我的收藏夹</a>
+<a href="" class="a1">我的客服</a>
+<a href="" class="a1">我的购物车</a>
+<a href="" class="a1">关于我们</a>
+</div>
+		
+</body>
+</html>

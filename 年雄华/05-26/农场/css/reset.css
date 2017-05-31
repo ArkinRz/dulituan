@@ -1,0 +1,491 @@
+@charset "utf-8";
+
+body{
+	/*字体家族   不建议使用中文名称：\5b8b\4f53  代表宋体  ，也可以写成  simsum */
+	font: 12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\5b8b\4f53,sans-serif;
+;
+
+background-color: #fff;
+color: #666;
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	font: inherit;
+}
+.big-div {
+	width: 100%;
+	min-width: 1060px;
+	height: 100%;
+	min-height: 186px;
+
+	border-bottom: 2px solid #318e00;
+}
+.top-header {
+	width: 1060px;
+	height: 140px;
+	margin: 0 auto;
+	position: relative; 
+}
+
+
+.top-header{
+	width: 1060px;
+	position: relative;
+	margin:0 auto;
+}
+.top-header .yy-logo {
+	width: 165px;
+	height: 65px;
+	position: absolute;
+	top: 30px;
+	background: url(../images/logo.png);
+	margin-top: 0px;
+	background-color: #fff;
+}
+
+.search {
+	
+	width: 700px;
+	position: absolute;
+	top: 15px;
+	right: 620px;
+	margin-top: 0px;
+}
+
+.wrap1 {
+	width: 100%;
+	min-width: 1206px;
+	height: 120px;
+	margin: 0 auto;
+}
+
+.shortcut{
+	min-width:100%;
+	height: 30px;
+	line-height: 30px;
+	
+	background-color: #e3e4e5;
+}
+
+.shortcut .wrap{
+	width: 1060px;
+	height: 30px;
+	margin:0 auto;
+	text-align: center;
+}
+
+.shortcut {
+	width: 1060px;
+	height: 30px;
+
+}
+
+.shortcut .wrap .w-l {
+	float: left;
+}
+
+.shortcut .wrap .w-l .jiantou {
+	margin-right: 10px;
+	padding-right: 15px;
+	background: url(../images/jiantou.png) no-repeat right;
+	background-size: 14px;
+	width: 90px;
+	text-align:right;
+	vertical-align: top;
+}
+
+.shortcut ul li {
+	display: inline-block;
+	padding-right:20px;
+	float: left;
+}
+
+.shortcut .wrap .w-r {
+	float: right;
+}
+
+.shortcut .wrap .w-r ul {
+	display: table;
+}
+.shortcut .wrap .w-r  li {
+	display: inline-block;
+	color: #f1f1f1;
+	vertical-align: middle;
+
+}
+
+.shortcut .wrap .w-r  li a {
+	padding: 5px 5px;
+	text-decoration: none;
+	vertical-align: middle;
+	color: #828282;
+}
+
+.shortcut .wrap .w-r li a:hover {
+	color: red;
+}
+
+.shortcut .wrap .w-r .car-h {
+	margin-left: 10px;
+	padding-right: 10px;
+	background: url(../images/gouwuche.png) no-repeat left;
+	background-size: 16px;
+	width: 90px;
+	text-align: center;
+	vertical-align: top;
+
+}
+
+.shortcut .wrap .w-r .at {
+	color: green;
+}
+.shortcut .wrap .w-r span {
+	margin-left: 0px;
+	padding-right: 10px;
+	background: url(../images/aside_menu.png) no-repeat left;
+	text-align: left;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+}
+
+.shortcut .wrap .w-r .jiantou {
+	margin-right: 10px;
+	padding-right: 10px;
+	background: url(../images/jiantou.png) no-repeat right;
+	background-size: 14px;
+	width: 100px;
+	text-align:right;
+	vertical-align: top;
+
+}
+.shortcut .wrap .w-l  span {
+	color: #318e00;
+}
+
+
+.search {
+	width: 600px;
+	position: absolute;
+	top: 26px;
+	right: 100px;
+}
+.search input {
+	height: 38px;
+	width: 450px;
+	line-height: 38;
+	text-indent: 4px;
+	font-size: 1.5px;
+	border: 2px solid #318e00;
+	letter-spacing: 1px;
+	vertical-align: top;
+	top: 15px;
+}
+
+.search button {
+	width: 50px;
+	height: 35px;
+	
+	background-color: #318e00;
+	background-size:20px;
+	cursor: pointer;
+	top: 15px;
+	color: #fff;
+	font-size: 18px;
+	width: 90px;
+	height: 42px;
+	border:1px solid #318e00;
+}
+
+.car {
+	width: 135px;
+	height: 40px;
+	background-color: #fff;
+	border: 1px solid  #318e00;
+
+	position: absolute;
+	right:0px;
+	top: 26px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 0.8em;
+}
+
+ .icon1 {
+	display: inline-block;
+	/*display: inline-block;  变块级标签*/
+	width: 20px;
+	height: 20px;
+	background: url(../images/gouwuche.png) no-repeat;
+	background-size:20px;
+	vertical-align: middle; 
+	color: #318e00;
+}
+
+.car .icon2 {
+	display: inline-block;
+	width: 24px;
+	height: 18px;
+	background:url(../images/message.png);
+	position: relative;
+	top: -6px;
+}
+
+.car .icon3 {
+	display: inline-block;
+	width: 8px;
+	height: 10px;
+	background:url(../images/yj_v.png) no-repeat center;
+	position: relative;
+	top: 2px;
+}
+
+.car strong {
+	display: inline-block;
+	position: relative;
+	width: 14px;
+	height: 14px;
+	color: #fff;
+	top: -52px;
+	left: 40px;
+
+}
+
+.car a {
+	color: #8a8a8a;
+	text-decoration: none;
+
+}
+.top-header .hotwords {
+	position: absolute;
+	top: 100px;
+	left:500px;
+}
+
+
+.top-header .hotwords ul {
+	position: absolute;
+	right: -360px;
+	width: 500px;
+	top: -15px;
+	float: left;
+	color: #666666
+}
+
+
+.top-header .hotwords a {
+	border-right: 1px dashed #a9a9a9;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-decoration: none;
+	color: #666666;
+}
+
+.top-header .hotwords a:hover {
+	color: red;
+}
+
+.top-header .hotwords a:last-child {
+	border:none;
+}
+
+.top-header .hotwords .other {
+	color: #318e00;
+}
+ 
+li {
+	list-style-type: none;
+}
+
+
+.nav-footer .header-nav {
+	width: 200px;
+	height: 36px;
+	margin: 0 auto;
+	float: left;
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	line-height: 36px;
+	background-color: #318e00;
+}
+.top-header .header-nav span {
+	margin-left: -20px;
+	padding-right: 8px;
+	background: url(../images/aside_menu.png) no-repeat left;
+	text-align: left;
+	display: inline-block;
+	width: 16px;
+	height: 12px;
+}
+
+.top-header .nav-footer ul {
+	width: 860px;
+	height: 36px;
+	float: right;
+	
+}
+.top-header .nav-footer ul li {
+	height: 36px;
+	width: 104px;
+	line-height: 36px;
+	font-size: 16px;
+	text-align: center;
+	float: left;
+}
+
+.top-header .nav-footer ul li .hover {
+	font-size: 16px;
+	border-left: 1px dashed #a9a9a9;
+	padding-left:20px;
+	text-decoration: none;
+	color: #818080;
+}
+.top-header .nav-footer ul li:hover a{
+	color: #318e00;
+}
+
+.nav-footer ul li:first-child a{
+	color: #318e00;
+	text-decoration: none;
+}
+
+.nav-footer ul li a:last-child{
+	border: none;
+}
+
+/*主体部分开始*/
+/*主体部分结束*/
+
+
+/*页脚*/
+.wrap-last {
+	width: 100%;
+	min-width: 1060px;
+	height: 100px;
+	margin-bottom: 20px;
+	background-color: #e5e5e5;
+}
+.wrap-last .foot-top {
+	margin-left: 190px;
+	width: 100%;
+	height: 100px;
+	background-color:#e5e5e5;
+}
+
+.wrap-last .foot-top ul li{
+	display: inline-block;
+	padding: 10px 0;
+	font-size: 18px;
+}
+
+.wrap-last .foot-top .icon-1{
+	line-height: 80px ;
+	background: url(../images/footer-1.png) no-repeat left;
+	text-indent: 60px;
+}
+.wrap-last .foot-top .icon-2{
+	line-height: 80px ;
+	background: url(../images/footer-2.png) no-repeat left;
+	text-indent: 60px;
+}
+.wrap-last .foot-top .icon-3{
+	line-height: 80px ;
+	background: url(../images/footer-3.png) no-repeat left;
+	text-indent: 60px;
+}
+.wrap-last .foot-top .icon-4{
+	line-height: 80px ;
+	background: url(../images/footer-4.png) no-repeat left;
+	text-indent: 60px;
+}
+.wrap-last .foot-top .icon-5{
+	line-height: 80px ;
+	background: url(../images/footer-5.png) no-repeat left;
+	text-indent: 60px;
+}
+
+.wrap-last .foot-top ul li a{
+	text-decoration: none;
+	color: #818080;
+	font-size: 25px;
+	text-align: center;
+	border-right: 1px dashed green;
+	padding: 10px 25px;
+}
+
+.wrap-last .foot-top li:last-child a{
+	border-right:  none;
+}
+
+
+.footer-last {
+	height: 195px;
+	width: 100%;
+}
+.footer-last .footer-bottom {
+	height: 195px;
+	width: 1121px;
+	margin-left: 190px;
+	border-bottom: 1px solid #808080;	
+}
+
+.footer-last .footer-bottom .little h3 {
+	font-size: 14px;
+	color: #5b5a5a;
+	font-weight: bold;
+}
+.footer-last .footer-bottom .little {
+	display: inline-block;
+	width: 155px;
+	height: 195px;
+}
+.footer-last .footer-bottom .little ul li a {
+	text-decoration: none;
+	font-size: 12px;
+	color:RGB(128,128,128);
+}
+
+.footer-last .footer-bottom .erweima {
+	width: 87px;
+	height: 87px;
+	background:url(../images/scan.png) no-repeat center;
+	display: inline-block;
+}
+
+.footer-bottom-over{
+	width: 950px;
+	margin: 0 auto;
+}
+.footer-bottom-over ul{
+margin-bottom: 10px;
+margin-left: 75px;
+}
+.footer-bottom-over ul li {
+	display: inline-block;
+	line-height: 18px;
+	padding: 10px 0;
+}
+.footer-bottom-over ul li a {
+	text-decoration: none;
+	color: #818080;
+	font-size: 15px;
+	text-align: center;
+	border-right: 1px dashed green;
+	padding:0 15px;
+}
+
+#special{
+	border: none;
+}
+.footer-bottom-over p {
+	display:inline-block;
+	margin-right: 25px;
+}
+
+.footer-last .footer-bottom .little ul li:hover a{
+	color: #318e00;
+}

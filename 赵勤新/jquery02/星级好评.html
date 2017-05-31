@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.1.0.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			// var ps=new Array();
+			$("ul li").click(function(){
+				// var a=$(this).prevAll();
+				// a.addClass("li")
+				$(this).prevAll().addClass("li")
+				$(this).addClass("li")
+				$(this).nextAll().removeClass("li")
+
+			})
+
+		})
+	</script>
+</head>
+<style type="text/css">
+	*{margin: 0;padding: 0;}
+	.div1{
+		width: 600px;
+		height: 600px;
+		border: 1px solid red;
+		margin: 0 auto;
+		background-color: pink;
+	}
+	ul{
+		padding-left: 60px;
+		padding-top: 50px;
+
+	}
+
+	ul li{
+		list-style-type: none;
+		float: left;
+		width: 40px;
+		height: 26px;
+		background-image: url(./images/off_icon.png);
+		background-repeat: no-repeat;
+
+
+	}
+
+	.li{
+		list-style-type: none;
+		float: left;
+		width: 40px;
+		height: 26px;
+		/*border: 1px solid red;*/
+		background-image: url(./images/on_icon.png);
+		background-repeat: no-repeat;
+		/*background-position: 20*/
+
+	}
+	p{
+		padding-top: 50px;
+		font-weight: bold;
+		font-size: 20px;
+	}
+	span{
+		font-weight: bold;
+	}
+
+
+	ul li span{
+		float: right;
+		cursor: pointer;
+		color: blue;
+	}
+	ul li span:hover{
+		color: red;
+		text-decoration: underline;
+	}
+
+	
+
+
+</style>
+<body>
+	<div class="div1">
+		<p>感谢你的使用，希望你对我们的服务留下你宝贵的建议，我们会认真听取你的建议，努力更好的为你服务</p>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<span>星级好评</span>
+		<div id="box" style="padding-top: 50px;margin-left: 150px;">
+	<textarea name="" id="txt" rows="10" cols="30"></textarea>
+		<button id="btn">发表评论</button>
+		<ul id="ul">
+			<!-- <li>21214214241214 <span>删除</span></li>  -->
+		</ul>
+	</div>
+
+	</div>
+</body>
+<script type="text/javascript">
+	var btn=document.getElementById('btn');
+	var ul=document.getElementById('ul');
+	var txt=document.getElementById('txt');
+
+	btn.onclick=function(){
+		if(txt.value==0){
+			alert("不能为空");
+			return false;
+		}
+
+		var newLi=document.createElement('li');
+		newLi.innerHTML=txt.value+"<span>删除</span>";
+		var lis=ul.children;
+		if (lis.length==0){
+			ul.appendChild(newLi);
+			 } else {ul.insertBefore(newLi,lis[0]);}
+
+
+
+
+			
+
+	}
+</script>
+
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>layui</title>
+	<link rel="stylesheet" type="text/css" href="./layui/css/layui.css">
+	<script src="./layui/layui.js"></script>
+</head>
+<body>
+	<i class="layui-icon">&#xe652;</i>
+	<i class="layui-icon">&#xe6fc;</i>
+	<button class="layui-btn layui-btn-warm">按钮</button>
+	<button class="layui-btn layui-btn-disabled layui-btn-big">禁用</button>
+	<form class="layui-form">
+		<div class="layui-form-item">
+			<label for="" class="layui-form-label">输入框</label>
+			<div class="layui-input-block">
+				<input class="layui-input"></input>
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">密码框</label>
+			<div class="layui-input-inline">
+			<input type="password" class="layui-input">
+
+			</div>
+			<div class="layui-word-aux layui-form-mid">密码必须是0-6数字</div>
+		</div>
+		<div class="layui-form-item">
+			<lable class="layui-form-label">选择框</lable>
+			<div class="layui-input-block">
+				<select class="layui-select">
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="2">3</option>
+				</select>
+			</div>
+			<input type="text" class="layui-input" onclick="layui.laydate({elem:this,format:'YYYY-MM-DD hh:mm:ss'})">
+
+
+			<textarea id="textarea" class="layui-textarea" style="display: none;"></textarea>
+
+		
+
+			<ul class="layui-nav" lay-filter="">
+				<li class="layui-nav-item"><a href="">最新活动</a></li>
+				<li class="layui-nav-item layui-this"><a href="">产品</a></li>
+				<li class="layui-nav-item"><a href="">大数据</a></li>
+				<li class="layui-nav-item">
+					<a href="javascript:;">解决方案</a>
+					<dl class="layui-nav-child"> <!-- 二级菜单 -->
+						<dd><a href="">移动模块</a></dd>
+						<dd><a href="">后台模版</a></dd>
+						<dd><a href="">电商平台</a></dd>
+					</dl>
+				</li>
+				<li class="layui-nav-item"><a href="">社区</a></li>
+			</ul><br>
+			<br>
+
+
+		
+			
+			<ul class="layui-nav layui-nav-tree" lay-filter="test">
+				<!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
+				<li class="layui-nav-item layui-nav-itemed">
+					<a href="javascript:;">默认展开</a>
+					<dl class="layui-nav-child">
+						<dd><a href="javascript:;">选项1</a></dd>
+						<dd><a href="javascript:;">选项2</a></dd>
+						<dd><a href="">跳转</a></dd>
+					</dl>
+				</li>
+				<li class="layui-nav-item">
+					<a href="javascript:;">解决方案</a>
+					<dl class="layui-nav-child">
+						<dd><a href="">移动模块</a></dd>
+						<dd><a href="">后台模版</a></dd>
+						<dd><a href="">电商平台</a></dd>
+					</dl>
+				</li>
+				<li class="layui-nav-item"><a href="">产品</a></li>
+				<li class="layui-nav-item"><a href="">大数据</a></li>
+			</ul><br><br>
+
+
+
+			<span class="layui-breadcrumb" lay-separator="-">
+				<a href="">首页</a>
+				<a href="">国际新闻</a>
+				<a href="">亚太地区</a>
+				<a><cite>正文</cite></a>
+			</span>
+
+		</div>
+	</form>
+	<script type="text/javascript">
+		layui.use(["form","element","layer","laydate","layedit"],function(){
+			var form = layui.form();
+				element = layui.layer
+				layer = layui.layer
+				$ = layui.jquery;
+
+   			layedit = layui.layedit;
+
+
+				form.on("submit(subDemo)",function(data){
+					console.log(data,field);
+					return false;
+
+				})
+
+
+		layedit.build('textarea'); //建立编辑器
+
+
+		//注意：导航 依赖 element 模块，否则无法进行功能性操作
+				layui.use('element', function(){
+  				var element = layui.element();
+  
+  					//…
+					});
+
+				
+		
+})
+
+	</script>
+</body>
+</html>
